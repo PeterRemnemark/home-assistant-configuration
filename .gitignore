@@ -40,8 +40,12 @@ jspm_packages
 __pycache__
 *.pyc
 
-# Other
+#Mac and Synology stuff
 .DS_Store
+@eaDir
+.DS_Store@SynoResource
+
+# Other
 *.uuid
 *.conf
 *.db
