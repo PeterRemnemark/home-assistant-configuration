@@ -1,0 +1,126 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: !secret homeassistant_name
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 37
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret homeassistant_time_zome
+  customize: !include_dir_merge_named includes/customize
+  customize_domain:
+    automation:
+      initial_state: 'on'
+  customize_glob:
+    "sensor.dinner_room_*":
+      emulated_hue_hidden: true
+      homebridge_hidden: true
+      haaska_hidden: true
+    "sensor.*_battery_level":
+      emulated_hue_hidden: true
+      homebridge_hidden: true
+      haaska_hidden: true
+    "sensor.*_battery_state":
+      emulated_hue_hidden: true
+      homebridge_hidden: true
+      haaska_hidden: true
+    "sensor.synology_*":
+      emulated_hue_hidden: true
+      homebridge_hidden: true
+      haaska_hidden: true
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+  server_host: !secret http_serverhost
+  # Uncomment this if you are using SSL or running in Docker etc
+  
+
+############################################################
+#
+# Components
+#
+############################################################
+
+# Enables the frontend
+frontend:
+# Enables configuration UI
+config:
+# Checks for available updates
+updater:
+  include_used_components: true
+# Discover some devices automatically
+discovery:
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+# Enables support for tracking state changes over time.
+history:
+# View all events in a logbook
+logbook:
+# Logging all events in the home-assistant.log
+# logger:
+#   default: critical
+#   logs:
+#     homeassistant.components: info
+#     homeassistant.components.automation: debug
+#    homeassistant.components.binary_sensor.rfxtrx: debug
+
+# External logging database
+#influxdb:
+  #host: 192.168.1.10
+
+# Track the sun
+sun:
+#iOS platform
+ios:
+# Text to speech
+tts:
+  platform: google
+# Rfx Com 433 device
+rfxtrx:
+  device: /dev/ttyUSB0
+# z-wave Aeon Stick
+zwave:
+  usb_path: /dev/ttyACM0
+  new_entity_ids: true
+
+alexa:
+
+emulated_hue:
+  host_ip: !secret emulated_hue_host
+  expose_by_default: false
+  # exposed_domains:
+  #   - group
+  #   - switch
+  #   - input_boolean
+
+#------------------------------------------------------
+
+###########################################################
+#
+# Includes
+#
+############################################################
+
+# single Files
+group: !include includes/groups.yaml
+binary_sensor: !include includes/binary_sensors.yaml
+device_tracker: !include includes/device_trackers.yaml
+light: !include includes/lights.yaml
+switch: !include includes/switches.yaml
+input_select: !include includes/input_select.yaml
+media_player: !include includes/media_players.yaml
+apple_tv: !include includes/apple_tv.yaml
+input_boolean: !include includes/input_boolean.yaml
+
+# Merge List
+automation: !include_dir_merge_list includes/automation
+sensor: !include_dir_merge_list includes/sensor
+
+#Merge named
+script: !include_dir_merge_named includes/scripts
+
+#------------------------------------------------------

@@ -1,0 +1,21 @@
+###############################################################################################################
+# rfxtrx Binary sensors
+- platform: rfxtrx
+  automatic_add: True
+  devices:
+    0b1100030128d6d60a010f70:
+      name: Garage door
+      device_class: opening
+    0b110015007cc0fa0a010f60:
+      name: Entré door
+      device_class: opening
+    0913000607e426019360:
+      name: Kitchen Motion
+      device_class: Motion
+      off_delay:
+        seconds: 5
+    0913001854a82a018e60:
+      name: Laundry Motion
+      device_class: Motion
+      off_delay:
+        seconds: 5

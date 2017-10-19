@@ -1,0 +1,31 @@
+guest_mode:
+  name: Guest Mode
+  icon: mdi:account-alert
+  initial: off
+
+vacation_mode:
+  name: Vacation Mode
+  icon: mdi:school
+  initial: off
+
+alert_mode:
+  name: Alert Mode
+  icon: mdi:alert-octagram
+  initial: off
+
+speech_notifications:
+  name: Speech Notifications
+  icon: mdi:speaker-wireless
+  initial: on
+
+good_night:
+  name: Good Night
+  initial: off
+
+good_morning:
+  name: Good Morning
+  initial: off
+
+night_mode:
+  name: Night Mode
+  initial: off

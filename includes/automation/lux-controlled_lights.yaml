@@ -1,0 +1,99 @@
+# To be used for checking lux of the sensors and take actions
+# alias: Soundtouch Preset Select
+# trigger:
+#   platform: state
+#   entity_id:
+#     - input_select.soundtouch_presets_schlafzimmer
+#     - input_select.soundtouch_presets_kueche
+#     - input_select.soundtouch_presets_room2
+#     - input_select.soundtouch_presets_wohnzimmer
+# action:
+# - service: media_player.play_media
+#   data_template:
+#     entity_id: >
+#       {% if trigger.entity_id == "input_select.soundtouch_presets_schlafzimmer" %} media_player.soundtouch_schlafzimmer
+#       {% elif trigger.entity_id == "input_select.soundtouch_presets_kueche" %} media_player.soundtouch_kuche
+#       {% elif trigger.entity_id == "input_select.soundtouch_presets_room2" %} media_player.soundtouch_room2
+#       {% elif trigger.entity_id == "input_select.soundtouch_presets_wohnzimmer" %} media_player.soundtouch_wohnzimmer
+#       {% endif %}
+#     media_content_id: >
+#       {% if trigger.to_state.state == "Deep Mix Moscow Radio" %} 1
+#       {% elif trigger.to_state.state == "Spotify: Slow Blues" %} 2
+#       {% elif trigger.to_state.state == "SomaFM: Covers" %} 3
+#       {% elif trigger.to_state.state == "Spotify: Sunday Soul" %} 4
+#       {% elif trigger.to_state.state == "Spotify: Mix der Woche" %} 5
+#       {% elif trigger.to_state.state == "Spotify: Mellow Beats" %} 6
+#       {% endif %}
+#     media_content_type: PLAYLIST
+
+# Turn on lights when dark inside and someone is home
+- id: lights_on_when_low_light-inside
+  alias: Turn on inside lights when luminance goes below 10 lux
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.dinner_room_luminance
+    below: 10
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.someone_home
+        state: 'yes'
+      - condition: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+      - condition: time
+        after: '08:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+    - switch.interior_entre
+    - switch.interior_dinner_room
+    - switch.interior_main_room
+    - switch.wall_main_room
+
+
+- id: lights_on_when_low_light-windows
+  alias: Turn on windows lights when luminance goes below 8 lux
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.dinner_room_luminance
+    below: 8
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.someone_home
+        state: 'yes'
+      - condition: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+      - condition: time
+        after: '08:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+    - group.window_lights
+
+# Turn off lights when bright inside and someone is home
+- id: lights_off_when_high_light
+  alias: Turn off lights when luminance goes above 13 lux
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.dinner_room_luminance
+    above: 13
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.someone_home
+        state: 'yes'
+      - condition: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+  action:
+    service: homeassistant.turn_off
+    entity_id:
+    - group.window_lights
+    - group.inside_lights
+    - group.wall_lights

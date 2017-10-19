@@ -1,0 +1,206 @@
+# ###################################
+# ##  Switches Section
+# ###################################
+switch.ceiling_garage:
+  friendly_name: 'Ceiling Garage'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:ceiling-light
+  assumed_state: false
+
+switch.ceiling_laundry:
+  friendly_name: 'Ceiling Laundry'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:ceiling-light
+  assumed_state: false
+
+switch.engine_heater:
+  friendly_name: 'Engine Heater'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:car
+  assumed_state: false
+
+switch.exterior_post:
+  friendly_name: 'Exterior Post'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lava-lamp
+  assumed_state: true
+
+switch.interior_dinner_room:
+  friendly_name: 'Interior Dinner Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.interior_entre:
+  friendly_name: 'Interior Entry'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: true
+
+switch.interior_main_room:
+  friendly_name: 'Interior Main Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.wall_main_room:
+  friendly_name: 'Wall Main Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.window_dinner_room:
+  friendly_name: 'Window Dinner Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.window_kitchen:
+  friendly_name: 'Window Kitchen'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: true
+
+switch.window_laundry:
+  friendly_name: 'Window Laundry'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.window_main_room:
+  friendly_name: 'Window Main Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.window_master_bedroom:
+  friendly_name: 'Window Master Bedroom'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.window_office:
+  friendly_name: 'Window Office'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.window_philip:
+  friendly_name: 'Window Philip'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+# switch.den_outlet:
+#   friendly_name: 'Den Outlet'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:power-plug
+#   assumed_state: true
+#
+#
+# switch.foyer_outlet:
+#   friendly_name: 'Foyer Outlet'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:power-plug
+#   assumed_state: true
+#
+#
+# switch.front_door_outlet:
+#   friendly_name: 'Front Door Outlet'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:power-plug
+#   assumed_state: true
+#
+# switch.garage_outlet:
+#   friendly_name: 'Garage Outlet'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:power-plug
+#   assumed_state: true
+#
+#
+# switch.ge_outdoor_outle_switch_7_0:
+#   friendly_name: 'Back Landscape Lighting'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:flower
+#
+#
+# switch.ge_outdoor_outle_switch_8_0:
+#   friendly_name: 'Front Landscape Lighting'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:flower
+#
+#
+# switch.kitchen_accent_2:
+#   friendly_name: 'Kitchen Accents 2'
+#   emulated_hue_hidden: true
+#   hidden: false
+#   icon: mdi:lightbulb-outline
+#   assumed_state: true
+#
+#
+# switch.kitchen_accents:
+#   friendly_name: 'Kitchen Accents'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:lightbulb-outline
+#   assumed_state: true
+#
+#
+# switch.living_room_amp:
+#   friendly_name: 'Living Room Amp'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:music-circle
+#   assumed_state: true
+#
+#
+# switch.living_room_outlet:
+#   friendly_name: 'Living Room Outlet'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:power-plug
+#   assumed_state: true
+#
+#
+# switch.master_bathroom_accents:
+#   friendly_name: 'Master Bathroom Accents'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:lightbulb-outline
+#   assumed_state: true
+#
+#
+# switch.outlet_304_2:
+#   friendly_name: 'Outlet 304 2'
+#   emulated_hue_hidden: true
+#   hidden: false
+#   icon: mdi:power-plug
+#   assumed_state: true
+#
+# switch.printer_outlet:
+#   friendly_name: 'Printer Outlet'
+#   emulated_hue_hidden: false
+#   hidden: false
+#   icon: mdi:printer
+#   assumed_state: true

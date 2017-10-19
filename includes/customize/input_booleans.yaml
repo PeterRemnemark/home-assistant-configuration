@@ -1,0 +1,110 @@
+#
+input_boolean.speech_notifications:
+  friendly_name: 'Speech Notifications'
+  emulated_hue_hidden: false
+  hidden: False
+  icon: mdi:speaker-wireless
+
+input_boolean.vacation_mode:
+  friendly_name: 'Vacation Mode'
+  emulated_hue_hidden: false
+  hidden: False
+  icon: mdi:school
+
+input_boolean.guest_mode:
+  friendly_name: 'Guest Mode'
+  emulated_hue_hidden: false
+  hidden: False
+  icon: mdi:account-alert
+
+input_boolean.good_night:
+  friendly_name: 'Good Night'
+  emulated_hue_hidden: false
+  hidden: False
+  icon: mdi:weather-night
+  homebridge_hidden: true
+
+input_boolean.good_morning:
+  friendly_name: 'Good Morning'
+  emulated_hue_hidden: false
+  hidden: False
+  icon: mdi:weather-sunset-up
+  homebridge_hidden: true
+
+input_boolean.alert_mode:
+  friendly_name: 'Alert Mode'
+  emulated_hue_hidden: false
+  hidden: False
+  icon: mdi:alert-octagram
+  homebridge_hidden: true
+
+input_boolean.night_mode:
+  friendly_name: 'Night Mode'
+  emulated_hue_hidden: false
+  hidden: False
+  icon: mdi:weather-night
+  homebridge_hidden: true
+#
+#
+# input_boolean.color_tornado:
+#   friendly_name: 'Color Tornado'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:invert-colors
+#   homebridge_hidden: true
+#
+#
+# input_boolean.flash:
+#   friendly_name: 'Flash'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:yin-yang
+#
+# input_boolean.guard_dog:
+#   friendly_name: 'Guard Dog'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:paw
+#
+# input_boolean.home_stats:
+#   friendly_name: 'Home Stats'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:chart-bar
+#
+# input_boolean.last_message:
+#   friendly_name: 'Last Message'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:repeat-once
+#
+#
+# input_boolean.meal_time:
+#   friendly_name: 'Meal Time'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:food
+
+# input_boolean.medicine:
+#   friendly_name: 'Medicine'
+#   emulated_hue_hidden: false
+#   hidden: False
+#
+
+# input_boolean.responsibilities:
+#   friendly_name: 'Responsibilities'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:delete-sweep
+#
+# input_boolean.tv_time:
+#   friendly_name: 'Tv Time'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:television-guide
+#
+# input_boolean.work:
+#   friendly_name: 'Work'
+#   emulated_hue_hidden: false
+#   hidden: False
+#   icon: mdi:briefcase

@@ -1,0 +1,35 @@
+# Turn on lights in Garage when door is open, and send text if noone is home
+- id: send_msg_if_garage_door_is_open_and_no_home
+  alias: Garage Door is open
+  trigger:
+    - platform: template
+      value_template: "{% if is_state('binary_sensor.garagedorren', 'on') %}true{% endif %}"
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.ceiling_garage
+    - condition: state
+      entity_id: sensor.someone_home
+      state: 'no'
+    - service: notify.ios_petersiphone
+      data:
+        message: "Garage door is open!"
+# - id: check_garage_door_and_lights
+#   alias: door_open
+#   trigger:
+#     platform: state
+#     entity_id: binary_sensor.garagedorren
+#     to: 'on'
+#   action:
+#     service_template: >
+#       {% if is_state('sensor.someone_home','yes')%}
+#         homeassistant.turn_on
+#       {% else %}
+#         notify.ios_petersiphone
+#       {% endif %}
+#
+#     data_template: >
+#       {% if is_state('sensor.someone_home','yes')%}
+#         switch.tak_garage
+#       {% else %}
+#         message: "Garage door is open!
+#       {% endif %}

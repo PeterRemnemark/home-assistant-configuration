@@ -1,0 +1,12 @@
+- platform: yr
+  monitored_conditions:
+    - temperature
+    - symbol
+    - precipitation
+    - windSpeed
+    - pressure
+    - windDirection
+    - humidity
+    - fog
+    - cloudiness
+    - dewpointTemperature

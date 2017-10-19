@@ -1,0 +1,47 @@
+#
+# ###################################
+# ##  Nest Section
+# ###################################
+# climate.downstairs:
+#   friendly_name: 'Nest Downstairs'
+#   icon: mdi:air-conditioner
+# climate.upstairs:
+#   friendly_name: 'Nest Upstairs'
+#   icon: mdi:air-conditioner
+#
+#
+# ###################################
+# ##  Sun Section
+# ###################################
+# sun.sun:
+#   hidden: true
+#
+
+#Weather
+sensor.yr_cloudiness:
+  friendly_name: Moln
+  icon: mdi:weather-cloudy
+sensor.yr_dewpoint_temperature:
+  friendly_name: Duggpunktstemperatur
+  icon: mdi:color-helper
+sensor.yr_fog:
+  friendly_name: Dimma
+  icon: mdi:weather-fog
+sensor.yr_humidity:
+  friendly_name: Luftfuktighet
+  icon: mdi:water-percent
+sensor.yr_precipitation:
+  friendly_name: Nederbörd
+  icon: mdi:weather-rainy
+sensor.yr_pressure:
+  friendly_name: Tryck
+  icon: mdi:apple-keyboard-caps
+sensor.yr_temperature:
+  friendly_name: Temperatur
+  icon: mdi:temperature-celsius
+sensor.yr_wind_direction:
+  friendly_name: Vindsriktning
+  icon: mdi:weather-windy-variant
+sensor.yr_wind_speed:
+  friendly_name: Vindshastighet
+  icon: mdi:weather-windy

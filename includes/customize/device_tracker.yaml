@@ -1,0 +1,32 @@
+# device_tracker.actiontechap:
+#   friendly_name: 'Actiontechap'
+#   emulated_hue_hidden: true
+#   hidden: True
+#   homebridge_hidden: true
+#
+#
+#
+#
+# device_tracker.alarm_panel_1:
+#   friendly_name: 'Alarm Panel 1'
+#   emulated_hue_hidden: true
+#   hidden: False
+#   homebridge_hidden: true
+#
+#
+#
+#
+# device_tracker.alarm_panel_2:
+#   friendly_name: 'Alarm Panel 2'
+#   emulated_hue_hidden: true
+#   hidden: False
+#   homebridge_hidden: true
+#
+#
+#
+#
+# device_tracker.alexa_echo:
+#   friendly_name: 'Alexa Echo'
+#   emulated_hue_hidden: true
+#   hidden: True
+#   homebridge_hidden: true

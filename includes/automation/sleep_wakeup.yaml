@@ -1,0 +1,29 @@
+# Turn off house when going to bed
+- id: turn_off_when_going_to_bed
+  alias: Turn off house when going to bed
+  trigger:
+    - platform: state
+      entity_id: sensor.petersiphone_battery_state
+      from: "Unplugged"
+      to: "Charging"
+    - platform: state
+      entity_id: input_boolean.good_night
+      to: 'on'
+      from: 'off'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.someone_home
+        state: 'yes'
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.window_lights
+        - group.inside_lights
+        - group.wall_lights
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.night_mode

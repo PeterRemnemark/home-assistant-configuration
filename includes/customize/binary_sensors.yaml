@@ -1,0 +1,77 @@
+# Binary Sensors
+#
+binary_sensor.entre_door:
+  friendly_name: 'Front door'
+  emulated_hue_hidden: true
+  hidden: false
+  homebridge_hidden: false
+  haaska_hidden: true
+
+binary_sensor.garage_door:
+  friendly_name: 'Garage door'
+  emulated_hue_hidden: true
+  hidden: false
+  homebridge_hidden: false
+  haaska_hidden: true
+
+binary_sensor.dinner_room_sensor:
+  friendly_name: 'Dinner room Sensor'
+  emulated_hue_hidden: true
+  hidden: false
+  homebridge_hidden: false
+  haaska_hidden: true
+
+binary_sensor.kitchen_motion:
+  friendly_name: 'Kitchen room Sensor'
+  emulated_hue_hidden: true
+  hidden: false
+  homebridge_hidden: false
+  haaska_hidden: true
+
+binary_sensor.laundry_motion:
+  friendly_name: 'Laundry room Sensor'
+  emulated_hue_hidden: true
+  hidden: false
+  homebridge_hidden: false
+  haaska_hidden: true
+
+# binary_sensor.aeotec_dsb04100_doorwindow_sensor_sensor_4_0:
+#   friendly_name: 'Aeotec Dsb04100 Door/window Sensor Sensor 4'
+#   emulated_hue_hidden: true
+#   hidden: True
+#   icon: mdi:home-variant
+#
+# binary_sensor.kitchen_door_opened:
+#   friendly_name: 'Kitchen Door'
+#   emulated_hue_hidden: true
+#   hidden: False
+#   icon: mdi:home-variant
+#   homebridge_hidden: false
+#
+# binary_sensor.carlowink:
+#   friendly_name: 'Carlo-Wink'
+#   emulated_hue_hidden: true
+#   hidden: False
+#   icon: mdi:router-wireless
+#   homebridge_hidden: true
+#
+# binary_sensor.downstairs_thermostat_online:
+#   friendly_name: 'Downstairs Thermostat Online'
+#   emulated_hue_hidden: true
+#   hidden: True
+#   homebridge_hidden: true
+#
+
+#
+# binary_sensor.front_door_opened:
+#   friendly_name: 'Front Door'
+#   emulated_hue_hidden: true
+#   hidden: True
+#   homebridge_hidden: false
+
+#
+# binary_sensor.sleepnumber_carlo_stacey_is_in_bed:
+#   friendly_name: 'Stacey Is In Bed'
+#   emulated_hue_hidden: true
+#   hidden: False
+#   homebridge_hidden: false

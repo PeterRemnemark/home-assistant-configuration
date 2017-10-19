@@ -1,0 +1,121 @@
+###############################################################################################################
+# INPUT_SELECT:
+###############################################################################################################
+
+  presence_detection_peter:
+    name: Presence detection Peter
+    options:
+      - 'Automatic'
+      - 'Manual home'
+      - 'Manual away'
+    initial: 'Automatic'
+    icon: mdi:account-location
+
+  presence_detection_katarina:
+    name: Presence detection Katarina
+    options:
+      - 'Automatic'
+      - 'Manual home'
+      - 'Manual away'
+    initial: 'Automatic'
+    icon: mdi:account-location
+
+  presence_detection_philip:
+    name: Presence detection Philip
+    options:
+      - 'Automatic'
+      - 'Manual home'
+      - 'Manual away'
+    initial: 'Automatic'
+    icon: mdi:account-location
+
+  # soundtouch_presets:
+  #   name: Presets
+  #   options:
+  #     - 'My favorites (spotify)'
+  #     - 'Songs I like (spotify)'
+  #     - 'JOEfm'
+  #     - 'Radio 1'
+  #     - 'Q-Music'
+  #   initial: 'Songs I like (spotify)'
+  #   icon: mdi:playlist-play
+  #
+  # soundtouch_device:
+  #   name: Device
+  #   options:
+  #     - 'OFF'
+  #     - 'Living room'
+  #     - 'Bathroom'
+  #     - 'Both'
+  #   initial: 'OFF'
+  #   icon: mdi:speaker-wireless
+  #
+  # google_presets:
+  #   name: Presets
+  #   options:
+  #     - 'Radio 1'
+  #     - 'Q-Music'
+  #     - 'JOEfm'
+  #     - 'MNM'
+  #     - 'VRT radio nieuws'
+  #   initial: 'VRT radio nieuws'
+  #   icon: mdi:playlist-play
+  #
+  # google_device:
+  #   name: Device
+  #   options:
+  #     - 'OFF'
+  #     - 'chromecast audio'
+  #     - 'google home'
+  #   initial: 'OFF'
+  #   icon: mdi:speaker-wireless
+  #
+  # bedroom_nightlamps:
+  #   name: Night lamps bedroom
+  #   options:
+  #     - 'Low'
+  #     - 'Medium'
+  #     - 'High'
+  #     - 'Jurgen night (low)'
+  #     - 'Benoit night (low)'
+  #     - 'OFF'
+  #   initial: 'OFF'
+  #   icon: mdi:google-pages
+  #
+  # bedroom_standinglamp:
+  #   name: Standing lamp bedroom
+  #   options:
+  #     - 'Red'
+  #     - 'Blue'
+  #     - 'Low'
+  #     - 'Medium'
+  #     - 'High'
+  #     - 'Night (very low)'
+  #     - 'OFF'
+  #   initial: 'OFF'
+  #   icon: mdi:google-pages
+  #
+  # bureau_standinglamp:
+  #   name: Standing lamp bureau
+  #   options:
+  #     - 'Low'
+  #     - 'Medium'
+  #     - 'High'
+  #     - 'Dimmed'
+  #     - 'OFF'
+  #   initial: 'OFF'
+  #   icon: mdi:google-pages
+  #
+  # scenes_livingroom:
+  #   name: Scenes Living room
+  #   options:
+  #     - 'Morning'
+  #     - 'Dinner'
+  #     - 'Dimmed'
+  #     - 'Watch TV blue'
+  #     - 'Watch TV red'
+  #     - 'Maximum'
+  #     - 'Late arrival'
+  #     - 'OFF'
+  #   initial: 'OFF'
+  #   icon: mdi:google-pages

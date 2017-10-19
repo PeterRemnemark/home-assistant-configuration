@@ -1,0 +1,12 @@
+- platform: rfxtrx
+  automatic_add: False
+  devices:
+    085007008700004389:
+      name: Fridge
+    0850070d970080e779:
+      name: Freezer
+    0a520901a700005e3f0179:
+      name: Cellar
+      data_type:
+        - Humidity
+        - Temperature

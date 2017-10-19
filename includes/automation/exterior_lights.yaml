@@ -1,0 +1,22 @@
+#Turn on outside lights when sun gone down
+- id: lights_on_03
+  alias: Turn on outside light when sun sets
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+    - group.exterior_lights
+
+
+# Turn the outside lights off at 2 AM every day
+- id: lights_off_02
+  alias: Ligts off outside
+  trigger:
+    platform: time
+    at: 02:02:00
+  action:
+    service: homeassistant.turn_off
+    entity_id:
+    - group.exterior_lights

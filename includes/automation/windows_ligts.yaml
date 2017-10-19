@@ -1,0 +1,28 @@
+#Turn on windows lights if noone is home and sun gone down
+- id: windows_lights_on
+  alias: Turn on window light when sun sets
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -01:00:00
+  condition:
+    - condition: state
+      entity_id: sensor.someone_home
+      state: 'no'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.window_lights
+
+# Turn the Windows lights off when noone is home
+- id: window_lights_off
+  alias: Lights off windows
+  trigger:
+    platform: time
+    at: '23:04:00'
+  condition:
+    - condition: state
+      entity_id: sensor.someone_home
+      state: 'no'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.window_lights

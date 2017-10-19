@@ -1,0 +1,242 @@
+#Sensors
+
+sensor.speedtest_download:
+  friendly_name: 'Download'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:speedometer
+  haaska_hidden: true
+
+sensor.speedtest_upload:
+  friendly_name: 'Upload'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:speedometer
+  haaska_hidden: true
+
+sensor.speedtest_ping:
+  friendly_name: 'Ping'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:speedometer
+  haaska_hidden: true
+
+sensor.cellar_humidity:
+  friendly_name: 'Cellar Humidity'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:water-percent
+  haaska_hidden: true
+
+sensor.cellar_temperature:
+  friendly_name: 'Cellar Temperatur'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:temperature-celsius
+  haaska_hidden: true
+
+sensor.freezer_temperature:
+  friendly_name: 'Freezer Temperature'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:temperature-celsius
+  haaska_hidden: true
+
+sensor.fridge_temperature:
+  friendly_name: 'Fridge Temperature'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:temperature-celsius
+  haaska_hidden: true
+
+sensor.location_katarina:
+  friendly_name: 'Location Katarina'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:account
+  haaska_hidden: true
+
+sensor.location_philip:
+  friendly_name: 'Location Philip'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:account
+  haaska_hidden: true
+
+sensor.location_peter:
+  friendly_name: 'Location Peter'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:account
+  haaska_hidden: true
+
+sensor.onlyone_home:
+  friendly_name: 'Only One Home'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:account
+  haaska_hidden: true
+
+sensor.someone_home:
+  friendly_name: 'Someone Home'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:account
+  haaska_hidden: true
+
+
+
+# sensor.actiontechap:
+#   friendly_name: 'Actiontech Ap'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:router-wireless
+#
+# sensor.aeotec_dsb04100_doorwindow_sensor_alarm_level_4_1:
+#   friendly_name: 'Aeotec Dsb04100 Door/window Sensor Alarm Level 4'
+#   emulated_hue_hidden: False
+#   hidden: True
+#
+#
+# sensor.alexa_echo:
+#   friendly_name: 'Alexa Echo'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:amazon
+#
+#
+# sensor.amazon_dot:
+#   friendly_name: 'Amazon Dot'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:amazon
+#
+#
+# sensor.carlopihole:
+#   friendly_name: 'Carlo-Pihole'
+#   emulated_hue_hidden: False
+#   hidden: False
+
+# sensor.chromecast_audio_1:
+#   friendly_name: 'Chromecast Audio 1'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:music-circle
+#
+#
+#
+# sensor.date:
+#   friendly_name: 'Date'
+#   emulated_hue_hidden: False
+#   hidden: True
+#   icon: mdi:calendar
+#
+# sensor.external_ip:
+#   friendly_name: 'External Ip'
+#   emulated_hue_hidden: False
+#   hidden: True
+#
+# sensor.front_door:
+#   friendly_name: 'Front Door'
+#   emulated_hue_hidden: False
+#   hidden: False
+#
+# sensor.ha_installed_version:
+#   friendly_name: 'Ha Installed Version'
+#   emulated_hue_hidden: False
+#   hidden: False
+#
+# sensor.ha_uptime:
+#   friendly_name: 'Ha Uptime'
+#   emulated_hue_hidden: False
+#   hidden: False
+#
+# sensor.hue_hub_1:
+#   friendly_name: 'Hue Hub 1'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:router-wireless
+#
+#
+# sensor.ipchange:
+#   friendly_name: 'Ipchange'
+#   emulated_hue_hidden: False
+#   hidden: True
+#
+# sensor.moon:
+#   friendly_name: 'Moon'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:brightness-3
+#
+# sensor.pihole_ads_blocked_today:
+#   friendly_name: 'Ads Blocked Today'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:do-not-disturb
+#
+# sensor.pihole_ads_percentage_blocked_today:
+#   friendly_name: 'Pi-Hole Ads Percentage Blocked Today'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:close-octagon-outline
+#
+# sensor.pihole_dns_queries_today:
+#   friendly_name: 'Dns Queries Today'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:note-text
+#
+# sensor.printer:
+#   friendly_name: 'Printer'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:printer
+#
+# sensor.rgb_led_garage_large:
+#   friendly_name: 'Rgb Led Garage Large'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:led-on
+#
+# sensor.samsungtv:
+#   friendly_name: 'Samsung Tv'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:television
+#
+# sensor.since_last_boot:
+#   friendly_name: 'Since Last Boot'
+#   : False
+#   hidden: True
+#   icon: mdi:clock
+#
+# sensor.since_last_boot_templated:
+#   friendly_name: 'Raspberry Pi Uptime'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:clock-start
+#
+# sensor.time:
+#   friendly_name: 'Time'
+#   emulated_hue_hidden: False
+#   hidden: True
+#   icon: mdi:clock
+#
+# sensor.unifi_ap:
+#   friendly_name: 'Unifi Ap'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:router-wireless
+#
+# sensor.wii:
+#   friendly_name: 'Wii'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:gamepad-variant
+#
+# sensor.withings_scale:
+#   friendly_name: 'Withings Scale'
+#   emulated_hue_hidden: False
+#   hidden: False
+#   icon: mdi:scale-bathroom

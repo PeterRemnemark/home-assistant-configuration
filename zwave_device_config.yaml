@@ -1,0 +1,27 @@
+sensor.aeotec_zw100_multisensor_6_luminance_2_3:
+  ignored: false
+  polling_intensity: 2
+sensor.aeotec_zw100_multisensor_6_temperature_2_1:
+  ignored: false
+  polling_intensity: 2
+binary_sensor.__sensor_2_0:
+  ignored: false
+  polling_intensity: 1
+sensor.aeotec_zw100_multisensor_6_luminance:
+  ignored: false
+  polling_intensity: 1
+sensor.aeotec_zw100_multisensor_6_burglar:
+  ignored: false
+  polling_intensity: 1
+sensor.aeotec_zw100_multisensor_6_ultraviolet:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw100_multisensor_6_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw100_multisensor_6_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw100_multisensor_6_alarm_level:
+  ignored: true
+  polling_intensity: 0

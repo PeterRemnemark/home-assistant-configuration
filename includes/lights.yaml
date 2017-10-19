@@ -1,0 +1,14 @@
+- platform: rfxtrx
+  automatic_add: false
+  devices:
+    0b11000d007cc0fa02000070:
+      name: Ceiling Dinner room
+    0b11000d007cc0fa03000070:
+      name: Interior Laundry
+
+- platform: hue
+  host: !secret hue_host
+  filename: phue.conf
+  allow_unreachable: true
+  allow_in_emulated_hue: false
+  allow_hue_groups: false

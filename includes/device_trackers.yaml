@@ -1,0 +1,17 @@
+# - platform: nmap_tracker
+#   hosts: !secret nmap_tracker_hosts
+#   home_interval: 5
+#   track_new_devices: no
+#   interval_seconds: 40
+#   consider_home: 180
+
+#Unifi platform
+- platform: unifi
+  host: !secret sensor_unifi_host
+  username: !secret sensor_unifi_username
+  password: !secret sensor_unifi_password
+  home_interval: 5
+  verify_ssl: false
+#  track_new_devices: no
+#  interval_seconds: 40
+  consider_home: 180

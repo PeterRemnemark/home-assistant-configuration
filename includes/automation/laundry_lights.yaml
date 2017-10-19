@@ -1,0 +1,19 @@
+############################################################
+#
+# Home Assistant Laundry Lights Door Automation
+#
+############################################################
+
+- alias: Turn ON Laundry Lights when movement is detected
+  trigger:
+    - platform: template
+      value_template: "{% if is_state('binary_sensor.laundry_motion', 'on') %}true{% endif %}"
+  condition:
+    - condition: state
+      entity_id: sensor.someone_home
+      state: 'yes'
+    # - condition: state
+    #   entity_id: sun.sun
+    #   state: 'below_horizon'
+  action:
+    - service: script.laundry_lights_timer

@@ -1,0 +1,13 @@
+# Synology
+- platform: synologydsm
+  entity_namespace: synology
+  host: !secret sensor_synology_host
+  username: !secret sensor_synology_username
+  password: !secret sensor_synology_password
+  monitored_conditions:
+    - cpu_total_load
+    - memory_real_usage
+#    - disk_status
+    - volume_status
+    - volume_percentage_used
+    - volume_disk_temp_max
