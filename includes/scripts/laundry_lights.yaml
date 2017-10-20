@@ -8,19 +8,19 @@ laundry_lights_timer_helper:
   sequence:
     - delay:
         minutes: 2
-    - service: homeassistant.turn_off
+    - service: switch.turn_off
       data_template:
         entity_id: >-
           {% if is_state('sensor.light_sensor', 'Bright') %}
             switch.ceiling_laundry
           {% elif is_state('sensor.light_sensor', 'Shade') %}
-            light.interior_laundry
+            switch.interior_laundry
           {% elif is_state('sensor.light_sensor', 'Dark') %}
-            light.interior_laundry
+            switch.interior_laundry
           {%- elif is_state('sensor.light_sensor', 'Night') -%}
             switch.window_laundry
           {% endif %}
-    - service: homeassistant.turn_off
+    - service: switch.turn_off
       data_template:
         entity_id: >
           {% if is_state('switch.window_laundry', 'on') %}
@@ -45,9 +45,9 @@ laundry_lights_timer:
           {% if is_state('sensor.light_sensor', 'Bright') %}
             switch.ceiling_laundry
           {% elif is_state('sensor.light_sensor', 'Shade') %}
-            light.interior_laundry
+            switch.interior_laundry
           {% elif is_state('sensor.light_sensor', 'Dark') %}
-            light.interior_laundry
+            switch.interior_laundry
           {%- elif is_state('sensor.light_sensor', 'Night') -%}
             switch.window_laundry
           {% endif %}

@@ -3,8 +3,7 @@
   devices:
     0b11000d007cc0fa02000070:
       name: Ceiling Dinner room
-    0b11000d007cc0fa03000070:
-      name: Interior Laundry
+
 
 - platform: hue
   host: !secret hue_host

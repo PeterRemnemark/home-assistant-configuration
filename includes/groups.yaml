@@ -103,7 +103,7 @@
       - switch.interior_dinner_room
       - switch.interior_main_room
       - switch.wall_main_room
-      - light.interior_laundry
+      - switch.interior_laundry
       - switch.ceiling_laundry
 
   morning_lights:

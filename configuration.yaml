@@ -37,7 +37,7 @@ http:
   api_password: !secret http_password
   server_host: !secret http_serverhost
   # Uncomment this if you are using SSL or running in Docker etc
-  
+
 
 ############################################################
 #
@@ -68,9 +68,24 @@ logbook:
 #     homeassistant.components.automation: debug
 #    homeassistant.components.binary_sensor.rfxtrx: debug
 
+recorder:
+  purge_interval: 2
+  purge_keep_days: 5
+#  db_url: sqlite:///home/user/.homeassistant/test
+  include:
+    entities:
+      - sensor.dinner_room_luminance
+      - sensor.yr_temperature
+      - sensor.cellar_temperature
+      - sensor.dinner_room_temperature
+      - sensor.freezer_temperature
+      - sensor.fridge_temperature
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+
 # External logging database
-#influxdb:
-  #host: 192.168.1.10
+influxdb:
+  host: !secret influxdb_host
 
 # Track the sun
 sun:
