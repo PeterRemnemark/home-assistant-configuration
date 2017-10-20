@@ -33,7 +33,9 @@
     - service: switch.turn_off
       entity_id:
         - switch.window_office
-
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.exterior_lights
     - service: input_boolean.turn_off
       entity_id:
         # - input_boolean.medicine
