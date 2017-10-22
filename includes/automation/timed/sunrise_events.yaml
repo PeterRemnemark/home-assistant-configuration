@@ -40,4 +40,5 @@
       entity_id:
         # - input_boolean.medicine
         # - input_boolean.daylight_override
+        - input_boolean.night_mode
         - input_boolean.guest_mode
