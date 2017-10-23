@@ -7,7 +7,7 @@
 garage_lights_timer_helper:
   sequence:
     - delay:
-        minutes: 1
+        minutes: 5
     - service: homeassistant.turn_off
       entity_id:
         - switch.ceiling_garage
