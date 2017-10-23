@@ -84,8 +84,8 @@ recorder:
       - sensor.speedtest_upload
 
 # External logging database
-influxdb:
-  host: !secret influxdb_host
+# influxdb:
+#   host: !secret influxdb_host
 
 # Track the sun
 sun:

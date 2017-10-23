@@ -1,13 +1,13 @@
 ############################################################
 #
-# Laundry lights Timer and Helper
+# Garage lights Timer and Helper
 #
 ############################################################
 
 garage_lights_timer_helper:
   sequence:
     - delay:
-        minutes: 10
+        minutes: 1
     - service: homeassistant.turn_off
       entity_id:
         - switch.ceiling_garage
@@ -20,7 +20,7 @@ garage_lights_timer:
     - service: homeassistant.turn_on
       entity_id:
         - switch.ceiling_garage
-    - wait_template: "{{ is_state('binary_sensor.garage_door', 'off' }}"
+    - wait_template: "{{is_state('binary_sensor.garage_door', 'off')}}"
     - service: script.turn_on
       data:
-        entity_id: script.laundry_lights_timer_helper
+        entity_id: script.garage_lights_timer_helper
