@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-cd /Volumes/docker-1/home-assistant/config
+cd /Volumes/docker/home-assistant/config
 #source /srv/hass/hass_venv/bin/activate
 #hass --script check_config
 
