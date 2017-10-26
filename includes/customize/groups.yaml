@@ -153,6 +153,12 @@ group.window_lights:
   hidden: false
   haaska_hidden: false
 
+group.window_main_room_lights:
+  friendly_name: 'Windows Lights'
+  emulated_hue_hidden: false
+  hidden: false
+  haaska_hidden: false
+
 group.all_automations:
   friendly_name: 'All Automations'
   emulated_hue_hidden: true

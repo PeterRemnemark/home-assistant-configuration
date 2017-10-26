@@ -93,8 +93,15 @@ switch.window_laundry:
   icon: mdi:lightbulb-outline
   assumed_state: false
 
-switch.window_main_room:
-  friendly_name: 'Window Main Room'
+light.window_main_room_1:
+  friendly_name: 'Window Main Room 1'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+light.window_main_room_2:
+  friendly_name: 'Window Main Room 2'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline

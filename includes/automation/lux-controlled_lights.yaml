@@ -71,9 +71,16 @@
       - condition: time
         after: '08:00:00'
   action:
-    service: homeassistant.turn_on
-    entity_id:
-    - group.window_lights
+    - service: homeassistant.turn_on
+      entity_id:
+        - group.window_lights
+    - service: light.turn_on
+      entity_id:
+        - light.window_main_room_1
+        - light.window_main_room_2
+      data_template:
+        brightness: "{{ states('sensor.time_brightness')|int }}"
+
 
 # Turn off lights when bright inside and someone is home
 - id: lights_off_when_high_light
@@ -97,3 +104,4 @@
     - group.window_lights
     - group.inside_lights
     - group.wall_lights
+    - group.window_main_room_lights

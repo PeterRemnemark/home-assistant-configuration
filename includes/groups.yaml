@@ -7,7 +7,7 @@
       - group.window_lights
       - group.inside_lights
       - group.ceiling_lights
-      - light.window_main_room_1
+      - group.window_main_room_lights
 #      - sensor.yr_symbol
 #      - sun.sun
 #      - group.location_katarina
@@ -22,7 +22,8 @@
     name: Main room
     view: yes
     entities:
-      - switch.window_main_room
+#      - switch.window_main_room
+      - group.window_main_room_lights
       - switch.wall_main_room
       - switch.interior_main_room
       - media_player.apple_tv_in_main_room
@@ -95,7 +96,14 @@
       - switch.window_master_bedroom
       - switch.window_philip
       - switch.window_laundry
-      - switch.window_main_room
+#      - switch.window_main_room
+
+  window_main_room_lights:
+    name: Window Main Room Lights
+    view: no
+    entities:
+      - light.window_main_room_1
+      - light.window_main_room_2
 
   inside_lights:
     name: Interior lights
