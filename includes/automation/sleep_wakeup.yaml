@@ -25,5 +25,8 @@
         - group.window_lights
         - group.inside_lights
         - group.wall_lights
+        - group.ceiling_lights
     - service: input_boolean.turn_on
       entity_id: input_boolean.night_mode
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.good_night

@@ -6,7 +6,7 @@
       - group.outside
       - group.window_lights
       - group.inside_lights
-      - light.ceiling_dinner_room
+      - group.ceiling_lights
       - light.window_main_room_1
 #      - sensor.yr_symbol
 #      - sun.sun
@@ -59,7 +59,7 @@
       - group.weather_group
 
 ###############################################################################################################
-# Groups:
+# Room groups:
 ###############################################################################################################
   outside:
     name: Exterior
@@ -83,6 +83,8 @@
       - light.ceiling_dinner_room
 
 ###############################################################################################################
+# Groups of lights
+###############################################################################################################
   window_lights:
     name: Windows lights
     view: no
@@ -102,9 +104,8 @@
       - switch.interior_entre
       - switch.interior_dinner_room
       - switch.interior_main_room
-      - switch.wall_main_room
       - switch.interior_laundry
-      - switch.ceiling_laundry
+
 
   morning_lights:
     name: Morning Lights
@@ -116,18 +117,30 @@
       - switch.wall_main_room
       - switch.interior_laundry
 
+  ceiling_lights:
+    name: Ceiling Lights
+    view: no
+    entities:
+      - switch.ceiling_laundry
+      - light.ceiling_dinner_room
+      - switch.ceiling_garage
 
   wall_lights:
     name: Wall Lights
     view: no
     entities:
       - switch.wall_main_room
+      - switch.wall_dinner_room
 
   exterior_lights:
     name: Exterior Lights
     view: no
     entities:
       - switch.exterior_post
+
+###############################################################################################################
+# Groups of items for View/tabs
+###############################################################################################################
 
   weather_group:
     name: Weather Information Home

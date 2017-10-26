@@ -9,6 +9,13 @@ switch.interior_laundry:
   icon: mdi:ceiling-light
   homebridge_hidden: true
 
+switch.wall_dinner_room:
+  friendly_name: 'Wall Dinner Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  homebridge_hidden: true
+
 switch.ceiling_garage:
   friendly_name: 'Ceiling Garage'
   emulated_hue_hidden: false
