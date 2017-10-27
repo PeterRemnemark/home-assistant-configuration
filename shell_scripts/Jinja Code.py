@@ -1,4 +1,4 @@
-You can use this code to quickly create files from the template editor in HA.  I use it mainly for `emulated_hue` and to quickly add in new Customize options to all things HA!
+You can use this code to quickly create files from the template editor in HA.  I use it mainly for `emulated_hue_hidden` and to quickly add in new Customize options to all things HA!
 
 For the sandbox.
 {% set trigger = {'entity_id':'sensor.downstairs_thermostat_hvac_state','to_state':'cooling'} %}
@@ -13,8 +13,8 @@ Create fast Customize for groups, sensors, covers etc...  Just change that first
 {% endif %}
 {{- state.entity_id }}:
   friendly_name: '{{ state.attributes.friendly_name|replace("_"," ",)|title() if state.attributes.friendly_name is defined else state.name|replace("_"," ",)|title() }}'
-  emulated_hue: {{state.attributes.emulated_hue if state.attributes.emulated_hue is defined else 'False' }}
-  hidden: {{state.attributes.hidden if state.attributes.hidden is defined else "False"}}
+  emulated_hue_hidden: {{state.attributes.emulated_hue_hidden if state.attributes.emulated_hue_hidden is defined else 'true' }}
+  hidden: {{state.attributes.hidden if state.attributes.hidden is defined else "true"}}
   homebridge_hidden: {{state.attributes.homebridge_hidden if state.attributes.homebridge_hidden is defined else "true"}}
   {{'icon: '+ state.attributes.icon if state.attributes.icon is defined}}
   {{'homebridge_cover_type: '+ state.attributes.homebridge_cover_type if state.attributes.homebridge_cover_type is defined}}

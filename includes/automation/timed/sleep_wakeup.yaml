@@ -16,9 +16,8 @@
       - condition: state
         entity_id: sensor.someone_home
         state: 'yes'
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
+      - condition: time
+        after: '21:30:00'
   action:
     - service: homeassistant.turn_off
       entity_id:
