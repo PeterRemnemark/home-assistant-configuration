@@ -1,6 +1,5 @@
 #Turn on inside lights when noone is home and sun gone down
-- id: lights_on_02
-  alias: Turn on inside light when sun sets
+- alias: Turn on inside light when sun sets
   trigger:
     platform: sun
     event: sunset
@@ -11,12 +10,11 @@
   action:
     service: homeassistant.turn_on
     entity_id:
-    - group.inside_lights
+    - group.interior_ligts
     - group.wall_lights
 
 # Turn the inside lights off when noone is home
-- id: lights_off_01
-  alias: Lights off inside
+- alias: Lights off inside
   trigger:
     platform: time
     at: '22:35:00'
@@ -27,5 +25,5 @@
   action:
     service: homeassistant.turn_off
     entity_id:
-    - group.inside_lights
+    - group.interior_ligts
     - group.wall_lights

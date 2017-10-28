@@ -1,0 +1,8 @@
+speedtest_net:
+  name: "Speedtest.net"
+  view: no
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - script.run_speedtest

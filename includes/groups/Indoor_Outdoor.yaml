@@ -1,0 +1,47 @@
+Interior_Lights:
+  entities:
+    - switch.front_door_hallway
+    - switch.interior_dinner_room
+    - switch.interior_main_room
+    - switch.interior_laundry
+
+Exterior_Lights:
+  entities:
+    - switch.exterior_post
+
+window_lights:
+  name: Windows lights
+  entities:
+    - switch.window_kitchen
+    - switch.window_office
+    - switch.window_dinner_room
+    - switch.window_master_bedroom
+    - switch.window_philip
+    - switch.window_laundry
+
+window_main_room_lights:
+  name: Window Main Room Lights
+  entities:
+    - light.window_main_room_1
+    - light.window_main_room_2
+
+morning_lights:
+  name: Morning Lights
+  entities:
+    - switch.window_kitchen
+    - switch.window_dinner_room
+    - switch.front_door_hallway
+    - switch.wall_main_room
+
+ceiling_lights:
+  name: Ceiling Lights
+  entities:
+    - switch.ceiling_laundry
+    - light.ceiling_dinner_room
+    - switch.ceiling_garage
+
+wall_lights:
+  name: Wall Lights
+  entities:
+    - switch.wall_main_room
+    - switch.wall_dinner_room

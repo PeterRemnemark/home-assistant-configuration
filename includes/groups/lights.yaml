@@ -1,0 +1,74 @@
+master bedroom lights:
+#  control: hidden
+  entities:
+    - switch.window_master_bedroom
+
+kitchen lights:
+#  control: hidden
+  entities:
+    - switch.window_kitchen
+
+main room lights:
+  entities:
+    - light.window_main_room_1
+    - light.window_main_room_2
+    - switch.wall_main_room
+    - switch.interior_main_room
+
+# main room accents:
+#   entities:
+#     - light.couch_1
+#     - light.tv_light
+#     - light.tv_stand_light
+
+office lights:
+  entities:
+    - switch.window_office
+
+dining room lights:
+  entities:
+    - switch.window_dinner_room
+    - switch.interior_dinner_room
+    - light.ceiling_dinner_room
+
+# Outdoor Pool Lights:
+#   entities:
+#     - light.p1_front_left
+#     - light.p1_front_right
+#     - light.p1_back_left
+#     - light.p1_back_right
+
+outdoor front lights:
+  entities:
+    - switch.exterior_post
+
+# outdoor back lights:
+#   entities:
+#     - light.outdoor_foyer
+#     - light.outdoor_sconce_1
+#     - light.outdoor_sconce_2
+#     - light.outdoor_sconce_3
+#     - light.led_garage_large
+#     - light.led_garage_small
+#     - light.led_outdoor_den
+
+garage lights:
+  control: hidden
+  entities:
+    - switch.ceiling_garage
+
+laundry lights:
+  control: hidden
+  entities:
+    - switch.window_laundry
+    - switch.interior_laundry
+    - switch.ceiling_laundry
+
+
+hallway Lights:
+  entities:
+    - switch.front_door_hallway
+
+philips room:
+  entities:
+    - switch.window_philip

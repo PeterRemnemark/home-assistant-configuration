@@ -121,7 +121,8 @@ emulated_hue:
 ############################################################
 
 # single Files
-group: !include includes/groups.yaml
+
+#group: !include includes/groups.yaml
 binary_sensor: !include includes/binary_sensors.yaml
 device_tracker: !include includes/device_trackers.yaml
 light: !include includes/lights.yaml
@@ -134,6 +135,7 @@ input_boolean: !include includes/input_boolean.yaml
 # Merge List
 automation: !include_dir_merge_list includes/automation
 sensor: !include_dir_merge_list includes/sensor
+group: !include_dir_merge_named includes/groups
 
 #Merge named
 script: !include_dir_merge_named includes/scripts

@@ -1,0 +1,8 @@
+z-wave:
+  name: z-wave Information
+  entities:
+    - sensor.dinner_room_burglar
+    - sensor.dinner_room_luminance
+    - sensor.dinner_room_relative_humidity
+    - sensor.dinner_room_temperature
+    - binary_sensor.dinner_room_sensor

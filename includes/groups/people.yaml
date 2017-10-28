@@ -1,0 +1,20 @@
+location_katarina:
+  name: "Location Katarina"
+  view: no
+  entities:
+    - device_tracker.katarinasiphone
+    - device_tracker.katarinaswifiiphone
+
+location_peter:
+  name: "Location Peter"
+  view: no
+  entities:
+    - device_tracker.petersiphone
+    - device_tracker.peterswifiiphone
+
+location_philip:
+  name: "Location Philip"
+  view: no
+  entities:
+    - device_tracker.philips_iphone
+    - device_tracker.philipswifiiphone

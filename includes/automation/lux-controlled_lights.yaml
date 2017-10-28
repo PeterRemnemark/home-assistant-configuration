@@ -27,8 +27,7 @@
 #     media_content_type: PLAYLIST
 
 # Turn on lights when dark inside and someone is home
-- id: lights_on_when_low_light-inside
-  alias: Turn on inside lights when luminance goes below 10 lux
+- alias: Turn on inside lights when luminance goes below 10 lux
   trigger:
     platform: numeric_state
     entity_id: sensor.dinner_room_luminance
@@ -47,14 +46,12 @@
   action:
     service: homeassistant.turn_on
     entity_id:
-    - switch.interior_entre
+    - switch.front_door_hallway
     - switch.interior_dinner_room
     - switch.interior_main_room
     - switch.wall_main_room
 
-
-- id: lights_on_when_low_light-windows
-  alias: Turn on windows lights when luminance goes below 8 lux
+- alias: Turn on windows lights when luminance goes below 8 lux
   trigger:
     platform: numeric_state
     entity_id: sensor.dinner_room_luminance
@@ -83,12 +80,11 @@
 
 
 # Turn off lights when bright inside and someone is home
-- id: lights_off_when_high_light
-  alias: Turn off lights when luminance goes above 13 lux
+- alias: Turn off lights when luminance goes above 12 lux
   trigger:
     platform: numeric_state
     entity_id: sensor.dinner_room_luminance
-    above: 13
+    above: 12
   condition:
     condition: and
     conditions:
@@ -102,6 +98,6 @@
     service: homeassistant.turn_off
     entity_id:
     - group.window_lights
-    - group.inside_lights
+    - group.interior_ligts
     - group.wall_lights
     - group.window_main_room_lights

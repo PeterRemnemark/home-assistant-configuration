@@ -51,7 +51,7 @@ switch.interior_dinner_room:
   icon: mdi:lightbulb-outline
   assumed_state: false
 
-switch.interior_entre:
+switch.front_door_hallway:
   friendly_name: 'Interior Entry'
   emulated_hue_hidden: false
   hidden: false

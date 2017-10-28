@@ -1,0 +1,143 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.exterior
+    - group.window_lights
+    - group.Interior_lights
+    - group.ceiling_lights
+    - group.window_main_room_lights
+    - group.wall_lights
+    - device_tracker.petersiphone
+    - device_tracker.katarinasiphone
+    - device_tracker.philips_iphone
+    - group.morning_lights
+    - group.home_modes
+
+mainroom_view:
+  name: Main room
+  view: yes
+  entities:
+    - group.window_main_room_lights
+    - switch.wall_main_room
+    - switch.interior_main_room
+    - media_player.apple_tv_in_main_room
+    - media_player.lg_tv_remote
+    - media_player.marantzsr5007
+
+kitchen_view:
+  name: Kitchen
+  view: yes
+  entities:
+    - switch.window_kitchen
+    - sensor.freezer_temperature
+    - sensor.fridge_temperature
+    - binary_sensor.kitchen_motion
+
+information_view:
+  name: Information
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.iphone_battery_status
+    - group.synology
+    - group.speedtest_net
+    - group.manual_override
+    - group.z-wave
+    - group.all_automations
+    - sensor.light_sensor
+
+
+weather_view:
+  name: weather Information
+  view: yes
+  entities:
+    - group.weather
+
+exterior:
+  name: Exterior
+  view: no
+  control: hidden
+  entities:
+    - switch.exterior_post
+    - switch.engine_heater
+    - switch.ceiling_garage
+    - binary_sensor.entre_door
+    - binary_sensor.garage_door
+    - sensor.cellar_humidity
+    - sensor.cellar_temperature
+
+# Bear Stone View:
+#   name: Bear Stone Run
+#   view: yes
+#   icon: mdi:home
+#   entities:
+#     - persistent_notification.update_available
+#     - group.home_modes
+#     - group.family
+#     - group.weather
+#     - group.amps
+#     - group.Bedroom_lights
+#     - group.Kitchen_lights
+#     - group.Dinette_lights
+#     - group.living_room_lights
+#     - group.living_room_accents
+#     - group.dining_room_lights
+#     - group.foyer_lights
+#     - group.upstairs_lights
+#     - group.den_lights
+#     - group.hallway
+#     - group.office_lights
+#     - group.garage_lights
+#     - group.outdoor_pool_lights
+#     - group.outdoor_lights
+#     - group.all_switches
+#     - group.media_players
+#
+# Doors:
+#   view: yes
+#   icon: mdi:security-home
+#   entities:
+#     - group.family
+#     - group.garage_doors
+#
+#
+# Lights:
+#   view: yes
+#   icon: mdi:lightbulb
+#   entities:
+#     - group.home_modes
+#     - group.amps
+#     - group.interior_lights
+#     - group.outdoor_lights
+#     - group.Bedroom_lights
+#     - group.Kitchen_lights
+#     - group.Dinette_lights
+#     - group.living_room_lights
+#     - group.living_room_accents
+#     - group.dining_room_lights
+#     - group.foyer_lights
+#     - group.upstairs_lights
+#     - group.den_lights
+#     - group.office_lights
+#     - group.garage_lights
+#     - group.outdoor_pool_lights
+#     - group.outdoor_front_lights
+#     - group.all_switches
+#
+# Info:
+#   view: yes
+#   icon: mdi:settings
+#   entities:
+#     - group.family
+#     - group.home_modes
+#     - group.network
+#     - group.sensors
+#     - group.garage_doors
+#     - sun.sun
+#     - group.media_players
+#     - group.weather
+#     - group.all_lights
+#     - group.all_switches
+#     - group.all_automations
+#     - group.all_scripts

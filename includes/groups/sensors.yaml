@@ -1,0 +1,10 @@
+Sensors:
+  entities:
+    - binary_sensor.entre_door
+    - binary_sensor.garage_door
+    - sensor.cellar_humidity
+    - sensor.cellar_temperature
+    - sensor.light_sensor
+    - sensor.freezer_temperature
+    - sensor.fridge_temperature
+    - binary_sensor.kitchen_motion
