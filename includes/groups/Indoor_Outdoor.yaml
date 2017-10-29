@@ -5,9 +5,10 @@ Interior_Lights:
     - switch.interior_main_room
     - switch.interior_laundry
 
-Exterior_Lights:
+exterior_lights:
   entities:
     - switch.exterior_post
+    - switch.exterior_side_entry
 
 window_lights:
   name: Windows lights
@@ -45,3 +46,4 @@ wall_lights:
   entities:
     - switch.wall_main_room
     - switch.wall_dinner_room
+    - switch.wall_fire_place

@@ -17,7 +17,7 @@
     0b11000d03F243FE03000070:
       name: Front Door Hallway
     0b11000d03F243FE04000070:
-      name: Window Main room
+      name: Wall Fire Place
     0b11000d03F243FE05000070:
       name: Window Kitchen
     0b11000d03F243FE06000070:
@@ -42,3 +42,5 @@
       name: Interior Laundry
     0b11000d03F243FE0b000070:
       name: Wall dinner Room
+    0b11000d007cc0fa05000070:
+      name: Exterior Side Entry

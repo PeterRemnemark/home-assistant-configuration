@@ -43,6 +43,12 @@ switch.exterior_post:
   hidden: false
   icon: mdi:lava-lamp
   assumed_state: true
+switch.exterior_side_entry:
+  friendly_name: 'Exterior Side Entry'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lava-lamp
+  assumed_state: true
 
 switch.interior_dinner_room:
   friendly_name: 'Interior Dinner Room'
@@ -67,6 +73,13 @@ switch.interior_main_room:
 
 switch.wall_main_room:
   friendly_name: 'Wall Main Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+switch.wall_fire_place:
+  friendly_name: 'Wall Fire Place'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline

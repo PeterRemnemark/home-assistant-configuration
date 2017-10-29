@@ -13,6 +13,7 @@ default_view:
     - device_tracker.philips_iphone
     - group.morning_lights
     - group.home_modes
+    - group.exterior_lights
 
 mainroom_view:
   name: Main room
