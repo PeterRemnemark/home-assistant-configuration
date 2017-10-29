@@ -1,4 +1,4 @@
-z-wave:
+zwave_group:
   name: z-wave Information
   entities:
     - sensor.dinner_room_burglar

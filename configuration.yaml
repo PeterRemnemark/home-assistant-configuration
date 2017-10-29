@@ -135,9 +135,9 @@ input_boolean: !include includes/input_boolean.yaml
 # Merge List
 automation: !include_dir_merge_list includes/automation
 sensor: !include_dir_merge_list includes/sensor
-group: !include_dir_merge_named includes/groups
 
 #Merge named
 script: !include_dir_merge_named includes/scripts
+group: !include_dir_merge_named includes/groups
 
 #------------------------------------------------------

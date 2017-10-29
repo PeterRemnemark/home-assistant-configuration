@@ -43,9 +43,10 @@ information_view:
     - group.synology
     - group.speedtest_net
     - group.manual_override
-    - group.z-wave
+    - group.zwave_group
     - group.all_automations
     - sensor.light_sensor
+    - sensor.time_brightness
 
 
 weather_view:

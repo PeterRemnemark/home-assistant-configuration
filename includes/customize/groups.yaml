@@ -1,5 +1,5 @@
-group.aeon_group:
-  friendly_name: 'Aeon Group'
+group.zwave_group:
+  friendly_name: 'Z-Wave Group'
   emulated_hue_hidden: true
   hidden: false
   homebridge_hidden: true
@@ -8,7 +8,7 @@ group.aeon_group:
 group.all_remotes:
   friendly_name: 'All Remotes'
   emulated_hue_hidden: true
-  hidden: true
+  hidden: false
   homebridge_hidden: true
   haaska_hidden: true
 
@@ -66,6 +66,7 @@ group.location_katarina:
   hidden: false
   homebridge_hidden: true
   haaska_hidden: true
+  entity_picture: /local/katarina_192x192.png
 
 group.location_peter:
   friendly_name: 'Loction Peter'
@@ -73,6 +74,7 @@ group.location_peter:
   hidden: false
   homebridge_hidden: true
   haaska_hidden: true
+  entity_picture: /local/peter_192x192.png
 
 group.location_philip:
   friendly_name: 'Loction Philip'
@@ -80,6 +82,7 @@ group.location_philip:
   hidden: false
   homebridge_hidden: true
   haaska_hidden: true
+  entity_picture: /local/philip_192x192.png
 
 group.mainroom_view:
   friendly_name: 'Main Room View'
