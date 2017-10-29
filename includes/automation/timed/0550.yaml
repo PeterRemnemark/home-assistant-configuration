@@ -10,27 +10,27 @@
       entity_id: input_boolean.good_morning
       to: 'on'
       from: 'off'
-      condition:
-  condition: or
-  conditions:
-    - condition: state
-      entity_id: input_boolean.good_morning
-      state: 'on'
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: sensor.someone_home
-          state: 'yes'
-        - condition: state
-          entity_id: input_boolean.vacation_mode
-          state: 'off'
-        - condition: time
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - fri
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: input_boolean.good_morning
+        state: 'on'
+      - condition: and
+        conditions:
+          - condition: state
+            entity_id: sensor.someone_home
+            state: 'yes'
+          - condition: state
+            entity_id: input_boolean.vacation_mode
+            state: 'off'
+          - condition: time
+            weekday:
+              - mon
+              - tue
+              - wed
+              - thu
+              - fri
   action:
     - service: homeassistant.turn_on
       entity_id:
