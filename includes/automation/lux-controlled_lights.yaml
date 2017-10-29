@@ -27,7 +27,7 @@
 #     media_content_type: PLAYLIST
 
 # Turn on lights when dark inside and someone is home
-- alias: Turn on inside lights when luminance goes below 10 lux
+- alias: Turn on interior lights when luminance goes below 10 lux
   trigger:
     platform: numeric_state
     entity_id: sensor.dinner_room_luminance

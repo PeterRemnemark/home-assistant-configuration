@@ -8,3 +8,4 @@ Sensors:
     - sensor.freezer_temperature
     - sensor.fridge_temperature
     - binary_sensor.kitchen_motion
+    - sensor.time_brightness

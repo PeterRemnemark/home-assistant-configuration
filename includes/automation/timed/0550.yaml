@@ -1,8 +1,8 @@
 ######################################################################
-##  Stuff that needs to happen at 05:50am.
+##  start off all weekdays at 05:50am except if vacation or via Good Morning signal
 ######################################################################
 
-- alias: 'Timed 550.'
+- alias: 'Lights turn on at 05.50 or via good morning signal'
   trigger:
     - platform: time
       at: '05:50:00'
@@ -10,22 +10,28 @@
       entity_id: input_boolean.good_morning
       to: 'on'
       from: 'off'
-  condition:
+      condition:
+  condition: or
+  conditions:
     - condition: state
-      entity_id: sensor.someone_home
-      state: 'yes'
-    - condition: state
-      entity_id: input_boolean.vacation_mode
-      state: 'off'
-    - condition: time
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
+      entity_id: input_boolean.good_morning
+      state: 'on'
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: sensor.someone_home
+          state: 'yes'
+        - condition: state
+          entity_id: input_boolean.vacation_mode
+          state: 'off'
+        - condition: time
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
 
-  action:
     - service: homeassistant.turn_on
       entity_id:
         - group.morning_lights
