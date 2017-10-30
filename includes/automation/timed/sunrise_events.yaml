@@ -26,19 +26,32 @@
        {{ states.sun.sun.state == 'above_horizon' }}
     - service: homeassistant.turn_off
       entity_id:
-        - group.morning_lights
-    - condition: state
-      entity_id: input_boolean.guest_mode
-      state: 'off'
-    - service: switch.turn_off
-      entity_id:
-        - switch.window_office
-    - service: homeassistant.turn_off
-      entity_id:
         - group.exterior_lights
     - service: input_boolean.turn_off
       entity_id:
-        # - input_boolean.medicine
-        # - input_boolean.daylight_override
         - input_boolean.night_mode
         - input_boolean.guest_mode
+       
+    - wait_template: >-
+       {{ states.sensor.light_sensor == 'Dark' }}
+    - service: homeassistant.turn_on
+      entity_id:
+        - group.wall_lights
+
+    - wait_template: >-
+       {{ states.sensor.light_sensor == 'Shade' }}
+    - service: homeassistant.turn_off
+      entity_id:
+        - switch.interior_dinner_room
+        - switch.interior_main_room
+        - switch.interior_laundry
+        - group.windows_lights
+
+    - wait_template: >-
+       {{ states.sensor.light_sensor == 'Bright' }}
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.window_lights
+        - group.interior_ligts
+        - group.wall_lights
+        - group.ceiling_lights
