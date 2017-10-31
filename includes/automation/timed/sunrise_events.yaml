@@ -31,15 +31,15 @@
       entity_id:
         - input_boolean.night_mode
         - input_boolean.guest_mode
-       
+
     - wait_template: >-
-       {{ states.sensor.light_sensor == 'Dark' }}
+       {{ states.sensor.light_sensor.state == 'Dark' }}
     - service: homeassistant.turn_on
       entity_id:
         - group.wall_lights
 
     - wait_template: >-
-       {{ states.sensor.light_sensor == 'Shade' }}
+       {{ states.sensor.light_sensor.state == 'Shade' }}
     - service: homeassistant.turn_off
       entity_id:
         - switch.interior_dinner_room
@@ -48,7 +48,7 @@
         - group.windows_lights
 
     - wait_template: >-
-       {{ states.sensor.light_sensor == 'Bright' }}
+       {{ states.sensor.light_sensor.state == 'Bright' }}
     - service: homeassistant.turn_off
       entity_id:
         - group.window_lights
