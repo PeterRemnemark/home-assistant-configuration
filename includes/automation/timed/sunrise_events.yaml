@@ -31,6 +31,7 @@
       entity_id:
         - input_boolean.night_mode
         - input_boolean.guest_mode
+        - input_boolean.good_morning
 
     - wait_template: >-
        {{ states.sensor.light_sensor.state == 'Dark' }}

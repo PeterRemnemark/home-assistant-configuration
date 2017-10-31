@@ -35,10 +35,12 @@
     - service: homeassistant.turn_on
       entity_id:
         - group.morning_lights
+    - service: input_boolean.turn_off
+      entity_id:
+        - input_boolean.night_mode
+        - input_boolean.good_morning
     - condition: state
       entity_id: input_boolean.guest_mode
       state: 'off'
     - service: switch.turn_on
       entity_id: switch.window_office
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.night_mode
