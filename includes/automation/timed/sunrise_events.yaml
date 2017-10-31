@@ -43,9 +43,7 @@
        {{ states.sensor.light_sensor.state == 'Shade' }}
     - service: homeassistant.turn_off
       entity_id:
-        - switch.interior_dinner_room
-        - switch.interior_main_room
-        - switch.interior_laundry
+        - group.interior_lights
         - group.windows_lights
 
     - wait_template: >-

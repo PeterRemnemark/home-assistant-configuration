@@ -32,8 +32,8 @@
       name: Wall Main room
     0b11000d03F243FE0f000070:
       name: Window dinner room
-    0b11000d03F243FE10000070:
-      name: Interior dinner room
+    # 0b11000d03F243FE10000070:
+    #   name: Interior dinner room
     0b11000d007cc0fa04000070:
       name: Ceiling Garage
     0b11000d03F243FE0e000070:

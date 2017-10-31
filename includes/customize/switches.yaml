@@ -50,13 +50,6 @@ switch.exterior_side_entry:
   icon: mdi:lava-lamp
   assumed_state: true
 
-switch.interior_dinner_room:
-  friendly_name: 'Interior Dinner Room'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lightbulb-outline
-  assumed_state: false
-
 switch.front_door_hallway:
   friendly_name: 'Interior Entry'
   emulated_hue_hidden: false
@@ -101,20 +94,6 @@ switch.window_kitchen:
 
 switch.window_laundry:
   friendly_name: 'Window Laundry'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lightbulb-outline
-  assumed_state: false
-
-light.window_main_room_1:
-  friendly_name: 'Window Main Room 1'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lightbulb-outline
-  assumed_state: false
-
-light.window_main_room_2:
-  friendly_name: 'Window Main Room 2'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline
