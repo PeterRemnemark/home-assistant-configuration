@@ -64,6 +64,7 @@ exterior:
     - switch.exterior_post
     - switch.engine_heater
     - switch.ceiling_garage
+    - switch.exterior_garage
     - binary_sensor.entre_door
     - binary_sensor.garage_door
     - sensor.cellar_humidity

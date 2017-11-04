@@ -43,8 +43,16 @@ switch.exterior_post:
   hidden: false
   icon: mdi:lava-lamp
   assumed_state: true
+
 switch.exterior_side_entry:
   friendly_name: 'Exterior Side Entry'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lava-lamp
+  assumed_state: true
+
+switch.exterior_garage:
+  friendly_name: 'Exterior Garage'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lava-lamp

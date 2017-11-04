@@ -21,7 +21,8 @@
     - service: homeassistant.turn_off
       entity_id:
         - group.window_lights
-        - group.interior_ligts
+        - group.window_main_room_lights
+        - group.Interior_lights
         - group.wall_lights
         - group.ceiling_lights
     - service: input_boolean.turn_on

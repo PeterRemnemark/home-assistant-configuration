@@ -40,7 +40,7 @@
         - group.wall_lights
 
     - wait_template: >-
-       {{ states.sensor.light_sensor.state == 'Shade' }}
+       {{ states.sensor.light_sensor.state == 'Shade' or states.sensor.light_sensor.state == 'Bright' }}
     - service: homeassistant.turn_off
       entity_id:
         - group.interior_lights
