@@ -21,9 +21,20 @@
     - service: homeassistant.turn_off
       entity_id:
         - group.window_lights
+    - delay: 00:00:20
+    - service: homeassistant.turn_off
+      entity_id:
         - group.window_main_room_lights
+    - service: homeassistant.turn_off
+      entity_id:
         - group.interior_lights
+    - delay: 00:00:20
+    - service: homeassistant.turn_off
+      entity_id:
         - group.wall_lights
+    - delay: 00:00:20
+    - service: homeassistant.turn_off
+      entity_id:
         - group.ceiling_lights
     - service: input_boolean.turn_on
       entity_id: input_boolean.night_mode

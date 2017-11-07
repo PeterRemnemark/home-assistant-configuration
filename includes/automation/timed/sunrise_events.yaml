@@ -44,7 +44,7 @@
     - service: homeassistant.turn_off
       entity_id:
         - group.interior_lights
-        - group.windows_lights
+        - group.window_lights
 
     - wait_template: >-
        {{ states.sensor.light_sensor.state == 'Bright' }}

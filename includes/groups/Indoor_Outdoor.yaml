@@ -1,4 +1,4 @@
-Interior_Lights:
+interior_lights:
   entities:
     - switch.front_door_hallway
     - light.interior_dinner_room_1
