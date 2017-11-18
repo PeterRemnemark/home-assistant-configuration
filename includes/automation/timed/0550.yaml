@@ -32,9 +32,7 @@
               - thu
               - fri
   action:
-    - service: homeassistant.turn_on
-      entity_id:
-        - group.morning_lights
+    - service: script.morning_lights
     - service: input_boolean.turn_off
       entity_id:
         - input_boolean.night_mode

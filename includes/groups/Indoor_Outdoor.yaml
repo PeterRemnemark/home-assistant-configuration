@@ -19,6 +19,8 @@ window_lights:
     - switch.window_master_bedroom
     - switch.window_philip
     - switch.window_laundry
+    - light.window_main_room_1
+    - light.window_main_room_2
 
 window_main_room_lights:
   name: Window Main Room Lights
@@ -26,13 +28,13 @@ window_main_room_lights:
     - light.window_main_room_1
     - light.window_main_room_2
 
-morning_lights:
-  name: Morning Lights
-  entities:
-    - switch.window_kitchen
-    - switch.window_dinner_room
-    - switch.front_door_hallway
-    - switch.wall_main_room
+# morning_lights:
+#   name: Morning Lights
+#   entities:
+#     - switch.window_kitchen
+#     - switch.window_dinner_room
+#     - switch.front_door_hallway
+#     - switch.wall_main_room
 
 ceiling_lights:
   name: Ceiling Lights

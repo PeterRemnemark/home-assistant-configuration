@@ -20,13 +20,7 @@ laundry_lights_timer_helper:
           {%- elif is_state('sensor.light_sensor', 'Night') -%}
             switch.window_laundry
           {% endif %}
-    - service: switch.turn_off
-      data_template:
-        entity_id: >
-          {% if is_state('switch.window_laundry', 'on') %}
-            switch.window_laundry
-          {% endif %}
-
+  
     # - service: light.turn_off
     #   data:
     #     entity_id: light.workshoplight_level_6_0

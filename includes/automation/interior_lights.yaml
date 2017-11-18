@@ -10,7 +10,7 @@
   action:
     service: homeassistant.turn_on
     entity_id:
-    - group.interior_ligts
+    - group.interior_lights
     - group.wall_lights
 
 # Turn the inside lights off when noone is home
@@ -25,5 +25,5 @@
   action:
     service: homeassistant.turn_off
     entity_id:
-    - group.interior_ligts
+    - group.interior_lights
     - group.wall_lights

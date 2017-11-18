@@ -49,7 +49,7 @@
         - switch.front_door_hallway
         - switch.interior_main_room
         - switch.wall_main_room
-    - service: lights.turn_on
+    - service: light.turn_on
       entity_id:
         - light.interior_dinner_room_1
       data_template:

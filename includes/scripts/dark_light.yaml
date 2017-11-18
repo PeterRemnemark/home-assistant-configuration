@@ -1,0 +1,15 @@
+
+
+# - service: homeassistant.turn_on
+#   entity_id:
+#     - group.window_lights
+# - service: light.turn_on
+#   entity_id:
+#     - light.window_main_room_1
+#     - light.window_main_room_2
+#   data_template:
+#     brightness: "{{ states('sensor.time_brightness')|int }}"
+#
+# - service: homeassistant.turn_on
+#   entity_id:
+#     - group.wall_lights

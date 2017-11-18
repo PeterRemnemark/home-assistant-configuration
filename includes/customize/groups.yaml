@@ -40,7 +40,7 @@ group.information_view:
   homebridge_hidden: true
   haaska_hidden: true
 
-group.interior_ligts:
+group.interior_lights:
   friendly_name: 'Interior Lights'
   hidden: false
   emulated_hue_hidden: false

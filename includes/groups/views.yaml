@@ -6,7 +6,7 @@ default_view:
     - group.window_lights
     - group.Interior_lights
     - group.ceiling_lights
-    - group.window_main_room_lights
+#    - group.window_main_room_lights
     - group.wall_lights
     - device_tracker.petersiphone
     - device_tracker.katarinasiphone
@@ -19,7 +19,9 @@ mainroom_view:
   name: Main room
   view: yes
   entities:
-    - group.window_main_room_lights
+    - light.window_main_room_1
+    - light.window_main_room_2
+#    - group.window_main_room_lights
     - switch.wall_main_room
     - switch.interior_main_room
     - media_player.apple_tv_in_main_room
