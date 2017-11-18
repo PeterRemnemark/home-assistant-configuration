@@ -5,7 +5,7 @@
 #     entities:
 #       - group.outside
 #       - group.window_lights
-#       - group.interior_ligts
+#       - group.interior_lights
 #       - group.ceiling_lights
 #       - group.window_main_room_lights
 # #      - sensor.yr_symbol

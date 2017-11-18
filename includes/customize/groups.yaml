@@ -98,12 +98,6 @@ group.manual_override:
   homebridge_hidden: true
   haaska_hidden: true
 
-group.morning_lights:
-  friendly_name: 'Morning Lights'
-  hidden: false
-  emulated_hue_hidden: false
-  haaska_hidden: false
-
 group.outside:
   friendly_name: 'Group Outside'
   emulated_hue_hidden: true

@@ -103,6 +103,6 @@
     service: homeassistant.turn_off
     entity_id:
     - group.window_lights
-    - group.interior_ligts
+    - group.interior_lights
     - group.wall_lights
     - group.window_main_room_lights
