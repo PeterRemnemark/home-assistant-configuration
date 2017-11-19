@@ -8,11 +8,18 @@ default_view:
     - group.ceiling_lights
 #    - group.window_main_room_lights
     - group.wall_lights
-    - device_tracker.petersiphone
-    - device_tracker.katarinasiphone
-    - device_tracker.philips_iphone
+    - sensor.location_peter
+    - sensor.location_katarina
+    - sensor.location_philip
+    # - device_tracker.petersiphone
+    # - device_tracker.katarinasiphone
+    # - device_tracker.philips_iphone
     - group.home_modes
     - group.exterior_lights
+    - sensor.light_sensor
+    - sensor.time_brightness
+    - sensor.onlyone_home
+    - sensor.someone_home
 
 mainroom_view:
   name: Main room
@@ -47,8 +54,6 @@ information_view:
     - group.manual_override
     - group.zwave_group
     - group.all_automations
-    - sensor.light_sensor
-    - sensor.time_brightness
 
 
 weather_view:

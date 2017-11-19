@@ -50,35 +50,35 @@ sensor.fridge_temperature:
   haaska_hidden: true
 
 sensor.location_katarina:
-  friendly_name: 'Location Katarina'
+  friendly_name: 'Katarina'
   emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
   haaska_hidden: true
 
 sensor.location_philip:
-  friendly_name: 'Location Philip'
+  friendly_name: 'Philip'
   emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
   haaska_hidden: true
 
 sensor.location_peter:
-  friendly_name: 'Location Peter'
+  friendly_name: 'Peter'
   emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
   haaska_hidden: true
 
 sensor.onlyone_home:
-  friendly_name: 'Only One Home'
+  friendly_name: 'Only One Home?'
   emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
   haaska_hidden: true
 
 sensor.someone_home:
-  friendly_name: 'Someone Home'
+  friendly_name: 'Someone Home?'
   emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
