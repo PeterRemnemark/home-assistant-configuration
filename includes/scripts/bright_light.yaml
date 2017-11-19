@@ -1,8 +1,23 @@
-
+############################################################
 #
-# service: homeassistant.turn_off
-# entity_id:
-# - group.window_lights
-# - group.interior_lights
-# - group.wall_lights
-# - group.window_main_room_lights
+# Bright Lights
+#
+############################################################
+
+bright_lights:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.window_lights
+    - delay: 00:00:10
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.interior_lights
+    - delay: 00:00:10
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.wall_lights
+    - delay: 00:00:10
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.ceiling_lights

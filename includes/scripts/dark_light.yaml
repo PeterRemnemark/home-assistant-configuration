@@ -35,4 +35,4 @@ dark_lights:
           {%- if now().strftime('%H%M')|int < 1000 -%}
             switch.turn_on
           {% endif %}
-      data: switch.window_master_bedroom
+      entity_id: switch.window_master_bedroom
