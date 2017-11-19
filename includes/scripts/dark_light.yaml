@@ -31,8 +31,8 @@ dark_lights:
         - switch.wall_dinner_room
         - switch.wall_fire_place
         - switch.wall_main_room
-    - service_template: >
-          {%- if now().strftime('%H%M')|int < 1000 -%}
-            switch.turn_on
+    - service_template: >-
+          {% if now().strftime('%H%M')|int > 1000 %}
+            homeassistant.turn_on
           {% endif %}
       entity_id: switch.window_master_bedroom
