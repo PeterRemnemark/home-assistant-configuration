@@ -1,8 +1,11 @@
 - platform: lg_netcast
   host: !secret media_player_lgtv
   access_token: !secret media_player_lgtv_token
+# - platform: denonavr
+#   host: !secret media_player_marantz
+#   show_all_sources: true
 - platform: denonavr
-  host: !secret media_player_marantz
+  host: !secret media_player_mainroom
   show_all_sources: true
 - platform: plex
   entity_namespace: 'plex-ds'
