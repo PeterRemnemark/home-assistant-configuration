@@ -20,8 +20,6 @@ location_philip:
     - device_tracker.philipswifiiphone
 
 family:
-  name: "Family"
-  view: no
   entities:
     - sensor.location_peter
     - sensor.location_katarina
