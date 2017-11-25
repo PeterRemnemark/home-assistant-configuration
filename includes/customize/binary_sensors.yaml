@@ -1,7 +1,7 @@
 # Binary Sensors
 #
-binary_sensor.entre_door:
-  friendly_name: 'Front door'
+binary_sensor.front_door_motion:
+  friendly_name: 'Front door motion'
   emulated_hue_hidden: true
   hidden: false
   homebridge_hidden: false
@@ -9,6 +9,20 @@ binary_sensor.entre_door:
 
 binary_sensor.garage_door:
   friendly_name: 'Garage door'
+  emulated_hue_hidden: true
+  hidden: false
+  homebridge_hidden: false
+  haaska_hidden: true
+
+binary_sensor.laundry_door:
+  friendly_name: 'Laundry door'
+  emulated_hue_hidden: true
+  hidden: false
+  homebridge_hidden: false
+  haaska_hidden: true
+
+binary_sensor.front_door:
+  friendly_name: 'Front door'
   emulated_hue_hidden: true
   hidden: false
   homebridge_hidden: false

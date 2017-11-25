@@ -7,8 +7,8 @@
       name: Garage door
       device_class: opening
     0b110015007cc0fa0a010f60:
-      name: Entré door
-      device_class: opening
+      name: Front door Motion
+      device_class: Motion
     0913000607e426019360:
       name: Kitchen Motion
       device_class: Motion

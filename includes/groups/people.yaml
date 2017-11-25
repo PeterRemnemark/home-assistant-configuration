@@ -18,3 +18,11 @@ location_philip:
   entities:
     - device_tracker.philips_iphone
     - device_tracker.philipswifiiphone
+
+family:
+  name: "Family"
+  view: no
+  entities:
+    - sensor.location_peter
+    - sensor.location_katarina
+    - sensor.location_philip

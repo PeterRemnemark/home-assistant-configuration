@@ -35,6 +35,20 @@ sensor.cellar_temperature:
   icon: mdi:temperature-celsius
   haaska_hidden: true
 
+sensor.mainroom_temperature:
+  friendly_name: 'Main Temperatur'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:temperature-celsius
+  haaska_hidden: true
+
+sensor.exterior_porch_temperature:
+  friendly_name: 'Exterior Porch Temperatur'
+  emulated_hue_hidden: true
+  hidden: false
+  icon: mdi:temperature-celsius
+  haaska_hidden: true
+
 sensor.freezer_temperature:
   friendly_name: 'Freezer Temperature'
   emulated_hue_hidden: true

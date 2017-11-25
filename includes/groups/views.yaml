@@ -2,18 +2,12 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
+    - group.family
     - group.exterior
     - group.window_lights
     - group.Interior_lights
     - group.ceiling_lights
-#    - group.window_main_room_lights
     - group.wall_lights
-    - sensor.location_peter
-    - sensor.location_katarina
-    - sensor.location_philip
-    # - device_tracker.petersiphone
-    # - device_tracker.katarinasiphone
-    # - device_tracker.philips_iphone
     - group.home_modes
     - group.exterior_lights
     - sensor.light_sensor
@@ -32,7 +26,8 @@ mainroom_view:
     - switch.interior_main_room
     - media_player.apple_tv_in_main_room
     - media_player.lg_tv_remote
-    - media_player.marantzsr5007
+#    - media_player.marantzsr5007
+    - media_player.marantz_nr1603
 
 kitchen_view:
   name: Kitchen
@@ -71,8 +66,10 @@ exterior:
     - switch.engine_heater
     - switch.ceiling_garage
     - switch.exterior_garage
-    - binary_sensor.entre_door
+    - binary_sensor.front_door_motion
+    - binary_sensor.front_door
     - binary_sensor.garage_door
+    - binary_sensor.laundry_door
     - sensor.cellar_humidity
     - sensor.cellar_temperature
 
