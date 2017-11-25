@@ -8,7 +8,6 @@ light.ceiling_dinner_room:
   icon: mdi:ceiling-light
   homebridge_hidden: false
 
-
 light.window_main_room_1:
   friendly_name: 'Window Main Room 1'
   emulated_hue_hidden: false
@@ -25,6 +24,20 @@ light.window_main_room_2:
 
 light.interior_dinner_room_1:
   friendly_name: 'Interior Dinner Room 1'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+light.interior_main_room:
+  friendly_name: 'Interior Main Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+  
+light.window_office:
+  friendly_name: 'Window Office'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline

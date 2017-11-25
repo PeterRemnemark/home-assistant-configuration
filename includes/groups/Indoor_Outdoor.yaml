@@ -2,7 +2,7 @@ interior_lights:
   entities:
     - switch.front_door_hallway
     - light.interior_dinner_room_1
-    - switch.interior_main_room
+    - light.interior_main_room
     - switch.interior_laundry
 
 exterior_lights:
@@ -14,7 +14,7 @@ window_lights:
   name: Windows lights
   entities:
     - switch.window_kitchen
-    - switch.window_office
+    - light.window_office
     - switch.window_dinner_room
     - switch.window_master_bedroom
     - switch.window_philip

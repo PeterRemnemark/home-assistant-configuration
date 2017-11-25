@@ -1,10 +1,10 @@
 # Turn off house when going to bed
 - alias: Turn off house when going to bed
   trigger:
-    - platform: state
-      entity_id: sensor.petersiphone_battery_state
-      from: "Unplugged"
-      to: "Charging"
+    # - platform: state
+    #   entity_id: sensor.petersiphone_battery_state
+    #   from: "Unplugged"
+    #   to: "Charging"
     - platform: state
       entity_id: input_boolean.good_night
       to: 'on'

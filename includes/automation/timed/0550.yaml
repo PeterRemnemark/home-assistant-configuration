@@ -40,5 +40,8 @@
     - condition: state
       entity_id: input_boolean.guest_mode
       state: 'off'
-    - service: switch.turn_on
-      entity_id: switch.window_office
+    - service: light.turn_on
+      entity_id:
+        - light.window_office
+      data_template:
+        brightness: "{{ states('sensor.time_brightness')|int }}"

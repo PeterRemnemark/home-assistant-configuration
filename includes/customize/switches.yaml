@@ -65,13 +65,6 @@ switch.front_door_hallway:
   icon: mdi:lightbulb-outline
   assumed_state: true
 
-switch.interior_main_room:
-  friendly_name: 'Interior Main Room'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lightbulb-outline
-  assumed_state: false
-
 switch.wall_main_room:
   friendly_name: 'Wall Main Room'
   emulated_hue_hidden: false
@@ -109,13 +102,6 @@ switch.window_laundry:
 
 switch.window_master_bedroom:
   friendly_name: 'Window Master Bedroom'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lightbulb-outline
-  assumed_state: false
-
-switch.window_office:
-  friendly_name: 'Window Office'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline

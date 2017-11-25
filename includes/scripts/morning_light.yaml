@@ -15,3 +15,8 @@ morning_lights:
         - switch.wall_dinner_room
         - switch.wall_fire_place
         - switch.wall_main_room
+    # - service: light.turn_on
+    #   entity_id:
+    #     - light.front_door_hallway
+    #   data_template:
+    #     brightness: "{{ states('sensor.time_brightness')|int }}"

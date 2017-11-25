@@ -13,7 +13,7 @@ main room lights:
     - light.window_main_room_1
     - light.window_main_room_2
     - switch.wall_main_room
-    - switch.interior_main_room
+    - light.interior_main_room
 
 # main room accents:
 #   entities:
@@ -23,7 +23,7 @@ main room lights:
 
 office lights:
   entities:
-    - switch.window_office
+    - light.window_office
 
 dinner room lights:
   entities:

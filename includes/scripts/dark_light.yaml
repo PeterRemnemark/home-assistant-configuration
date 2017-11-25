@@ -11,7 +11,10 @@ dark_lights:
         - light.window_main_room_1
         - light.window_main_room_2
         - light.interior_dinner_room_1
-        - light.interior_philip_1
+#        - light.front_door_hallway
+        - light.interior_main_room
+        - light.window_office
+#        - light.interior_philip_1
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
     - service: switch.turn_on
@@ -19,13 +22,11 @@ dark_lights:
         - switch.window_dinner_room
         - switch.window_kitchen
         - switch.window_laundry
-        - switch.window_office
         - switch.window_philip
     - service: switch.turn_on
       entity_id:
-        - switch.front_door_hallway
         - switch.interior_laundry
-        - switch.interior_main_room
+        - switch.front_door_hallway
     - service: switch.turn_on
       entity_id:
         - switch.wall_dinner_room
