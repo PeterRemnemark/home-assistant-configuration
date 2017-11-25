@@ -1,7 +1,74 @@
 # ###################################
 # ##  Scripts Section
 # ###################################
-#
+
+
+script.bright_lights:
+  friendly_name: 'Bright Light'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:script
+  haaska_hidden: false
+
+
+script.dark_lights:
+  friendly_name: 'Dark Light'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:script
+  haaska_hidden: false
+
+script.morning_lights:
+  friendly_name: 'Morning Light'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:script
+  haaska_hidden: false
+
+script.shade_lights:
+  friendly_name: 'Shade Light'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:script
+  haaska_hidden: false
+
+script.run_speedtest:
+  friendly_name: 'Run Speed Test'
+  emulated_hue_hidden: True
+  hidden: false
+  icon: mdi:script
+  haaska_hidden: True
+
+script.garage_lights_timer:
+  friendly_name: 'Garage Light Timer'
+  emulated_hue_hidden: True
+  hidden: true
+  icon: mdi:script
+  haaska_hidden: True
+
+script.garage_lights_timer_helper:
+  friendly_name: 'Garage Light Timer Helper'
+  emulated_hue_hidden: True
+  hidden: true
+  icon: mdi:script
+  haaska_hidden: True
+
+script.laundry_lights_timer:
+  friendly_name: 'Laundry Light Timer'
+  emulated_hue_hidden: True
+  hidden: true
+  icon: mdi:script
+  haaska_hidden: True
+
+script.laundry_lights_timer_helper:
+  friendly_name: 'Laundry Light Timer Helper'
+  emulated_hue_hidden: True
+  hidden: true
+  icon: mdi:script
+  haaska_hidden: True
+
+
+
 # script.dog_bark:
 #   friendly_name: 'Dog Bark'
 #   emulated_hue_hidden: false

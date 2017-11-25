@@ -107,6 +107,11 @@ zwave:
   usb_path: /dev/ttyACM0
   new_entity_ids: true
 
+dcz:
+  ws_url: !secret dcz_ws_url
+  api_key: !secret dcz_api_key
+  host: !secret dcz_host
+
 alexa:
 
 emulated_hue:
