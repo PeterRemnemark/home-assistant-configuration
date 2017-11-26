@@ -14,6 +14,8 @@ default_view:
     - sensor.time_brightness
     - sensor.onlyone_home
     - sensor.someone_home
+    - sensor.exterior_porch_temperature
+    - sensor.mainroom_temperature
 
 mainroom_view:
   name: Main room

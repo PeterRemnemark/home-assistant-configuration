@@ -6,18 +6,21 @@
 ##
 ###################################
 
-- alias: 'Lights turn on at 05.50 or via good morning signal'
+- alias: 'Change the brightness during the day'
   trigger:
-    - platform: time
-      at: '07:00:00'
-    - platform: time
-      at: '09:00:00'
-    - platform: time
-      at: '17:00:00'
-    - platform: time
-      at: '20:30:00'
-    - platform: time
-      at: '22:00:00'
+    # - platform: time
+    #   at: '07:00:00'
+    # - platform: time
+    #   at: '09:00:00'
+    # - platform: time
+    #   at: '17:00:00'
+    # - platform: time
+    #   at: '20:30:00'
+    # - platform: time
+    #   at: '22:00:00'
+    - platform: state
+      entity_id: sensor.time_brightness
+
   condition:
     - condition: state
       entity_id: sensor.someone_home
