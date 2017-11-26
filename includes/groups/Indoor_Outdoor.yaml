@@ -16,7 +16,7 @@ window_lights:
     - switch.window_kitchen
     - light.window_office
     - switch.window_dinner_room
-    - switch.window_master_bedroom
+    - light.window_master_bedroom
     - switch.window_philip
     - switch.window_laundry
     - light.window_main_room_1

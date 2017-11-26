@@ -34,6 +34,8 @@ dark_lights:
         - switch.wall_main_room
     - service_template: >-
           {% if now().strftime('%H%M')|int > 1000 %}
-            homeassistant.turn_on
+            light.turn_on
           {% endif %}
-      entity_id: switch.window_master_bedroom
+      entity_id: light.window_master_bedroom
+      data_template:
+        brightness: "{{ states('sensor.time_brightness')|int }}"

@@ -1,7 +1,7 @@
 master bedroom lights:
 #  control: hidden
   entities:
-    - switch.window_master_bedroom
+    - light.window_master_bedroom
 
 kitchen lights:
 #  control: hidden

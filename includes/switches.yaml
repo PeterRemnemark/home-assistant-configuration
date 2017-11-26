@@ -10,10 +10,10 @@
 #      name: Entrédörren
     0b11000d007cc0fa01000070:
       name: Engine Heater
-    0b11000d03F243FE01000070:
-      name: Window Office
-    0b11000d03F243FE02000070:
-      name: Interior Main room
+    # 0b11000d03F243FE01000070:
+    #   name: Window Office
+    # 0b11000d03F243FE02000070:
+    #   name: Interior Main room
     0b11000d03F243FE03000070:
       name: Front Door Hallway
     0b11000d03F243FE04000070:
@@ -22,8 +22,8 @@
       name: Window Kitchen
     0b11000d03F243FE06000070:
       name: Window Philip
-    0b11000d03F243FE07000070:
-      name: Window Master Bedroom
+    # 0b11000d03F243FE07000070:
+    #   name: Window Master Bedroom
     0b11000d03F243FE08000070:
       name: Exterior post
     0b11000d03F243FE09000070:
