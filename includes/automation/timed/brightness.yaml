@@ -1,0 +1,85 @@
+###################################
+##  Brighness events
+##
+## Changing the brighness during the day if the light sensor remains in same state i.e. dark for the whole day
+## Schedule according to my brighness template sensor
+##
+###################################
+
+- alias: 'Lights turn on at 05.50 or via good morning signal'
+  trigger:
+    - platform: time
+      at: '07:00:00'
+    - platform: time
+      at: '09:00:00'
+    - platform: time
+      at: '17:00:00'
+    - platform: time
+      at: '20:30:00'
+    - platform: time
+      at: '22:00:00'
+  condition:
+    - condition: state
+      entity_id: sensor.someone_home
+      state: 'yes'
+  action:
+    - service_template: >-
+        {% if is_state ("sensor.light_sensor", "Shade") %}
+          script.shade_lights
+        {% elif is_state ("sensor.light_sensor", "Dark") %}
+          script.dark_lights
+        {% else %}
+          unknown
+        {% endif %}
+
+##############################################################################
+###  Detect when lights are turned on and adjust them accordingly based on time.
+###  Code by @JesseWebDotCom
+###
+### != implicates that those shall not be included in the brightness action
+####
+##############################################################################
+# - alias: detect lights and adjust the brightness when turned on based on time
+#   trigger:
+#     - platform: event
+#       event_type: state_changed
+#
+#   condition:
+#     - condition: state
+#       entity_id: group.family
+#       state: 'home'
+#     - condition: state
+#       entity_id: input_boolean.alert_mode
+#       state: 'off'
+#     - condition: template
+#       value_template: "{{ trigger.event.data is not none }}"
+#     - condition: template
+#       value_template: "{{ trigger.event.data.entity_id is not none }}"
+#     - condition: template
+#       value_template: "{{ trigger.event.data.entity_id.split('.')[0] == 'light' }}"
+#     - condition: template
+#       value_template: "{{ trigger.event.data.entity_id.split('_')[0] != 'light.tv' }}"
+#     - condition: template
+#       value_template: "{{ trigger.event.data.entity_id.split('_')[0] != 'light.couch' }}"
+#     - condition: template
+#       value_template: "{{ trigger.event.data.entity_id.split('_')[0] != 'light.office' }}"
+#     - condition: template
+#       value_template: "{{ trigger.event.data.new_state.state == 'on' }}"
+#     - condition: template
+#       value_template: "{{ trigger.event.data.old_state.state == 'off' }}"
+#
+#   action:
+#     - service: light.turn_on
+#       data_template:
+#         entity_id: "{{ trigger.event.data.entity_id }}"
+#         brightness: >
+#           {% set hour=states("sensor.time").split(':')[0] | int %}
+#           {%- if hour >= 5 and hour < 8  -%}
+#             50
+#           {%- elif hour >= 8 and hour <20  -%}
+#             255
+#           {%- elif hour >= 20 and hour <24  -%}
+#             40
+#           {%- else -%}
+#             15
+#           {%- endif %}
