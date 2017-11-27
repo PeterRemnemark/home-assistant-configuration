@@ -11,3 +11,14 @@
   allow_unreachable: true
   allow_in_emulated_hue: false
   allow_hue_groups: false
+
+
+- platform: yeelight
+  devices:
+    192.168.1.147:
+      name: Interior Main Room
+      # transition: 1000
+      # use_music_mode: True #(defaults to False)
+      # save_on_change: False #(defaults to True)
+    192.168.1.148:
+      name: Interior Philip Room

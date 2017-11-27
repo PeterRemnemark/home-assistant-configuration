@@ -4,6 +4,7 @@ interior_lights:
     - light.interior_dinner_room_1
     - light.interior_main_room
     - switch.interior_laundry
+    - light.interior_philip_room
 
 exterior_lights:
   entities:

@@ -13,8 +13,14 @@ morning_lights:
         - switch.window_laundry
         - switch.front_door_hallway
         - switch.wall_dinner_room
-        - switch.wall_fire_place
+    #    - switch.wall_fire_place
         - switch.wall_main_room
+    - service: light.turn_on
+      entity_id:
+        - light.interior_philip_room
+      data_template:
+        brightness: "{{ states('sensor.time_brightness')|int }}"
+        color_temp: "320"  
     # - service: light.turn_on
     #   entity_id:
     #     - light.front_door_hallway
