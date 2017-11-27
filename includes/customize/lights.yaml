@@ -36,6 +36,13 @@ light.interior_main_room:
   icon: mdi:lightbulb-outline
   assumed_state: false
 
+light.interior_philip_room:
+  friendly_name: 'Interior Philip Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
 light.window_office:
   friendly_name: 'Window Office'
   emulated_hue_hidden: false

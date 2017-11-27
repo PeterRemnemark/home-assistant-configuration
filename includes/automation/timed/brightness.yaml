@@ -22,9 +22,22 @@
       entity_id: sensor.time_brightness
 
   condition:
-    - condition: state
-      entity_id: sensor.someone_home
-      state: 'yes'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.someone_home
+        state: 'yes'
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+      - condition: time
+        after: '08:00:00'
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
   action:
     - service_template: >-
         {% if is_state ("sensor.light_sensor", "Shade") %}
