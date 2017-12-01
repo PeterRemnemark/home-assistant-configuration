@@ -15,13 +15,20 @@ morning_lights:
         - switch.wall_dinner_room
     #    - switch.wall_fire_place
         - switch.wall_main_room
+<<<<<<< HEAD
     - delay: '00:50:00'
+=======
+>>>>>>> db27a8b9e5e88533b91c312c1c519d3b06d2cad0
     - service: light.turn_on
       entity_id:
         - light.interior_philip_room
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
+<<<<<<< HEAD
         color_temp: "320"
+=======
+        color_temp: "320"  
+>>>>>>> db27a8b9e5e88533b91c312c1c519d3b06d2cad0
     # - service: light.turn_on
     #   entity_id:
     #     - light.front_door_hallway
