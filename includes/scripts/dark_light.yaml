@@ -17,7 +17,7 @@ dark_lights:
 #        - light.interior_philip_1
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
-        color_temp: "320"
+        color_temp: "342"
     - service: switch.turn_on
       entity_id:
         - switch.window_dinner_room
@@ -40,7 +40,7 @@ dark_lights:
       entity_id: light.window_master_bedroom
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
-        color_temp: "320"
+        color_temp: "342"
     - service_template: >-
           {% if now().strftime('%H%M')|int > 900 %}
             light.turn_on
@@ -48,4 +48,4 @@ dark_lights:
       entity_id: light.interior_philip_room
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
-        color_temp: "320"
+        color_temp: "342"
