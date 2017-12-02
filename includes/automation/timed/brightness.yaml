@@ -8,16 +8,6 @@
 
 - alias: 'Change the brightness during the day'
   trigger:
-    # - platform: time
-    #   at: '07:00:00'
-    # - platform: time
-    #   at: '09:00:00'
-    # - platform: time
-    #   at: '17:00:00'
-    # - platform: time
-    #   at: '20:30:00'
-    # - platform: time
-    #   at: '22:00:00'
     - platform: state
       entity_id: sensor.time_brightness
 
@@ -32,12 +22,6 @@
         state: 'off'
       - condition: time
         after: '08:00:00'
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
   action:
     - service_template: >-
         {% if is_state ("sensor.light_sensor", "Shade") %}
