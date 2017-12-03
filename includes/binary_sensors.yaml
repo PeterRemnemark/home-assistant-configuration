@@ -3,9 +3,9 @@
 - platform: rfxtrx
   automatic_add: True
   devices:
-    0b1100030128d6d60a010f70:
-      name: Garage door
-      device_class: opening
+    # 0b1100030128d6d60a010f70:
+    #   name: Garage door
+    #   device_class: opening
     0b110015007cc0fa0a010f60:
       name: Front door Motion
       device_class: Motion
