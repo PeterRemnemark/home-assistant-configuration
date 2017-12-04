@@ -17,7 +17,8 @@ automation:
       condition: and
       conditions:
         - condition: numeric_state
-          entity_id: sensor.exterior_porch_temperature
+          # entity_id: sensor.exterior_porch_temperature
+          entity_id: sensor.yr_temperature
           below: -10
         - condition: template
           value_template: '{{ ((now().strftime("%s") | int + 7200) | timestamp_custom("%H:%M")) == states.sensor.departuretime_ak.state  }}'
@@ -40,7 +41,8 @@ automation:
       condition: and
       conditions:
         - condition: numeric_state
-          entity_id: sensor.exterior_porch_temperature
+          #entity_id: sensor.exterior_porch_temperature
+          entity_id: sensor.yr_temperature
           below: 1.0
         - condition: template
           value_template: '{{ ((now().strftime("%s") | int + 3600) | timestamp_custom("%H:%M")) == states.sensor.departuretime_ak.state  }}'
@@ -63,7 +65,8 @@ automation:
       condition: and
       conditions:
         - condition: numeric_state
-          entity_id: sensor.exterior_porch_temperature
+          #entity_id: sensor.exterior_porch_temperature
+          entity_id: sensor.yr_temperature
           below: 5.0
         - condition: template
           value_template: '{{ ((now().strftime("%s") | int + 1800) | timestamp_custom("%H:%M")) == states.sensor.departuretime_ak.state  }}'
@@ -150,6 +153,7 @@ group:
       - input_number.heater_ak_hour
       - input_number.heater_ak_minutes
       - sensor.exterior_porch_temperature
+      - sensor.yr_temperature
       - switch.engine_heater
 
 # Script section
