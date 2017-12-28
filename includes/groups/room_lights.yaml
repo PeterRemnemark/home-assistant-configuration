@@ -75,3 +75,4 @@ philips room:
   entities:
     - switch.window_philip
     - light.interior_philip_room
+    - light.ceiling_philip_room

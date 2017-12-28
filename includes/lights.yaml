@@ -22,3 +22,6 @@
       # save_on_change: False #(defaults to True)
     192.168.1.148:
       name: Interior Philip Room
+
+    192.168.1.149:
+      name: Ceiling Philip Room

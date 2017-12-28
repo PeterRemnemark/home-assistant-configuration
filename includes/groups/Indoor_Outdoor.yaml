@@ -43,6 +43,7 @@ ceiling_lights:
     - switch.ceiling_laundry
     - light.ceiling_dinner_room
     - switch.ceiling_garage
+    - light.ceiling_philip_room
 
 wall_lights:
   name: Wall Lights
