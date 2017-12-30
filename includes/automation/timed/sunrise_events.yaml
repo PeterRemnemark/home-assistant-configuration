@@ -34,7 +34,9 @@
         - input_boolean.good_morning
 
     - delay: '00:{{ (range(5, 40)|random|int) }}:00'
-
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'off'
     - service_template: >-
         {% if is_state ("sensor.light_sensor", "Bright") %}
           script.bright_lights
