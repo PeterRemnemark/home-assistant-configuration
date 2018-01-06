@@ -14,8 +14,8 @@
       device_class: Motion
       off_delay:
         seconds: 5
-    0913001854a82a018e60:
-      name: Laundry Motion
-      device_class: Motion
-      off_delay:
-        seconds: 5
+    # 0913001854a82a018e60:
+    #   name: Laundry Motion
+    #   device_class: Motion
+    #   off_delay:
+    #     seconds: 5
