@@ -1,0 +1,29 @@
+- alias: Turn on Night light
+  trigger:
+    platform: state
+    entity_id: input_boolean.night_mode
+    from: 'off'
+    to: 'on'
+  condition:
+    - condition: state
+      entity_id: sensor.someone_home
+      state: 'yes'
+  action:
+     service: light.turn_on
+     entity_id:
+       - light.gateway_light_34ce00fa72a2
+     data:
+       brightness: 48
+       rgb_color: [10, 0, 255]
+
+
+- alias: Turn off Night light
+  trigger:
+    platform: state
+    entity_id: input_boolean.night_mode
+    from: 'on'
+    to: 'off'
+  action:
+    service: light.turn_off
+    entity_id:
+      - light.gateway_light_34ce00fa72a2
