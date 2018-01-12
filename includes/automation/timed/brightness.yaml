@@ -26,6 +26,8 @@
     - service_template: >-
         {% if is_state ("sensor.light_sensor", "Shade") %}
           script.shade_lights
+        {% elif is_state ("sensor.light_sensor", "Dim") %}
+          script.dim_lights
         {% elif is_state ("sensor.light_sensor", "Dark") %}
           script.dark_lights
         {% else %}

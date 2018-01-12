@@ -25,3 +25,6 @@ sensor.aeotec_zw100_multisensor_6_alarm_type:
 sensor.aeotec_zw100_multisensor_6_alarm_level:
   ignored: true
   polling_intensity: 0
+sensor.dinner_room_luminance:
+  ignored: false
+  polling_intensity: 300

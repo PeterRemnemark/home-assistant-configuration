@@ -54,20 +54,25 @@ xiaomi_aqara:
 # Enables the frontend
 frontend:
   #Support fro the new Java UI
-  javascript_version: latest
+  #javascript_version: latest
 
 # Enables configuration UI
 config:
+
 # Checks for available updates
 updater:
   include_used_components: true
+
 # Discover some devices automatically
-discovery:
+#discovery:
+
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 # Enables support for tracking state changes over time.
+
 history:
 # View all events in a logbook
+
 logbook:
 # Logging all events in the home-assistant.log
 # logger:
@@ -111,10 +116,16 @@ zwave:
   usb_path: /dev/ttyACM0
   new_entity_ids: true
 
-dcz:
-  ws_url: !secret dcz_ws_url
-  api_key: !secret dcz_api_key
+# dcz:
+#   ws_url: !secret dcz_ws_url
+#   api_key: !secret dcz_api_key
+#   host: !secret dcz_host
+
+deconz:
   host: !secret dcz_host
+  api_key: !secret dcz_api_key
+  port: 80
+
 
 alexa:
 
