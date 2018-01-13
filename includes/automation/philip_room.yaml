@@ -1,0 +1,51 @@
+- alias: 'Toggle Philip Room lamps from dimmer'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: philip_remote
+      event: 1002
+  action:
+    service: light.toggle
+    entity_id:
+      - light.ceiling_philip_room
+      - light.interior_philip_room
+
+- alias: 'Increase brightness of Philip Room lamps'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: philip_remote
+      event: 2002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id:
+          - light.ceiling_philip_room
+          - light.interior_philip_room
+        brightness: {% raw %}>
+          {% set bri = states.light.lamp.attributes.brightness | int %}
+          {{ [bri+30, 249] | min }}{% endraw %}
+        rgb_color: [255,255,255]
+
+- alias: 'Decrease brightness of Philip Room lamps'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_control_1
+      event: 3002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id:
+          - light.ceiling_philip_room
+          - light.interior_philip_room
+        brightness: {% raw %}>
+          {% set bri = states.light.lamp.attributes.brightness | int %}
+          {{ [bri-30, 0] | max }}{% endraw %}
+        rgb_color: [255,255,255]
