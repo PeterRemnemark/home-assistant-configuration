@@ -7,19 +7,13 @@
       id: philip_remote
       event: 1002
   action:
-    service: light.toggle
-    entity_id:
-      - light.ceiling_philip_room
-      - light.interior_philip_room
-<<<<<<< HEAD
-    data:
-      rgb_color: [255,0,191]
+    - service: light.toggle
+      data_template:
+        entity_id:
+          - light.ceiling_philip_room
+          - light.interior_philip_room
 
 - alias: 'Set full brightness for Philip Room'
-=======
-
-- alias: 'Increase brightness of Philip Room lamps'
->>>>>>> 35639dc9f0964ac079486b3d9f1918ad74eb7f9b
   initial_state: 'on'
   trigger:
     platform: event
@@ -33,29 +27,16 @@
         entity_id:
           - light.ceiling_philip_room
           - light.interior_philip_room
-<<<<<<< HEAD
         brightness: 254
         rgb_color: [255,255,255]
 
 - alias: 'Restore color and brightness for Philip Room lamps'
-=======
-        brightness: {% raw %}>
-          {% set bri = states.light.lamp.attributes.brightness | int %}
-          {{ [bri+30, 249] | min }}{% endraw %}
-        rgb_color: [255,255,255]
-
-- alias: 'Decrease brightness of Philip Room lamps'
->>>>>>> 35639dc9f0964ac079486b3d9f1918ad74eb7f9b
   initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
     event_data:
-<<<<<<< HEAD
       id: philip_remote
-=======
-      id: remote_control_1
->>>>>>> 35639dc9f0964ac079486b3d9f1918ad74eb7f9b
       event: 3002
   action:
     - service: light.turn_on
@@ -63,12 +44,5 @@
         entity_id:
           - light.ceiling_philip_room
           - light.interior_philip_room
-<<<<<<< HEAD
         brightness: "{{ states('sensor.time_brightness')|int }}"
         rgb_color: [255,0,191]
-=======
-        brightness: {% raw %}>
-          {% set bri = states.light.lamp.attributes.brightness | int %}
-          {{ [bri-30, 0] | max }}{% endraw %}
-        rgb_color: [255,255,255]
->>>>>>> 35639dc9f0964ac079486b3d9f1918ad74eb7f9b
