@@ -1,0 +1,49 @@
+- alias: 'Toggle Philip Room lamps from dimmer'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: philip_remote
+      event: 1002
+  action:
+    service: light.toggle
+    entity_id:
+      - light.ceiling_philip_room
+      - light.interior_philip_room
+    data:
+      rgb_color: [255,0,191]
+
+- alias: 'Set full brightness for Philip Room'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: philip_remote
+      event: 2002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id:
+          - light.ceiling_philip_room
+          - light.interior_philip_room
+        brightness: 254
+        rgb_color: [255,255,255]
+
+- alias: 'Restore color and brightness for Philip Room lamps'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: philip_remote
+      event: 3002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id:
+          - light.ceiling_philip_room
+          - light.interior_philip_room
+        brightness: "{{ states('sensor.time_brightness')|int }}"
+        rgb_color: [255,0,191]
