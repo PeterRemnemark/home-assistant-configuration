@@ -39,6 +39,28 @@
       - condition: state
         entity_id: sun.sun
         state: 'above_horizon'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.light_sensor
+            state: 'Bright'
+            for:
+              minutes: 10
+          - condition: state
+            entity_id: sensor.light_sensor
+            state: 'Dim'
+            for:
+              minutes: 10
+          - condition: state
+            entity_id: sensor.light_sensor
+            state: 'Shade'
+            for:
+              minutes: 10
+          - condition: state
+            entity_id: sensor.light_sensor
+            state: 'Dark'
+            for:
+              minutes: 10
       # - condition: time
       #   after: '08:00:00'
   action:
@@ -54,7 +76,6 @@
         {% else %}
           unknown
         {% endif %}
-
 
 # # Turn on lights when dark inside and someone is home
 # - alias: Turn on interior lights when luminance goes below 10 lux

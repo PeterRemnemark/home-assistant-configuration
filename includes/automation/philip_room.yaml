@@ -7,7 +7,7 @@
       id: philip_remote
       event: 1002
   action:
-    - service: light.toggle
+    - service: light.turn_off
       data_template:
         entity_id:
           - light.ceiling_philip_room
@@ -45,4 +45,38 @@
           - light.ceiling_philip_room
           - light.interior_philip_room
         brightness: "{{ states('sensor.time_brightness')|int }}"
+        rgb_color: [255,0,191]
+
+- alias: 'Full brightness for Philip Room lamps'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: philip_remote
+      event: 4002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id:
+          - light.ceiling_philip_room
+          - light.interior_philip_room
+        brightness: 254
+        rgb_color: [255,0,191]
+
+- alias: 'Half brightness for Philip Room lamps'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: philip_remote
+      event: 5002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id:
+          - light.ceiling_philip_room
+          - light.interior_philip_room
+        brightness: 127
         rgb_color: [255,0,191]
