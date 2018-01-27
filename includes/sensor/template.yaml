@@ -28,9 +28,9 @@
         {% else %}
           mdi:help
         {% endif %}
-      entity_id:
-        - group.location_peter
-        - input_select.presence_detection_peter
+      # entity_id:
+      #   - group.location_peter
+      #   - input_select.presence_detection_peter
 
     location_katarina:
       friendly_name: 'Location Katarina'
@@ -58,9 +58,9 @@
         {% else %}
           mdi:help
         {% endif %}
-      entity_id:
-        - group.location_katarina
-        - input_select.presence_detection_katarina
+      # entity_id:
+      #   - group.location_katarina
+      #   - input_select.presence_detection_katarina
 
     location_philip:
       friendly_name: 'Location Philip'
@@ -88,16 +88,16 @@
         {% else %}
           mdi:help
         {% endif %}
-      entity_id:
-        - group.location_philip
-        - input_select.presence_detection_philip
+      # entity_id:
+      #   - group.location_philip
+      #   - input_select.presence_detection_philip
 
     someone_home:
       value_template: '{% if is_state("sensor.location_katarina", "home") or is_state("sensor.location_peter", "home") or is_state("sensor.location_philip", "home") %}yes{% else %}no{% endif %}'
-      entity_id:
-        - sensor.location_katarina
-        - sensor.location_peter
-        - sensor.location_philip
+      # entity_id:
+      #   - sensor.location_katarina
+      #   - sensor.location_peter
+      #   - sensor.location_philip
 
     onlyone_home:
       value_template: >
@@ -114,11 +114,11 @@
         {% else %}
           no
         {% endif %}
-      entity_id:
-        - sensor.location_katarina
-        - sensor.location_peter
-        - sensor.location_philip
-        - sensor.someone_home
+      # entity_id:
+      #   - sensor.location_katarina
+      #   - sensor.location_peter
+      #   - sensor.location_philip
+      #   - sensor.someone_home
 
 ############################################################
 #

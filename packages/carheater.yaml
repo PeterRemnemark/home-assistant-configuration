@@ -132,9 +132,9 @@ sensor:
       departuretime_ak:
         friendly_name: 'Avresetid AK'
         value_template: '{% if states.input_number.heater_ak_hour.state|round(0)|string|length == 1 %}0{% endif %}{{ states.input_number.heater_ak_hour.state|round(0)|string }}:{% if states.input_number.heater_ak_minutes.state|round(0)|string|length == 1 %}0{% endif %}{{ states.input_number.heater_ak_minutes.state|round(0)|string }}'
-        entity_id:
-         - input_number.heater_ak_minutes
-         - input_number.heater_ak_hour
+        # entity_id:
+        #  - input_number.heater_ak_minutes
+        #  - input_number.heater_ak_hour
 
 # Group section
 group:

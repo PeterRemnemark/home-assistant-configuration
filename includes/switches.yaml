@@ -1,3 +1,14 @@
+- platform: broadlink
+  host: 192.168.1.151
+  mac: '34:EA:34:42:A6:89'
+  timeout: 15
+  switches:
+    tv_lg:
+      friendly_name: "LG Tv Power"
+      command_on: 'JgB4AAABKZISExITEjcTExETEhMSExITEjcSNxMTEjcSNxM3EjcTNxMTEhISExI3ExMSEhITEhMSNxM2EzcTExI2EzcTNxI3EwAFJgABKUkSAAxWAAEpSRIADFYAASlJEgAMVgABKUkSAAxWAAEpSRIADFYAASlJEgANBQ=='
+      command_off: 'JgB4AAABKZISExITEjcTExETEhMSExITEjcSNxMTEjcSNxM3EjcTNxMTEhISExI3ExMSEhITEhMSNxM2EzcTExI2EzcTNxI3EwAFJgABKUkSAAxWAAEpSRIADFYAASlJEgAMVgABKUkSAAxWAAEpSRIADFYAASlJEgANBQ=='
+
+
 - platform: rfxtrx
   automatic_add: false
   signal_repetitions: 3
