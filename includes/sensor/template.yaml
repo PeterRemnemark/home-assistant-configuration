@@ -155,21 +155,18 @@
     light_sensor:
       friendly_name: Inside Light Sensor
       value_template: >-
-        {% if states("sensor.dinner_room_luminance") | float >= 29 %}
+        {% if states ("sensor.luminance_dinner_room_mean") | float >= 29 %}
           Bright
-        {% elif states("sensor.dinner_room_luminance") | float < 29 and states("sensor.dinner_room_luminance") | float >= 20 %}
+        {% elif states ("sensor.luminance_dinner_room_mean") | float < 29 and states("sensor.luminance_dinner_room_mean") | float >= 20 %}
           Dim
-        {% elif states("sensor.dinner_room_luminance") | float < 20 and states("sensor.dinner_room_luminance") | float >= 15 %}
+        {% elif states ("sensor.luminance_dinner_room_mean") | float < 20 and states ("sensor.luminance_dinner_room_mean") | float >= 15 %}
           Shade
-        {% elif states("sensor.dinner_room_luminance") | float < 15 and is_state("input_boolean.night_mode", "off") %}
+        {% elif states ("sensor.luminance_dinner_room_mean") | float < 15 and is_state("input_boolean.night_mode", "off") %}
           Dark
-        {% elif states("sensor.dinner_room_luminance") | float < 15 and is_state("input_boolean.night_mode", "on") %}
+        {% elif ("sensor.luminance_dinner_room_mean") | float < 15 and is_state("input_boolean.night_mode", "on") %}
           Night
-        {% else %}
-          unknown
         {% endif %}
-
-
+# states.sensor.luminance_living_room_mean
 
 
 

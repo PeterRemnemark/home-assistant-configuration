@@ -15,7 +15,7 @@ homeassistant:
     automation:
       initial_state: 'on'
   customize_glob:
-    "sensor.dinner_room_*":
+    "sensor.*":
       emulated_hue_hidden: true
       homebridge_hidden: true
       haaska_hidden: true
@@ -31,6 +31,19 @@ homeassistant:
       emulated_hue_hidden: true
       homebridge_hidden: true
       haaska_hidden: true
+    "binary_sensor.*":
+      emulated_hue_hidden: true
+      homebridge_hidden: true
+      haaska_hidden: true
+    "group.*":
+      emulated_hue_hidden: true
+      homebridge_hidden: true
+      haaska_hidden: true
+    "lights.*":
+      emulated_hue_hidden: false
+      homebridge_hidden: false
+      haaska_hidden: false
+
   packages: !include_dir_named packages
 
 http:

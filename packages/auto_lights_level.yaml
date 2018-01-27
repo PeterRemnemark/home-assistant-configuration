@@ -1,0 +1,79 @@
+sensor:
+  - platform: statistics
+    entity_id: sensor.dinner_room_luminance
+    name: Luminance dinner Room
+    sampling_size: 10
+
+# input_slider:
+#   luminance_living_room_setpoint:
+#     name: Luminance Living Room Setpoint
+#     icon: mdi:brightness-auto
+#     initial: 20
+#     min: 0
+#     max: 200
+#     step: 10
+#   living_room_level:
+#     name: Current Living Room Light Level
+#     icon: mdi:brightness-6
+#     initial: 150
+#     min: 0
+#     max: 255
+#     step: 1
+#
+# automation:
+#
+#   - alias: "auto_luminance_living_room_control"
+#     trigger:
+#       - platform: time
+#         minutes: '/1'
+#         seconds: 00
+#       - platform: template
+#         value_template: '{{ (states.sensor.luminance_living_room_mean |int ) > (states.input_slider.luminance_living_room_setpoint.state |int) }}'
+#     action:
+#       - service: input_slider.select_value
+#         entity_id: input_slider.living_room_level
+#         data_template:
+#           value: '{{ (states.input_slider.living_room_level.state | int) - 5 }}'
+#
+#   - alias: "auto_luminance_living_room_control"
+#     trigger:
+#       - platform: time
+#         minutes: '/1'
+#         seconds: 00
+#       - platform: template
+#         value_template: '{{ (states.sensor.luminance_living_room_mean |int ) < (states.input_slider.luminance_living_room_setpoint.state |int) }}'
+#     action:
+#       - service: input_slider.select_value
+#         entity_id: input_slider.living_room_level
+#         data_template:
+#           value: '{{ (states.input_slider.living_room_level.state | int) + 5 }}'
+#
+#   - alias: "Set living room light level"
+#     trigger:
+#       - platform: time
+#         minutes: '/1'
+#         seconds: 00
+#       - platform: template
+#         value_template:  '{{ (states.sensor.luminance_living_room_mean |int ) != (states.input_slider.luminance_living_room_setpoint.state |int) }}'
+#     action:
+#       - service: light.turn_on
+#         entity_id:
+#           - group.living_room_lights
+#         data_template:
+#           brightness: '{{ states.input_slider.living_room_level.state | int }}'
+#
+# group:
+#   Living Room Lights:
+#     name: Living Room Lights
+#     entities:
+#       - light.living_room_level
+#
+#   Automatic Luminance Settings:
+#     name: Automatic Luminance Settings
+#     control: hidden
+#     entities:
+#     - automation.auto_luminance_living_room_control
+#     - light.living_room_level
+#     - sensor.luminance_living_room_mean
+#     - input_slider.luminance_living_room_setpoint
+#     - input_slider.living_room_level

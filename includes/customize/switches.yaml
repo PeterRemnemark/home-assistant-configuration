@@ -7,15 +7,17 @@ switch.interior_laundry:
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:ceiling-light
-  homebridge_hidden: true
+  homebridge_hidden: false
+  assumed_state: false
 
 switch.wall_dinner_room:
   friendly_name: 'Wall Dinner Room'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline
-  homebridge_hidden: true
-
+  homebridge_hidden: false
+  assumed_state: false
+  
 switch.ceiling_garage:
   friendly_name: 'Ceiling Garage'
   emulated_hue_hidden: false
@@ -42,28 +44,28 @@ switch.exterior_post:
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lava-lamp
-  assumed_state: true
+  assumed_state: false
 
 switch.exterior_side_entry:
   friendly_name: 'Exterior Side Entry'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lava-lamp
-  assumed_state: true
+  assumed_state: false
 
 switch.exterior_garage:
   friendly_name: 'Exterior Garage'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lava-lamp
-  assumed_state: true
+  assumed_state: false
 
 switch.front_door_hallway:
   friendly_name: 'Interior Entry'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline
-  assumed_state: true
+  assumed_state: false
 
 switch.wall_main_room:
   friendly_name: 'Wall Main Room'

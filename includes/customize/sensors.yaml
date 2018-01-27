@@ -2,101 +2,93 @@
 
 sensor.speedtest_download:
   friendly_name: 'Download'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:speedometer
-  haaska_hidden: true
 
 sensor.speedtest_upload:
   friendly_name: 'Upload'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:speedometer
-  haaska_hidden: true
 
 sensor.speedtest_ping:
   friendly_name: 'Ping'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:speedometer
-  haaska_hidden: true
 
 sensor.cellar_humidity:
   friendly_name: 'Cellar Humidity'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:water-percent
-  haaska_hidden: true
 
 sensor.cellar_temperature:
   friendly_name: 'Cellar Temperatur'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:temperature-celsius
-  haaska_hidden: true
-
-sensor.mainroom_temperature:
-  friendly_name: 'Main Temperatur'
-  emulated_hue_hidden: true
-  hidden: false
-  icon: mdi:temperature-celsius
-  haaska_hidden: true
 
 sensor.exterior_porch_temperature:
-  friendly_name: 'Exterior Porch Temperatur'
-  emulated_hue_hidden: true
+  friendly_name: 'Outside Temperatur'
   hidden: false
   icon: mdi:temperature-celsius
-  haaska_hidden: true
+
+sensor.main_room_temperature:
+  friendly_name: 'Inside Temperatur'
+  hidden: false
+  icon: mdi:temperature-celsius
+
+sensor.exterior_porch_humidity:
+  friendly_name: 'Outside Humidity'
+  hidden: false
+  icon: mdi:water-percent
+
+sensor.main_room_humidity:
+  friendly_name: 'Inside Humidity'
+  hidden: false
+  icon: mdi:water-percent
+
+sensor.exterior_porch_pressure:
+  friendly_name: 'Outside Pressure'
+  hidden: false
+  icon: mdi:apple-keyboard-caps
+
+sensor.main_room_pressure:
+  friendly_name: 'Inside Pressure'
+  hidden: false
+  icon: mdi:apple-keyboard-caps
 
 sensor.freezer_temperature:
   friendly_name: 'Freezer Temperature'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:temperature-celsius
-  haaska_hidden: true
 
 sensor.fridge_temperature:
   friendly_name: 'Fridge Temperature'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:temperature-celsius
-  haaska_hidden: true
 
 sensor.location_katarina:
   friendly_name: 'Katarina'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
-  haaska_hidden: true
 
 sensor.location_philip:
   friendly_name: 'Philip'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
-  haaska_hidden: true
 
 sensor.location_peter:
   friendly_name: 'Peter'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
-  haaska_hidden: true
 
 sensor.onlyone_home:
   friendly_name: 'Only One Home?'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
-  haaska_hidden: true
 
 sensor.someone_home:
   friendly_name: 'Someone Home?'
-  emulated_hue_hidden: true
   hidden: false
   icon: mdi:account
-  haaska_hidden: true
 
 
 

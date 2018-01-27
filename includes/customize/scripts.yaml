@@ -10,6 +10,12 @@ script.bright_lights:
   icon: mdi:script
   haaska_hidden: false
 
+script.dim_lights:
+  friendly_name: 'Dim Light'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:script
+  haaska_hidden: false
 
 script.dark_lights:
   friendly_name: 'Dark Light'

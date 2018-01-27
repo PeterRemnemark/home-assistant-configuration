@@ -30,6 +30,10 @@
   trigger:
     platform: state
     entity_id: sensor.light_sensor
+    # to: ['Bright','Dim','Shade','Dark','Night']
+    # for:
+    #   minutes: 10
+
   condition:
     condition: and
     conditions:
@@ -39,28 +43,28 @@
       - condition: state
         entity_id: sun.sun
         state: 'above_horizon'
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: sensor.light_sensor
-            state: 'Bright'
-            for:
-              minutes: 10
-          - condition: state
-            entity_id: sensor.light_sensor
-            state: 'Dim'
-            for:
-              minutes: 10
-          - condition: state
-            entity_id: sensor.light_sensor
-            state: 'Shade'
-            for:
-              minutes: 10
-          - condition: state
-            entity_id: sensor.light_sensor
-            state: 'Dark'
-            for:
-              minutes: 10
+      # - condition: or
+      #   conditions:
+      #     - condition: state
+      #       entity_id: sensor.light_sensor
+      #       state: 'Bright'
+      #       for:
+      #         minutes: 5
+      #     - condition: state
+      #       entity_id: sensor.light_sensor
+      #       state: 'Dim'
+      #       for:
+      #         minutes: 5
+      #     - condition: state
+      #       entity_id: sensor.light_sensor
+      #       state: 'Shade'
+      #       for:
+      #         minutes: 5
+      #     - condition: state
+      #       entity_id: sensor.light_sensor
+      #       state: 'Dark'
+      #       for:
+      #         minutes: 5
       # - condition: time
       #   after: '08:00:00'
   action:
@@ -73,8 +77,6 @@
           script.shade_lights
         {% elif is_state ("sensor.light_sensor", "Dark") %}
           script.dark_lights
-        {% else %}
-          unknown
         {% endif %}
 
 # # Turn on lights when dark inside and someone is home

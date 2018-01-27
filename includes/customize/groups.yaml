@@ -1,205 +1,110 @@
 group.zwave_group:
   friendly_name: 'Z-Wave Group'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.all_remotes:
   friendly_name: 'All Remotes'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.default_view:
   friendly_name: 'Default View'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.dinnerroom:
   friendly_name: 'Dinner Room'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.home_modes:
   friendly_name: 'Home Modes'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.information_view:
   friendly_name: 'Information View'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.interior_lights:
   friendly_name: 'Interior Lights'
   hidden: false
-  emulated_hue_hidden: false
-  haaska_hidden: false
 
 group.iphone_battery_status:
   friendly_name: 'iPhone Battery Status'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.kitchen_view:
   friendly_name: 'Kitchen View'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.location_katarina:
   friendly_name: 'Location Katarina'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
   entity_picture: /local/katarina_192x192.png
 
 group.location_peter:
   friendly_name: 'Loction Peter'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
   entity_picture: /local/peter_192x192.png
 
 group.location_philip:
   friendly_name: 'Loction Philip'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
   entity_picture: /local/philip_192x192.png
 
 group.mainroom_view:
   friendly_name: 'Main Room View'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.manual_override:
   friendly_name: 'Manual Overrides'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.outside:
   friendly_name: 'Group Outside'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.exterior_lights:
   friendly_name: 'Exterior Lights'
   hidden: false
-  emulated_hue_hidden: false
-  haaska_hidden: false
 
 group.speedtest_net:
   friendly_name: 'Speed Test'
   hidden: false
-  emulated_hue_hidden: true
-  homebridge_hidden: true
 
 group.synology:
   friendly_name: 'Synology'
   hidden: false
-  emulated_hue_hidden: true
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.wall_lights:
   friendly_name: 'Wall Lights'
   hidden: false
-  emulated_hue_hidden: false
-  haaska_hidden: false
 
 group.weather_group:
   friendly_name: 'Weather Group'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.weather_view:
   friendly_name: 'Weather View'
-  emulated_hue_hidden: true
   hidden: false
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.window_lights:
   friendly_name: 'Windows Lights'
-  emulated_hue_hidden: false
   hidden: false
-  haaska_hidden: false
 
 group.window_main_room_lights:
   friendly_name: 'Windows Lights'
-  emulated_hue_hidden: false
   hidden: false
-  haaska_hidden: false
 
 group.all_automations:
   friendly_name: 'All Automations'
-  emulated_hue_hidden: true
   hidden: true
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.all_devices:
   friendly_name: 'All Devices'
-  emulated_hue_hidden: true
   hidden: true
-  homebridge_hidden: true
-  haaska_hidden: true
 
 group.all_lights:
   friendly_name: 'All Lights'
-  emulated_hue_hidden: true
   hidden: true
-  haaska_hidden: false
 
 group.all_switches:
   friendly_name: 'All Switches'
-  emulated_hue_hidden: true
   hidden: true
-  haaska_hidden: false
-
-#
-# group.all_scripts:
-#   friendly_name: 'All Scripts'
-#   emulated_hue_hidden: true
-#   hidden: true
-#   homebridge_hidden: true
-#
-#
-# group.exterior_lights:
-#   friendly_name: 'Exterior Lights'
-#   emulated_hue_hidden: false
-#   hidden: false
-#
-#
-#
-# group.family:
-#   friendly_name: 'Family'
-#   emulated_hue_hidden: true
-#   hidden: false
-#   homebridge_hidden: true
-#

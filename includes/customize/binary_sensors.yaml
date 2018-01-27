@@ -2,52 +2,24 @@
 #
 binary_sensor.front_door_motion:
   friendly_name: 'Front door motion'
-  emulated_hue_hidden: true
-  hidden: false
-  homebridge_hidden: false
-  haaska_hidden: true
 
 binary_sensor.garage_door:
   friendly_name: 'Garage door'
-  emulated_hue_hidden: true
-  hidden: false
-  homebridge_hidden: false
-  haaska_hidden: true
 
 binary_sensor.laundry_door:
   friendly_name: 'Laundry door'
-  emulated_hue_hidden: true
-  hidden: false
-  homebridge_hidden: false
-  haaska_hidden: true
 
 binary_sensor.front_door:
   friendly_name: 'Front door'
-  emulated_hue_hidden: true
-  hidden: false
-  homebridge_hidden: false
-  haaska_hidden: true
 
 binary_sensor.dinner_room_sensor:
   friendly_name: 'Dinner room Sensor'
-  emulated_hue_hidden: true
-  hidden: false
-  homebridge_hidden: false
-  haaska_hidden: true
 
 binary_sensor.kitchen_motion:
   friendly_name: 'Kitchen room Sensor'
-  emulated_hue_hidden: true
-  hidden: false
-  homebridge_hidden: false
-  haaska_hidden: true
 
 binary_sensor.laundry_motion:
   friendly_name: 'Laundry room Sensor'
-  emulated_hue_hidden: true
-  hidden: false
-  homebridge_hidden: false
-  haaska_hidden: true
 
 # binary_sensor.aeotec_dsb04100_doorwindow_sensor_sensor_4_0:
 #   friendly_name: 'Aeotec Dsb04100 Door/window Sensor Sensor 4'

@@ -15,11 +15,13 @@ default_view:
     - sensor.onlyone_home
     - sensor.someone_home
     - sensor.exterior_porch_temperature
-    - sensor.mainroom_temperature
+    - sensor.main_room_temperature
+    - sensor.dinner_room_luminance
+    - group.scripts
 
 mainroom_view:
   name: Main room
-  view: yes
+  view: no
   entities:
     - light.window_main_room_1
     - light.window_main_room_2
@@ -33,7 +35,7 @@ mainroom_view:
 
 kitchen_view:
   name: Kitchen
-  view: yes
+  view: no
   entities:
     - switch.window_kitchen
     - sensor.freezer_temperature
@@ -56,8 +58,11 @@ information_view:
 weather_view:
   name: weather Information
   view: yes
+  icon: mdi:weather-sunny
   entities:
     - group.weather
+    - group.t_sensors
+    - group.p_sensors
 
 exterior:
   name: Exterior
@@ -72,8 +77,42 @@ exterior:
     - binary_sensor.front_door
     - binary_sensor.garage_door
     - binary_sensor.laundry_door
-    - sensor.cellar_humidity
+
+scripts:
+  name: Scripts
+  view: no
+  control: hidden
+  entities:
+    - script.bright_lights
+    - script.dark_lights
+    - script.dim_lights
+    - script.morning_lights
+    - script.shade_lights
+
+t_sensors:
+  name: House Temperaturs
+  view: no
+  control: hidden
+  entities:
     - sensor.cellar_temperature
+    - sensor.dinner_room_temperature
+    - sensor.main_room_temperature
+    - sensor.exterior_porch_temperature
+    - sensor.freezer_temperature
+    - sensor.fridge_temperature
+
+p_sensors:
+  name: House Pressure and Humidity
+  view: no
+  control: hidden
+  entities:
+    - sensor.cellar_humidity
+    - sensor.dinner_room_relative_humidity
+    - sensor.exterior_porch_humidity
+    - sensor.main_room_humidity
+    - sensor.main_room_pressure
+    - sensor.exterior_porch_pressure
+
 
 # Bear Stone View:
 #   name: Bear Stone Run
