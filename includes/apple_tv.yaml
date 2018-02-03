@@ -1,7 +1,7 @@
 - name: Apple TV in Main room
   host: !secret appletv_v_rum_host
   login_id: !secret appletv_v_rum_login
-  start_off: true
+#  start_off: true
 #    credentials: 8660DEA5154FB46B:20B94847926112B3F46F85DB3A7311830463BF65570C22C3786E27F38C3326CF
 - name: Apple TV in Bedroom
   host: !secret appletv_s_rum_host

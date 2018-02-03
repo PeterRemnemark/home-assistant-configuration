@@ -2,7 +2,7 @@ sensor:
   - platform: statistics
     entity_id: sensor.dinner_room_luminance
     name: Luminance dinner Room
-    sampling_size: 10
+    sampling_size: 17
 
 # input_slider:
 #   luminance_living_room_setpoint:

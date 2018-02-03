@@ -7,7 +7,14 @@
       friendly_name: "LG Tv Power"
       command_on: 'JgB4AAABKZISExITEjcTExETEhMSExITEjcSNxMTEjcSNxM3EjcTNxMTEhISExI3ExMSEhITEhMSNxM2EzcTExI2EzcTNxI3EwAFJgABKUkSAAxWAAEpSRIADFYAASlJEgAMVgABKUkSAAxWAAEpSRIADFYAASlJEgANBQ=='
       command_off: 'JgB4AAABKZISExITEjcTExETEhMSExITEjcSNxMTEjcSNxM3EjcTNxMTEhISExI3ExMSEhITEhMSNxM2EzcTExI2EzcTNxI3EwAFJgABKUkSAAxWAAEpSRIADFYAASlJEgAMVgABKUkSAAxWAAEpSRIADFYAASlJEgANBQ=='
-
+    # tv_lg_ok:
+    #   friendly_name: "LG Tv OK"
+    #   command_on: 'AAAAAAAAAAAAAAAA=='
+    #   command_off: 'AAAAAAAAAAAAAAAA=='
+    # tv_lg_select:
+    #   friendly_name: "LG Tv select"
+    #   command_on: 'AAAAAAAAAAAAAAAA=='
+    #   command_off: 'AAAAAAAAAAAAAAAA=='
 
 - platform: rfxtrx
   automatic_add: false

@@ -9,3 +9,22 @@
   show_all_sources: true
 - platform: plex
   entity_namespace: 'plex-ds'
+
+- platform: spotify
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
+  # aliases:
+  #     abc123def456: 'Living Room'
+  #     9183abas000: 'Bed Room'
+
+# Coffey Table Jazz
+# spotify:user:spotify:playlist:37i9dQZF1DWVqfgj8NZEp1
+#
+# Digster Soft Jazz
+# spotify:user:digster.se:playlist:33YLYbQcmFT7Qv7NrNVIDo
+#
+# New Music Friday
+# spotify:user:spotify:playlist:37i9dQZF1DXcecv7ESbOPu
+#
+# Girl PWR
+# spotify:user:spotify:playlist:37i9dQZF1DX3JcVtdd4I4E
