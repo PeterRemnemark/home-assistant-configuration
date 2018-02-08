@@ -13,10 +13,11 @@ default_view:
     - sensor.light_sensor
     - sensor.time_brightness
     - sensor.onlyone_home
-    - sensor.someone_home
+#    - sensor.someone_home
     - sensor.exterior_porch_temperature
     - sensor.main_room_temperature
     - sensor.dinner_room_luminance
+    - sensor.luminance_dinner_room_mean
     - group.scripts
 
 mainroom_view:
