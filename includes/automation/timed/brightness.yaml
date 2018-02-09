@@ -30,8 +30,6 @@
           script.dim_lights
         {% elif is_state ("sensor.light_sensor", "Dark") %}
           script.dark_lights
-        {% else %}
-          unknown
         {% endif %}
 
 ##############################################################################

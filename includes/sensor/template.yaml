@@ -120,53 +120,61 @@
       #   - sensor.location_philip
       #   - sensor.someone_home
 
-# ############################################################
-# #
-# # Set brightness depending on Time of Day
-# #
-# ############################################################
-#     time_brightness:
-#       value_template: >-
-#         {%- if now().strftime('%H%M')|int < 600 -%}
-#           32
-#         {%- elif now().strftime('%H%M')|int < 700 -%}
-#           64
-#         {%- elif now().strftime('%H%M')|int < 900 -%}
-#           96
-#         {%- elif now().strftime('%H%M')|int < 1100 -%}
-#           138
-#         {%- elif now().strftime('%H%M')|int < 1400 -%}
-#           192
-#         {%- elif now().strftime('%H%M')|int < 1700 -%}
-#           138
-#         {%- elif now().strftime('%H%M')|int < 2030 -%}
-#           128
-#         {%- elif now().strftime('%H%M')|int < 2200 -%}
-#           64
-#         {%- else -%}
-#           32
-#         {%- endif -%}
-# ###########################################################
-# #
-# # Set Light Sensor to brightness for Automations
-# #
-# ############################################################
+############################################################
 #
-#     light_sensor:
-#       friendly_name: Inside Light Sensor
-#       value_template: >-
-#         {% if states ("sensor.luminance_dinner_room_mean") | float >= 29 %}
-#           Bright
-#         {% elif states ("sensor.luminance_dinner_room_mean") | float < 29 and states("sensor.luminance_dinner_room_mean") | float >= 20 %}
-#           Dim
-#         {% elif states ("sensor.luminance_dinner_room_mean") | float < 20 and states ("sensor.luminance_dinner_room_mean") | float >= 15 %}
-#           Shade
-#         {% elif states ("sensor.luminance_dinner_room_mean") | float < 15 and is_state("input_boolean.night_mode", "off") %}
-#           Dark
-#         {% elif ("sensor.luminance_dinner_room_mean") | float < 15 and is_state("input_boolean.night_mode", "on") %}
-#           Night
-#         {% endif %}
-# # states.sensor.luminance_living_room_mean
+# Set brightness depending on Time of Day
+#
+############################################################
+    time_brightness:
+      value_template: >-
+        {%- if now().strftime('%H%M')|int < 600 -%}
+          32
+        {%- elif now().strftime('%H%M')|int < 700 -%}
+          64
+        {%- elif now().strftime('%H%M')|int < 900 -%}
+          128
+        {%- elif now().strftime('%H%M')|int < 1000 -%}
+          192
+        {%- elif now().strftime('%H%M')|int < 1100 -%}
+          220
+        {%- elif now().strftime('%H%M')|int < 1300 -%}
+          250
+        {%- elif now().strftime('%H%M')|int < 1500 -%}
+          220
+        {%- elif now().strftime('%H%M')|int < 1800 -%}
+          192
+        {%- elif now().strftime('%H%M')|int < 1900 -%}
+          180
+        {%- elif now().strftime('%H%M')|int < 2030 -%}
+          150
+        {%- elif now().strftime('%H%M')|int < 2130 -%}
+          128
+        {%- elif now().strftime('%H%M')|int < 2230 -%}
+          64
+        {%- elif now().strftime('%H%M')|int < 2300 -%}
+          32
+        {%- else -%}
+          20
+        {%- endif -%}
+###########################################################
+#
+# Set Light Sensor to brightness for Automations
+#
+############################################################
+
+    light_sensor:
+      friendly_name: Inside Light Sensor
+      value_template: >-
+        {% if states ("sensor.luminance_dinner_room_mean") | float >= 40 %}
+          Bright
+        {% elif states ("sensor.luminance_dinner_room_mean") | float < 40 and states ("sensor.luminance_dinner_room_mean") | float >= 25 %}
+          Shade
+        {% elif states ("sensor.luminance_dinner_room_mean") | float < 25 and is_state("input_boolean.night_mode", "off") %}
+          Dark
+        {% elif ("sensor.luminance_dinner_room_mean") | float < 25 and is_state("input_boolean.night_mode", "on") %}
+          Night
+        {% endif %}
+# states.sensor.luminance_living_room_mean
 
 
 
