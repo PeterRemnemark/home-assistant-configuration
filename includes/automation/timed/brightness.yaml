@@ -22,6 +22,9 @@
         state: 'off'
       - condition: time
         after: '08:00:00'
+      - condition: state
+        entity_id: input_boolean.night_mode
+        state: 'off'
   action:
     - service_template: >-
         {% if is_state ("sensor.light_sensor", "Shade") %}

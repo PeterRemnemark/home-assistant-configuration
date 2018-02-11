@@ -30,10 +30,6 @@
   trigger:
     platform: state
     entity_id: sensor.light_sensor
-    # to: ['Bright','Dim','Shade','Dark','Night']
-    # for:
-    #   minutes: 10
-
   condition:
     condition: and
     conditions:
@@ -41,39 +37,15 @@
         entity_id: sensor.someone_home
         state: 'yes'
       - condition: state
-        entity_id: sun.sun
-        state: 'above_horizon'
-      # - condition: or
-      #   conditions:
-      #     - condition: state
-      #       entity_id: sensor.light_sensor
-      #       state: 'Bright'
-      #       for:
-      #         minutes: 5
-      #     - condition: state
-      #       entity_id: sensor.light_sensor
-      #       state: 'Dim'
-      #       for:
-      #         minutes: 5
-      #     - condition: state
-      #       entity_id: sensor.light_sensor
-      #       state: 'Shade'
-      #       for:
-      #         minutes: 5
-      #     - condition: state
-      #       entity_id: sensor.light_sensor
-      #       state: 'Dark'
-      #       for:
-      #         minutes: 5
-      # - condition: time
-      #   after: '08:00:00'
+        entity_id: input_boolean.night_mode
+        state: 'off'
   action:
     - service_template: >-
         {% if is_state ("sensor.light_sensor", "Bright") %}
           script.bright_lights
-        {% elif is_state ("sensor.light_sensor",  "Dim") %}
+        {% elif is_state ("sensor.light_sensor", "Dim") %}
           script.dim_lights
-        {% elif is_state ("sensor.light_sensor",  "Shade") %}
+        {% elif is_state ("sensor.light_sensor", "Shade") %}
           script.shade_lights
         {% elif is_state ("sensor.light_sensor", "Dark") %}
           script.dark_lights

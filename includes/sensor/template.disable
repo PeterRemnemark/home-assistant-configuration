@@ -132,19 +132,29 @@
         {%- elif now().strftime('%H%M')|int < 700 -%}
           64
         {%- elif now().strftime('%H%M')|int < 900 -%}
-          96
-        {%- elif now().strftime('%H%M')|int < 1100 -%}
-          138
-        {%- elif now().strftime('%H%M')|int < 1400 -%}
-          192
-        {%- elif now().strftime('%H%M')|int < 1700 -%}
-          138
-        {%- elif now().strftime('%H%M')|int < 2030 -%}
           128
-        {%- elif now().strftime('%H%M')|int < 2200 -%}
+        {%- elif now().strftime('%H%M')|int < 1000 -%}
+          192
+        {%- elif now().strftime('%H%M')|int < 1100 -%}
+          220
+        {%- elif now().strftime('%H%M')|int < 1300 -%}
+          250
+        {%- elif now().strftime('%H%M')|int < 1500 -%}
+          220
+        {%- elif now().strftime('%H%M')|int < 1800 -%}
+          192
+        {%- elif now().strftime('%H%M')|int < 1900 -%}
+          180
+        {%- elif now().strftime('%H%M')|int < 2030 -%}
+          150
+        {%- elif now().strftime('%H%M')|int < 2130 -%}
+          128
+        {%- elif now().strftime('%H%M')|int < 2230 -%}
           64
-        {%- else -%}
+        {%- elif now().strftime('%H%M')|int < 2300 -%}
           32
+        {%- else -%}
+          20
         {%- endif -%}
 ###########################################################
 #
@@ -155,21 +165,16 @@
     light_sensor:
       friendly_name: Inside Light Sensor
       value_template: >-
-        {% if states("sensor.luminance_dinner_room_mean") | float >= 50.0 %}
+        {% if states ("sensor.luminance_dinner_room_mean") | float >= 40.0 %}
           Bright
-        {% elif states("sensor.luminance_dinner_room_mean") | float < 50.0 and states("sensor.luminance_dinner_room_mean") | float >= 40.0 %}
-          Dim
-        {% elif states("sensor.luminance_dinner_room_mean") | float < 40.0 and states("sensor.luminance_dinner_room_mean") | float >= 25.0 %}
+        {% elif states ("sensor.luminance_dinner_room_mean") | float < 40.0 and states ("sensor.luminance_dinner_room_mean") | float >= 25.0 %}
           Shade
-        {% elif states("sensor.luminance_dinner_room_mean") | float < 25.0 and is_state("input_boolean.night_mode", "off") %}
+        {% elif states ("sensor.luminance_dinner_room_mean") | float < 25.0 and is_state("input_boolean.night_mode", "off") %}
           Dark
-        {% elif states("sensor.luminance_dinner_room_mean") | float < 25.0 and is_state("input_boolean.night_mode", "on") %}
+        {% elif ("sensor.luminance_dinner_room_mean") | float < 25.0 and is_state("input_boolean.night_mode", "on") %}
           Night
-        {% else %}
-          unknown
         {% endif %}
-
-
+# states.sensor.luminance_living_room_mean
 
 
 

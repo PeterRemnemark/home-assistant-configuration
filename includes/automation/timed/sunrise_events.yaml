@@ -27,9 +27,11 @@
     - service: homeassistant.turn_off
       entity_id:
         - group.exterior_lights
+    - wait_template: >-
+       {{ states.input_boolean.night_mode.state == 'off' }}
     - service: input_boolean.turn_off
       entity_id:
-        - input_boolean.night_mode
+#        - input_boolean.night_mode
         - input_boolean.guest_mode
         - input_boolean.good_morning
 
@@ -46,8 +48,6 @@
           script.shade_lights
         {% elif is_state ("sensor.light_sensor", "Dark") %}
           script.dark_lights
-        {% else %}
-          unknown
         {% endif %}
 
     # - wait_template: #>-

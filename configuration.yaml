@@ -67,7 +67,7 @@ xiaomi_aqara:
 # Enables the frontend
 frontend:
   #Support fro the new Java UI
-  #javascript_version: latest
+  javascript_version: latest
 
 # Enables configuration UI
 config:
