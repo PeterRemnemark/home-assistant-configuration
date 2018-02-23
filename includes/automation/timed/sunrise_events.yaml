@@ -27,15 +27,13 @@
     - service: homeassistant.turn_off
       entity_id:
         - group.exterior_lights
+    - delay: '00:{{ (range(5, 40)|random|int) }}:00'
     - wait_template: >-
        {{ states.input_boolean.night_mode.state == 'off' }}
     - service: input_boolean.turn_off
       entity_id:
-#        - input_boolean.night_mode
         - input_boolean.guest_mode
         - input_boolean.good_morning
-
-    - delay: '00:{{ (range(5, 40)|random|int) }}:00'
     - condition: state
       entity_id: input_boolean.vacation_mode
       state: 'off'
@@ -49,25 +47,3 @@
         {% elif is_state ("sensor.light_sensor", "Dark") %}
           script.dark_lights
         {% endif %}
-
-    # - wait_template: #>-
-    #    {{ states.sensor.light_sensor.state == 'Dark' }}
-    # - service: homeassistant.turn_on
-    #   entity_id:
-    #     - group.wall_lights
-    #
-    # - wait_template: #>-
-    #    {{ states.sensor.light_sensor.state == 'Shade' or states.sensor.light_sensor.state == 'Bright' }}
-    # - service: homeassistant.turn_off
-    #   entity_id:
-    #     - group.interior_lights
-    #     - group.window_lights
-    #
-    # - wait_template: #>-
-    #    {{ states.sensor.light_sensor.state == 'Bright' }}
-    # - service: homeassistant.turn_off
-    #   entity_id:
-    #     - group.window_lights
-    #     - group.interior_lights
-    #     - group.wall_lights
-    #     - group.ceiling_lights

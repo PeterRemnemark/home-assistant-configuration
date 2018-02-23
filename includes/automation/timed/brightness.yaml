@@ -17,11 +17,11 @@
       - condition: state
         entity_id: sensor.someone_home
         state: 'yes'
-      - condition: state
-        entity_id: input_boolean.vacation_mode
-        state: 'off'
+      # - condition: state
+      #   entity_id: input_boolean.vacation_mode
+      #   state: 'off'
       - condition: time
-        after: '08:00:00'
+        after: '09:00:00'
       - condition: state
         entity_id: input_boolean.night_mode
         state: 'off'
