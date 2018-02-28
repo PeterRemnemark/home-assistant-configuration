@@ -1,0 +1,123 @@
+remote.apple_tv_in_main_room:
+  platform: apple_tv
+  unique_id: 542e97d1b52109247fa36f300da01d59bf7c4ccfe7e6f9921a029bbc7a9c6173
+remote.apple_tv_in_bedroom:
+  platform: apple_tv
+  unique_id: 82b05bfbdb7f8823d787490e4e26624eeb08ec5f31320062513d01ac6cca8ea4
+binary_sensor.laundry_door:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:9f:f5:b7-01-0006
+binary_sensor.front_door_motion_2:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:21:c5:bb-01-0406
+binary_sensor.laundry_motion:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:23:1f:fa-01-0406
+binary_sensor.garage_door:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:9d:b5:22-01-0006
+binary_sensor.front_door:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:ab:5b:0a-01-0006
+sensor.main_room_temperature:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:d3:6c:a4-01-0402
+sensor.main_room_humidity:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:d3:6c:a4-01-0405
+sensor.philip_remote_battery_level:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:2e:16:71-01-1000
+sensor.main_room_pressure:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:d3:6c:a4-01-0403
+sensor.exterior_porch_temperature:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:d6:f8:af-01-0402
+sensor.exterior_porch_humidity:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:d6:f8:af-01-0405
+sensor.exterior_porch_pressure:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:d6:f8:af-01-0403
+media_player.apple_tv_in_main_room:
+  platform: apple_tv
+  unique_id: 542e97d1b52109247fa36f300da01d59bf7c4ccfe7e6f9921a029bbc7a9c6173
+media_player.apple_tv_in_bedroom:
+  platform: apple_tv
+  unique_id: 82b05bfbdb7f8823d787490e4e26624eeb08ec5f31320062513d01ac6cca8ea4
+light.window_main_room_1:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:88:9a:89-01
+light.window_main_room_2:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:8c:99:b3-01
+light.interior_dinner_room_1:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:88:33:27-01
+light.window_office:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:8c:8f:c3-01
+light.window_master_bedroom:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:36:3d:f7-01
+sensor.peters_ipad_battery_state:
+  platform: ios
+  unique_id: state_Peters-iPad2
+sensor.katarinasiphone_battery_state:
+  platform: ios
+  unique_id: state_katarinasiphone
+sensor.petersiphone_battery_state:
+  platform: ios
+  unique_id: state_petersiphone
+sensor.petersiphone_battery_level:
+  platform: ios
+  unique_id: level_petersiphone
+sensor.philips_iphone_battery_level:
+  platform: ios
+  unique_id: level_philips_iphone
+sensor.katarinasiphone_battery_level:
+  platform: ios
+  unique_id: level_katarinasiphone
+sensor.philips_iphone_battery_state:
+  platform: ios
+  unique_id: state_philips_iphone
+sensor.pereseiphone_battery_state:
+  platform: ios
+  unique_id: state_pereseiphone
+sensor.pereseiphone_battery_level:
+  platform: ios
+  unique_id: level_pereseiphone
+sensor.peters_ipad_battery_level:
+  platform: ios
+  unique_id: level_Peters-iPad2
+binary_sensor.dinner_room_sensor:
+  platform: zwave
+  unique_id: 2-72057594076463104
+sensor.dinner_room_temperature:
+  platform: zwave
+  unique_id: 2-72057594076479506
+sensor.dinner_room_luminance:
+  platform: zwave
+  unique_id: 2-72057594076479538
+sensor.dinner_room_relative_humidity:
+  platform: zwave
+  unique_id: 2-72057594076479570
+sensor.dinner_room_ultraviolet:
+  platform: zwave
+  unique_id: 2-72057594076479922
+sensor.dinner_room_alarm_type:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.dinner_room_alarm_level:
+  platform: zwave
+  unique_id: 2-72057594077528081
+sensor.dinner_room_sourcenodeid:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.dinner_room_burglar:
+  platform: zwave
+  unique_id: 2-72057594077528225
+media_player.plexds_peters_ipad:
+  platform: plex
+  unique_id: B1AC04BA-F8E4-44C2-89FE-2B04C86ACA17

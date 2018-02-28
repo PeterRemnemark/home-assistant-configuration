@@ -6,7 +6,7 @@
   condition:
     - condition: state
       entity_id: sensor.someone_home
-      state: 'yes'
+      state: 'no'
   action:
     service: homeassistant.turn_on
     entity_id:
