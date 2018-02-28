@@ -60,4 +60,3 @@
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
         color_temp: "320"
-    -
