@@ -13,7 +13,8 @@ alexa:
       - light
       - switch
     exclude_entities:
-      # - light.stairs_bottom_spot
+      - light.all_lights
+      - light.gateway_light_34ce00fa72a2
     exclude_domains:
       - group
       - automation
@@ -45,6 +46,6 @@ alexa:
     # script.movie_time:
     #   name: 'Movie time'
     #   display_categories: 'SWITCH'
-    # script.turn_on_shield:
-    #   name: 'Living room tv'
-    #   display_categories: 'TV'
+    switch.lg_tv_power:
+      name: 'Living room tv'
+      display_categories: 'TV'
