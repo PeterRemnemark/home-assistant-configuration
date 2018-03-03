@@ -56,12 +56,14 @@ __pycache__
 *.sqlite
 *.xml
 *.backup
+*.db*
 life360.sh
 *.google.token
 .google.token
 .ring_cache.pickle
 .spotify-token-cache
 .HA_VERSION
+.cloud
 usps_cookies.pickle
 camera_recording.py
 home-assistant.env

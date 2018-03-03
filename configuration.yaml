@@ -142,9 +142,11 @@ deconz:
 
 alexa:
 
-emulated_hue:
-  host_ip: !secret emulated_hue_host
-  expose_by_default: false
+cloud: !include includes/alexa.yaml
+
+# emulated_hue:
+#   host_ip: !secret emulated_hue_host
+#   expose_by_default: false
   # exposed_domains:
   #   - group
   #   - switch

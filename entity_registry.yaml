@@ -121,3 +121,9 @@ sensor.dinner_room_burglar:
 media_player.plexds_peters_ipad:
   platform: plex
   unique_id: B1AC04BA-F8E4-44C2-89FE-2B04C86ACA17
+sensor.illumination_34ce00fa72a2:
+  platform: xiaomi_aqara
+  unique_id: illumination34ce00fa72a2
+light.gateway_light_34ce00fa72a2:
+  platform: xiaomi_aqara
+  unique_id: rgb34ce00fa72a2

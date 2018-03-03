@@ -1,0 +1,50 @@
+alexa:
+  filter:
+    include_entities:
+      - input_boolean.speech_notifications
+      - input_boolean.vacation_mode
+      - input_boolean.guest_mode
+      - input_boolean.good_night
+      - input_boolean.good_morning
+      # - group.inside_lights_automations
+      # - script.movie_time
+      # - script.turn_on_shield
+    include_domains:
+      - light
+      - switch
+    exclude_entities:
+      # - light.stairs_bottom_spot
+    exclude_domains:
+      - group
+      - automation
+      - alert
+      - media_player
+      - script
+      - switch
+      - scene
+
+  entity_config:
+    # group.walk_in_closet_lights:
+    #   name: 'Walk in closet lights'
+    #   display_categories: 'LIGHT'
+    input_boolean.good_night:
+      name: 'Good Night'
+      display_categories: 'SWITCH'
+    input_boolean.good_morning:
+      name: 'Good morning'
+      display_categories: 'SWITCH'
+    input_boolean.guest_mode:
+      name: 'Guest Mode'
+      display_categories: 'SWITCH'
+    input_boolean.vacation_mode:
+      name: 'Vacation Mode'
+      display_categories: 'SWITCH'
+    input_boolean.speech_notifications:
+      name: 'Speech Notifications'
+      display_categories: 'SWITCH'
+    # script.movie_time:
+    #   name: 'Movie time'
+    #   display_categories: 'SWITCH'
+    # script.turn_on_shield:
+    #   name: 'Living room tv'
+    #   display_categories: 'TV'
