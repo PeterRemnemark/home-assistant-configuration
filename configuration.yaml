@@ -62,7 +62,7 @@ http:
 xiaomi_aqara:
   discovery_retry: 5
   gateways:
-    - key: 2A1D4FDF92064DD3
+    - key: 4D3CF1BDCCF54C04
 
 # Enables the frontend
 frontend:

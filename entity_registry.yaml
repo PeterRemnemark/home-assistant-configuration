@@ -127,3 +127,9 @@ sensor.illumination_34ce00fa72a2:
 light.gateway_light_34ce00fa72a2:
   platform: xiaomi_aqara
   unique_id: rgb34ce00fa72a2
+binary_sensor.water_leak_ftx_system:
+  platform: deconz
+  unique_id: 00:15:8d:00:02:11:23:88-01-0500
+binary_sensor.water_leak_kitchen:
+  platform: deconz
+  unique_id: 00:15:8d:00:02:11:21:1e-01-0500

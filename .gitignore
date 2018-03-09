@@ -46,6 +46,7 @@ __pycache__
 .DS_Store@SynoResource
 
 # Other
+.c9*
 *.uuid
 *.conf
 *.db
