@@ -133,3 +133,6 @@ binary_sensor.water_leak_ftx_system:
 binary_sensor.water_leak_kitchen:
   platform: deconz
   unique_id: 00:15:8d:00:02:11:21:1e-01-0500
+media_player.plexds_plex_web_safari:
+  platform: plex
+  unique_id: iusy24boh5al34xi3if4pkmk
