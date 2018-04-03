@@ -136,3 +136,6 @@ binary_sensor.water_leak_kitchen:
 media_player.plexds_plex_web_safari:
   platform: plex
   unique_id: iusy24boh5al34xi3if4pkmk
+light.exterior_post:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:89:89:1b-01

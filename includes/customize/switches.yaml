@@ -17,7 +17,7 @@ switch.wall_dinner_room:
   icon: mdi:lightbulb-outline
   homebridge_hidden: false
   assumed_state: false
-  
+
 switch.ceiling_garage:
   friendly_name: 'Ceiling Garage'
   emulated_hue_hidden: false
@@ -37,13 +37,6 @@ switch.engine_heater:
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:car
-  assumed_state: false
-
-switch.exterior_post:
-  friendly_name: 'Exterior Post'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lava-lamp
   assumed_state: false
 
 switch.exterior_side_entry:
