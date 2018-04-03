@@ -42,8 +42,8 @@
       name: Window Philip
     # 0b11000d03F243FE07000070:
     #   name: Window Master Bedroom
-    0b11000d03F243FE08000070:
-      name: Exterior post
+    # 0b11000d03F243FE08000070:
+    #   name: Exterior post
     0b11000d03F243FE09000070:
       name: Window Laundry
     0b11000d03F243FE0a000070:

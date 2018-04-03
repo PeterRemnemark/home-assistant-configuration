@@ -1,6 +1,14 @@
 # Lights
 #
 
+light.exterior_post:
+  friendly_name: 'Exterior Post'
+  emulated_hue_hidden: false
+  hidden: false
+  homebridge_hidden: false
+  icon: mdi:lava-lamp
+  assumed_state: false
+
 light.ceiling_dinner_room:
   friendly_name: 'Ceiling Dinner room'
   emulated_hue_hidden: false

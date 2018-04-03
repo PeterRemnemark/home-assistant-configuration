@@ -8,7 +8,7 @@ interior_lights:
 
 exterior_lights:
   entities:
-    - switch.exterior_post
+    - light.exterior_post
     - switch.exterior_side_entry
 
 window_lights:

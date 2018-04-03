@@ -42,7 +42,7 @@ dinner room lights:
 
 outdoor front lights:
   entities:
-    - switch.exterior_post
+    - light.exterior_post
 
 # outdoor back lights:
 #   entities:
