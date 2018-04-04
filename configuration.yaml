@@ -127,7 +127,7 @@ rfxtrx:
 # z-wave Aeon Stick
 zwave:
   usb_path: /dev/ttyACM0
-  new_entity_ids: true
+#  new_entity_ids: true
 
 # dcz:
 #   ws_url: !secret dcz_ws_url
