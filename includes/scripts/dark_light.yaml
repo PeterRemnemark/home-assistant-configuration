@@ -11,7 +11,8 @@ dark_lights:
         - light.window_main_room_1
         - light.window_main_room_2
         - light.interior_dinner_room_1
-#        - light.front_door_hallway
+        - light.hallway_1
+        - light.hallway_2
         - light.interior_main_room
         - light.window_office
 #        - light.interior_philip_1
@@ -24,10 +25,10 @@ dark_lights:
         - switch.window_kitchen
         - switch.window_laundry
         - switch.window_philip
-    - service: switch.turn_on
-      entity_id:
-        - switch.interior_laundry
-        - switch.front_door_hallway
+    # - service: switch.turn_on
+    #   entity_id:
+    #     - switch.interior_laundry
+    #     - switch.front_door_hallway
     - service: switch.turn_on
       entity_id:
         - switch.wall_dinner_room

@@ -53,13 +53,6 @@ switch.exterior_garage:
   icon: mdi:lava-lamp
   assumed_state: false
 
-switch.front_door_hallway:
-  friendly_name: 'Interior Entry'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lightbulb-outline
-  assumed_state: false
-
 switch.wall_main_room:
   friendly_name: 'Wall Main Room'
   emulated_hue_hidden: false

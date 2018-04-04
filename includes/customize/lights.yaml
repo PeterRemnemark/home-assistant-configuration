@@ -1,6 +1,20 @@
 # Lights
 #
 
+light.Hallway_1:
+  friendly_name: 'Hallway 1'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
+
+light.Hallway_2:
+    friendly_name: 'Hallway 2'
+    emulated_hue_hidden: false
+    hidden: false
+    icon: mdi:lightbulb-outline
+    assumed_state: false
+
 light.exterior_post:
   friendly_name: 'Exterior Post'
   emulated_hue_hidden: false

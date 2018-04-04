@@ -69,7 +69,8 @@ laundry lights:
 
 hallway Lights:
   entities:
-    - switch.front_door_hallway
+    - light.hallway_1
+    - light.hallway_2
 
 philips room:
   entities:

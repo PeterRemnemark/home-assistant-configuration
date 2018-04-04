@@ -139,3 +139,9 @@ media_player.plexds_plex_web_safari:
 light.exterior_post:
   platform: deconz
   unique_id: 00:0b:57:ff:fe:89:89:1b-01
+light.hallway_2:
+  platform: deconz
+  unique_id: 90:fd:9f:ff:fe:82:80:df-01
+light.hallway_1:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:b8:f6:90-01

@@ -1,6 +1,7 @@
 interior_lights:
   entities:
-    - switch.front_door_hallway
+    - light.hallway_1
+    - light.hallway_2
     - light.interior_dinner_room_1
     - light.interior_main_room
     - switch.interior_laundry
