@@ -6,27 +6,22 @@
 
 shade_lights:
   sequence:
-    - service_template: >-
-        {% if is_state ("group.window_lights", "on") %}
-          homeassistant.turn_off
-        {% endif %}
-      entity_id:
-        - group.window_lights
-
     - service: switch.turn_on
       entity_id:
-        - switch.front_door_hallway
         - switch.wall_main_room
         - switch.wall_dinner_room
         - switch.wall_fire_place
     - service: light.turn_on
       entity_id:
-        # - light.window_main_room_1
-        # - light.window_main_room_2
         - light.interior_main_room
         - light.interior_dinner_room_1
         - light.hallway_1
         - light.hallway_2
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
-        color_temp: "342"
+    - service_template: >-
+        {% if is_state ("group.window_lights", "on") %}
+          homeassistant.turn_off
+        {% endif %}
+      entity_id:
+        - group.window_lights

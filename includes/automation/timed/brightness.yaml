@@ -16,6 +16,14 @@
   condition:
     condition: or
     conditions:
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.light_sensor
+            state: 'Dim'
+          - condition: state
+            entity_id: sensor.light_sensor
+            state: 'Bright'
       - condition: and
         conditions:
           - condition: state

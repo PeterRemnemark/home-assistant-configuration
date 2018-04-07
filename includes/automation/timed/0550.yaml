@@ -32,37 +32,46 @@
               - thu
               - fri
   action:
-  #  - service: script.morning_lights
     - service: input_boolean.turn_off
       entity_id:
         - input_boolean.night_mode
         - input_boolean.good_morning
-    - service: switch.turn_on
-      entity_id:
-        - switch.window_kitchen
-        - switch.window_dinner_room
-        - switch.window_laundry
-        - switch.wall_dinner_room
-        - switch.wall_main_room
-    - service: light.turn_on
-      entity_id:
-        - light.hallway_1
-        - light.hallway_2
-      data_template:
-        brightness: "{{ states('sensor.time_brightness')|int }}"
-        color_temp: "320"
-    - condition: state
-      entity_id: input_boolean.guest_mode
-      state: 'off'
-    - service: light.turn_on
-      entity_id:
-        - light.window_office
-      data_template:
-        brightness: "{{ states('sensor.time_brightness')|int }}"
-    - delay: '00:30:00'
-    - service: light.turn_on
-      entity_id:
-        - light.interior_philip_room
-      data_template:
-        brightness: "{{ states('sensor.time_brightness')|int }}"
-        color_temp: "320"
+    - service_template: >-
+        {% if is_state ("sensor.light_sensor", "Shade") %}
+          script.shade_lights
+        {% elif is_state ("sensor.light_sensor", "Bright") %}
+          script.bright_lights
+        {% elif is_state ("sensor.light_sensor", "Dim") %}
+          script.dim_lights
+        {% else %}
+          script.morning_lights
+        {% endif %}
+
+  # - service: switch.turn_on
+    #   entity_id:
+    #     - switch.window_kitchen
+    #     - switch.window_dinner_room
+    #     - switch.window_laundry
+    #     - switch.wall_dinner_room
+    #     - switch.wall_main_room
+    # - service: light.turn_on
+    #   entity_id:
+    #     - light.hallway_1
+    #     - light.hallway_2
+    #   data_template:
+    #     brightness: "{{ states('sensor.time_brightness')|int }}"
+    # - condition: state
+    #   entity_id: input_boolean.guest_mode
+    #   state: 'off'
+    # - service: light.turn_on
+    #   entity_id:
+    #     - light.window_office
+    #   data_template:
+    #     brightness: "{{ states('sensor.time_brightness')|int }}"
+    # - delay: '00:30:00'
+    # - service: light.turn_on
+    #   entity_id:
+    #     - light.interior_philip_room
+    #   data_template:
+    #     brightness: "{{ states('sensor.time_brightness')|int }}"
+    #     color_temp: "320"
