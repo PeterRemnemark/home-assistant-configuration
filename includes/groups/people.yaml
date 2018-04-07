@@ -16,6 +16,7 @@ location_philip:
   name: "Location Philip"
   view: no
   entities:
+    - device_tracker.philipxperiaz3
     - device_tracker.philips_iphone
     - device_tracker.philipswifiiphone
 
