@@ -10,8 +10,8 @@ kitchen lights:
 
 main room lights:
   entities:
-    - light.window_main_room_1
-    - light.window_main_room_2
+    - light.window_main_room
+#    - light.window_main_room_2
     - switch.wall_main_room
     - light.interior_main_room
 

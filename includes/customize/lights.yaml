@@ -1,19 +1,19 @@
 # Lights
 #
 
-light.Hallway_1:
-  friendly_name: 'Hallway 1'
+light.window_kitchen:
+  friendly_name: 'Window Kitchen'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline
   assumed_state: false
 
-light.Hallway_2:
-    friendly_name: 'Hallway 2'
-    emulated_hue_hidden: false
-    hidden: false
-    icon: mdi:lightbulb-outline
-    assumed_state: false
+light.Hallway:
+  friendly_name: 'Hallway'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lightbulb-outline
+  assumed_state: false
 
 light.exterior_post:
   friendly_name: 'Exterior Post'
@@ -38,14 +38,8 @@ light.ceiling_philip_room:
   icon: mdi:ceiling-light
   homebridge_hidden: false
 
-light.window_main_room_1:
-  friendly_name: 'Window Main Room 1'
-  emulated_hue_hidden: false
-  hidden: false
-  icon: mdi:lightbulb-outline
-
-light.window_main_room_2:
-  friendly_name: 'Window Main Room 2'
+light.window_main_room:
+  friendly_name: 'Window Main Room'
   emulated_hue_hidden: false
   hidden: false
   icon: mdi:lightbulb-outline

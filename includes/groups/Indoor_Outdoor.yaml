@@ -1,7 +1,7 @@
 interior_lights:
   entities:
-    - light.hallway_1
-    - light.hallway_2
+    - light.hallway
+#    - light.hallway_2
     - light.interior_dinner_room_1
     - light.interior_main_room
     - switch.interior_laundry
@@ -15,20 +15,20 @@ exterior_lights:
 window_lights:
   name: Windows lights
   entities:
-    - switch.window_kitchen
+    - light.window_kitchen
     - light.window_office
     - switch.window_dinner_room
     - light.window_master_bedroom
     - switch.window_philip
     - switch.window_laundry
-    - light.window_main_room_1
-    - light.window_main_room_2
+    - light.window_main_room
+#    - light.window_main_room_2
 
-window_main_room_lights:
-  name: Window Main Room Lights
-  entities:
-    - light.window_main_room_1
-    - light.window_main_room_2
+# window_main_room_lights:
+#   name: Window Main Room Lights
+#   entities:
+#     - light.window_main_room_1
+#     - light.window_main_room_2
 
 # morning_lights:
 #   name: Morning Lights

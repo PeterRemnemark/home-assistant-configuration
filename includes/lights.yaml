@@ -11,6 +11,23 @@
 #   allow_unreachable: true
 #   allow_in_emulated_hue: false
 #   allow_hue_groups: false
+- platform: group
+  name: Window Kitchen
+  entities:
+    - light.window_kitchen_1
+    - light.window_kitchen_2
+
+- platform: group
+  name: Window Main Room
+  entities:
+    - light.window_main_room_1
+    - light.window_main_room_2
+
+- platform: group
+  name: Hallway
+  entities:
+    - light.hallway_1
+    - light.hallway_2
 
 
 - platform: yeelight

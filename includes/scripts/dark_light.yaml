@@ -8,19 +8,19 @@ dark_lights:
   sequence:
     - service: light.turn_on
       entity_id:
-        - light.window_main_room_1
-        - light.window_main_room_2
+        - light.window_main_room
+#        - light.window_main_room_2
         - light.interior_dinner_room_1
-        - light.hallway_1
-        - light.hallway_2
+        - light.hallway
+#        - light.hallway_2
         - light.interior_main_room
         - light.window_office
+        - light.window_kitchen
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
     - service: switch.turn_on
       entity_id:
         - switch.window_dinner_room
-        - switch.window_kitchen
         - switch.window_laundry
         - switch.window_philip
     - service: switch.turn_on
