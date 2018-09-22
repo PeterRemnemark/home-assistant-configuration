@@ -27,10 +27,10 @@ office lights:
 
 dinner room lights:
   entities:
-    - switch.window_dinner_room
+    - light.window_dinner_room
     - light.interior_dinner_room_1
     - light.ceiling_dinner_room
-    - switch.wall_dinner_room
+    - light.wall_dinner_room
     - switch.wall_fire_place
 
 # Outdoor Pool Lights:

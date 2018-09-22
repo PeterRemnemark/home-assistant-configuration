@@ -17,7 +17,7 @@ window_lights:
   entities:
     - light.window_kitchen
     - light.window_office
-    - switch.window_dinner_room
+    - light.window_dinner_room
     - light.window_master_bedroom
     - switch.window_philip
     - switch.window_laundry
@@ -50,5 +50,5 @@ wall_lights:
   name: Wall Lights
   entities:
     - switch.wall_main_room
-    - switch.wall_dinner_room
+    - light.wall_dinner_room
     - switch.wall_fire_place

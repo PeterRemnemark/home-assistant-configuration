@@ -210,3 +210,11 @@ media_player.plexds_safari:
   name:
   platform: plex
   unique_id: ie15xdyyazl49835v7s7ubfm
+light.window_dinner_room:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:cb:47:9e-01
+light.wall_dinner_room:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:cb:43:46-01
