@@ -202,3 +202,11 @@ light.window_kitchen_2:
   name:
   platform: deconz
   unique_id: 7c:b0:3e:aa:00:a7:c0:0f-03
+sensor.daylight:
+  name:
+  platform: deconz
+  unique_id: 00:21:2e:ff:ff:01:01:dd-01
+media_player.plexds_safari:
+  name:
+  platform: plex
+  unique_id: ie15xdyyazl49835v7s7ubfm
