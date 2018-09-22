@@ -7,8 +7,8 @@
 - platform: denonavr
   host: !secret media_player_mainroom
   show_all_sources: true
-- platform: plex
-  entity_namespace: 'plex-ds'
+# - platform: plex
+#   entity_namespace: 'plex-ds'
 
 - platform: spotify
   client_id: !secret spotify_id
