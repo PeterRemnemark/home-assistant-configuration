@@ -73,7 +73,7 @@ exterior:
   view: no
   control: hidden
   entities:
-    - light.exterior_post
+#    - light.exterior_post
     - switch.engine_heater
     - switch.ceiling_garage
     - switch.exterior_garage

@@ -130,19 +130,19 @@
         {%- if now().strftime('%H%M')|int < 600 -%}
           32
         {%- elif now().strftime('%H%M')|int < 700 -%}
-          64
-        {%- elif now().strftime('%H%M')|int < 900 -%}
           96
-        {%- elif now().strftime('%H%M')|int < 1100 -%}
-          138
-        {%- elif now().strftime('%H%M')|int < 1400 -%}
-          192
-        {%- elif now().strftime('%H%M')|int < 1700 -%}
-          138
-        {%- elif now().strftime('%H%M')|int < 2030 -%}
+        {%- elif now().strftime('%H%M')|int < 900 -%}
           128
-        {%- elif now().strftime('%H%M')|int < 2200 -%}
-          64
+        {%- elif now().strftime('%H%M')|int < 1100 -%}
+          192
+        {%- elif now().strftime('%H%M')|int < 1400 -%}
+          224
+        {%- elif now().strftime('%H%M')|int < 2100 -%}
+          192
+        {%- elif now().strftime('%H%M')|int < 2230 -%}
+          128
+        {%- elif now().strftime('%H%M')|int < 2330 -%}
+          96
         {%- else -%}
           32
         {%- endif -%}

@@ -37,6 +37,30 @@ light.exterior_post:
   icon: mdi:lava-lamp
   assumed_state: false
 
+light.exterior_back_door:
+  friendly_name: 'Exterior Back Door'
+  emulated_hue_hidden: false
+  hidden: false
+  homebridge_hidden: false
+  icon: mdi:lava-lamp
+  assumed_state: false
+
+light.exterior_front_door:
+  friendly_name: 'Exterior Front Door'
+  emulated_hue_hidden: false
+  hidden: false
+  homebridge_hidden: false
+  icon: mdi:lava-lamp
+  assumed_state: false
+
+light.exterior_side_door:
+  friendly_name: 'Exterior Side Door'
+  emulated_hue_hidden: false
+  hidden: false
+  homebridge_hidden: false
+  icon: mdi:lava-lamp
+  assumed_state: false
+
 light.ceiling_dinner_room:
   friendly_name: 'Ceiling Dinner room'
   emulated_hue_hidden: false

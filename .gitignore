@@ -65,6 +65,7 @@ life360.sh
 .spotify-token-cache
 .HA_VERSION
 .cloud
+.storage
 usps_cookies.pickle
 camera_recording.py
 home-assistant.env

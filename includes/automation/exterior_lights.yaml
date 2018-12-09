@@ -5,9 +5,11 @@
     platform: sun
     event: sunset
   action:
-    service: homeassistant.turn_on
-    entity_id:
-    - group.exterior_lights
+    service: light.turn_on
+    data:
+      brightness: 254
+      entity_id:
+        - group.exterior_lights
 
 
 # Turn the outside lights off at 2 AM every day
@@ -15,8 +17,8 @@
   alias: Ligts off outside
   trigger:
     platform: time
-    at: 02:02:00
+    at: 01:58:00
   action:
-    service: homeassistant.turn_off
+    service: light.turn_off
     entity_id:
     - group.exterior_lights

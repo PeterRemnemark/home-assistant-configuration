@@ -64,7 +64,7 @@
       name: Interior Laundry
     # 0b11000d03F243FE0b000070:
     #   name: Wall dinner Room
-    0b11000d007cc0fa05000070:
-      name: Exterior Side Entry
+    #0b11000d007cc0fa05000070:
+    #  name: Exterior Side Entry
     0b11000d007cc0fa06000070:
       name: Exterior Garage
