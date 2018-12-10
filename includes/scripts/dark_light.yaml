@@ -20,6 +20,11 @@ dark_lights:
         - light.window_dinner_room
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
+    - service: light.turn_on
+      entity_id:
+        - light.wall_dinner_room
+      data_template:
+        brightness: "{{ states('sensor.time_brightness')|int //2 }}"
     - service: switch.turn_on
       entity_id:
 #        - switch.window_dinner_room

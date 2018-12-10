@@ -14,10 +14,14 @@ morning_lights:
 #        - switch.wall_main_room
     - service: light.turn_on
       entity_id:
+        - light.wall_dinner_room
+      data_template:
+        brightness: "{{ states('sensor.time_brightness')|int //2 }}"
+    - service: light.turn_on
+      entity_id:
         - light.window_kitchen
         - light.hallway
         - light.interior_main_room
-        - light.wall_dinner_room
         - light.window_dinner_room
 #        - light.hallway_2
       data_template:
