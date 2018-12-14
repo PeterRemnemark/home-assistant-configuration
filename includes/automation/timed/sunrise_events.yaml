@@ -2,48 +2,36 @@
 ##  Sunrise events
 ###################################
 
-- alias: 'Sunrise events'
+- alias: 'Turn on exterior lights before Sunrise'
   trigger:
     - platform: sun
       event: sunrise
       offset: '-02:00:00'
+    - platform: time
+      at: '06:00:00'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
 
   action:
 #    - service: script.interior_off
     - service: homeassistant.turn_on
       entity_id:
         - group.exterior_lights
+      data:
+        brightness: 100
 
-    # - delay: '00:{{ (range(1, 55)|random|int) }}:00'
-    # - service: light.turn_off
-    #   entity_id:
-    #     - group.exterior_lights
-    #     - group.outdoor_front_lights
-    #     - group.outdoor_pool_lights
-    #     - group.all_lights
+###################################
+##  Sunrise events
+###################################
 
-    - wait_template: >-
-       {{ states.sun.sun.state == 'above_horizon' }}
+- alias: 'Turn off exterior lighgts when Sunrise'
+  trigger:
+    - platform: sun
+      event: sunrise
+  action:
+#    - service: script.interior_off
     - service: homeassistant.turn_off
       entity_id:
         - group.exterior_lights
- # - delay: '00:{{ (range(5, 40)|random|int) }}:00'
-    # - wait_template: >-
-    #    {{ states.input_boolean.night_mode.state == 'off' }}
-    # - service: input_boolean.turn_off
-    #   entity_id:
-    #     - input_boolean.guest_mode
-    #     - input_boolean.good_morning
-    # - condition: state
-    #   entity_id: input_boolean.vacation_mode
-    #   state: 'off'
-    # - service_template: >-
-    #     {% if is_state ("sensor.light_sensor", "Bright") %}
-    #       script.bright_lights
-    #     {% elif is_state ("sensor.light_sensor", "Dim") %}
-    #       script.dim_lights
-    #     {% elif is_state ("sensor.light_sensor", "Shade") %}
-    #       script.shade_lights
-    #     {% elif is_state ("sensor.light_sensor", "Dark") %}
-    #       script.dark_lights
-    #     {% endif %}
