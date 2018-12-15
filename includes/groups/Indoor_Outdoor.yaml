@@ -21,7 +21,7 @@ window_lights:
     - light.window_office
     - light.window_dinner_room
     - light.window_master_bedroom
-    - switch.window_philip
+#    - switch.window_philip
     - switch.window_laundry
     - light.window_main_room
 #    - light.window_main_room_2
@@ -54,3 +54,14 @@ wall_lights:
     - switch.wall_main_room
     - light.wall_dinner_room
     - switch.wall_fire_place
+#
+x_mas_lights:
+  name: Christmas lights
+  entities:
+    - switch.x_mas_office
+    - switch.x_mas_philip
+    - switch.x_mas_master_bedroom
+    - switch.x_mas_dinner_room
+    - switch.x_mas_kitchen
+    - switch.x_mas_main_room
+    - switch.x_mas_tree

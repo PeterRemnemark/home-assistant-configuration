@@ -1,0 +1,19 @@
+# Turn on and off Christmas Period
+- alias: Turn on Christmas Period
+  trigger:
+    - platform: template
+      value_template: >-
+        "{% if is_state ("sensor.christmas_period","yes") %} true{% endif %}""
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.x_mas
+
+
+- alias: Turn off Christmas Period
+  trigger:
+    - platform: template
+      value_template: >-
+        "{% if is_state ("sensor.christmas_period","no") %} true{% endif %}""
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.x_mas

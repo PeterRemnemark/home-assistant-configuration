@@ -18,4 +18,4 @@ home_modes:
     - input_boolean.night_mode
     - input_boolean.good_night
     - input_boolean.good_morning
-    
+    - input_boolean.x_mas

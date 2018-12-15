@@ -1,10 +1,6 @@
 # Turn off house when going to bed
 - alias: Turn off house when going to bed
   trigger:
-    # - platform: state
-    #   entity_id: sensor.petersiphone_battery_state
-    #   from: "Unplugged"
-    #   to: "Charging"
     - platform: state
       entity_id: input_boolean.good_night
       to: 'on'
@@ -24,7 +20,7 @@
     - delay: 00:00:20
     - service: homeassistant.turn_off
       entity_id:
-        - group.window_main_room_lights
+        - group.x_mas_lights
     - service: homeassistant.turn_off
       entity_id:
         - group.interior_lights

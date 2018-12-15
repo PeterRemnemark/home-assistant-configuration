@@ -61,6 +61,10 @@
         {% elif is_state ("sensor.light_sensor", "Dark") %}
           script.dark_lights
         {% endif %}
+    - service_template: >-
+        {% if is_state ("sensor.christmas_period","yes") %}
+          script.christmas_lights
+        {% endif %}
 
 ##############################################################################
 ###  Detect when lights are turned on and adjust them accordingly based on time.

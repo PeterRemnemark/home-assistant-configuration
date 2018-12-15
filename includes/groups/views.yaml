@@ -23,7 +23,7 @@ default_view:
 mainroom_view:
   name: Main room
   view: yes
-  icon: mdi:youtube-play
+  icon: mdi:youtube-tv
   entities:
 #    - light.window_main_room_1
 #    - light.window_main_room_2
@@ -39,7 +39,7 @@ mainroom_view:
 
 kitchen_view:
   name: Kitchen
-  view: no
+  view: yes
   entities:
     - switch.window_kitchen
     - sensor.freezer_temperature
@@ -51,12 +51,14 @@ information_view:
   view: yes
   icon: mdi:settings
   entities:
+    - group.x_mas_lights
     - group.iphone_battery_status
     - group.synology
     - group.speedtest_net
     - group.manual_override
     - group.zwave_group
     - group.all_automations
+
 
 
 weather_view:
@@ -92,6 +94,7 @@ scripts:
     - script.dim_lights
     - script.morning_lights
     - script.shade_lights
+    - script.christmas_lights
 
 t_sensors:
   name: House Temperaturs
@@ -116,6 +119,8 @@ p_sensors:
     - sensor.main_room_humidity
     - sensor.main_room_pressure
     - sensor.exterior_porch_pressure
+
+#
 
 
 # Bear Stone View:

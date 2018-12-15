@@ -45,6 +45,12 @@ input_boolean.night_mode:
   icon: mdi:weather-night
   homebridge_hidden: true
 #
+input_boolean.x_mas:
+  friendly_name: 'Christmas'
+  emulated_hue_hidden: true
+  hidden: False
+  icon: mdi:pine-tree
+  homebridge_hidden: true
 #
 # input_boolean.color_tornado:
 #   friendly_name: 'Color Tornado'

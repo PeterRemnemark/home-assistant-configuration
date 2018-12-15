@@ -120,6 +120,14 @@
       #   - sensor.location_philip
       #   - sensor.someone_home
 
+    christmas_period:
+      value_template: >
+        {% if (is_state ("light.window_kitchen","unavailable") and is_state("light.window_dinner_room", "unavailable") and (now().month == 12) ) %}
+          yes
+        {% else %}
+          no
+        {% endif  %}
+
 ############################################################
 #
 # Set brightness depending on Time of Day

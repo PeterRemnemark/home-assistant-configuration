@@ -1,0 +1,37 @@
+############################################################
+#
+# christmas Lights
+#
+############################################################
+
+christmas_lights:
+  sequence:
+    - service: switch.turn_on
+      entity_id:
+        - switch.x_mas_dinner_room
+        - switch.x_mas_kitchen
+        - switch.x_mas_main_room
+        - switch.x_mas_master_bedroom
+        - switch.x_mas_philip
+        - switch.x_mas_tree
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'off'
+    - service: switch.turn_on
+      entity_id:
+        - switch.x_mas_office
+    - service_template: >-
+        {% if (now().isoweekday() == 6) or (now().isoweekday() == 7) %}
+          {% if (now().strftime('%H%M')|int > 900 ) %}
+            switch.turn_on
+          {% else %}
+            switch.turn_off
+          {% endif %}
+        {% else %}
+          {% if (now().strftime('%H%M')|int > 630 ) %}
+            switch.turn_on
+          {% else %}
+            switch.turn_off
+          {% endif %}
+        {% endif %}
+      entity_id: switch.x_mas_philip

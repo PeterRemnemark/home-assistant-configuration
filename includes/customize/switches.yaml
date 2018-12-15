@@ -66,12 +66,54 @@ switch.window_laundry:
   hidden: false
   icon: mdi:lightbulb-outline
   assumed_state: false
-
-switch.window_philip:
-  friendly_name: 'Window Philip'
+#
+switch.x_mas_tree:
+  friendly_name: 'Christmas Tree Lighting'
   emulated_hue_hidden: false
   hidden: false
-  icon: mdi:lightbulb-outline
+  icon: mdi:lava-lamp
+  assumed_state: false
+
+switch.x_mas_master_bedroom:
+  friendly_name: 'Christmas Lighting Master Bedroom'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lamp
+  assumed_state: false
+
+switch.x_mas_office:
+  friendly_name: 'Christmas Lighting Office'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lamp
+  assumed_state: false
+
+switch.x_mas_kitchen:
+  friendly_name: 'Christmas Lighting Kitchen'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lamp
+  assumed_state: false
+
+switch.x_mas_main_room:
+  friendly_name: 'Christmas Lighting Main Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lamp
+  assumed_state: false
+
+switch.x_mas_dinner_room:
+  friendly_name: 'Christmas Lighting Dinner Room'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lamp
+  assumed_state: false
+
+switch.x_mas_philip:
+  friendly_name: 'Christmas Lighting Philip'
+  emulated_hue_hidden: false
+  hidden: false
+  icon: mdi:lamp
   assumed_state: false
 
 # switch.den_outlet:
