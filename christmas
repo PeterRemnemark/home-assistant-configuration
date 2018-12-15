@@ -1,7 +1,0 @@
-
-
-
-- service_template: >-
-    {% if is_state ("sensor.christmas_period","yes") %}
-      script.chistmas_lights
-    {% endif %}
