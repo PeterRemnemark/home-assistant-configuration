@@ -6,33 +6,15 @@
       to: 'on'
       from: 'off'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sensor.someone_home
-        state: 'yes'
-      - condition: sun
-        after: sunset
+    - condition: sun
+      after: sunset
   action:
-    - service: homeassistant.turn_off
-      entity_id:
-        - group.window_lights
-    - delay: 00:00:20
-    - service: homeassistant.turn_off
-      entity_id:
-        - group.x_mas_lights
-    - service: homeassistant.turn_off
-      entity_id:
-        - group.interior_lights
-    - delay: 00:00:20
-    - service: homeassistant.turn_off
-      entity_id:
-        - group.wall_lights
-    - delay: 00:00:20
-    - service: homeassistant.turn_off
-      entity_id:
-        - group.ceiling_lights
+    - service: light.turn_on
+      data:
+        entity_id: light.wall_dinner_room
+        flash: 'short'
     - service: input_boolean.turn_on
       entity_id: input_boolean.night_mode
     - service: input_boolean.turn_off
       entity_id: input_boolean.good_night
+    - service: script.lights_off

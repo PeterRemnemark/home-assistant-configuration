@@ -135,25 +135,27 @@
 ############################################################
     time_brightness:
       value_template: >-
-        {%- if now().strftime('%H%M')|int < 600 -%}
-          32
-        {%- elif now().strftime('%H%M')|int < 700 -%}
-          96
-        {%- elif now().strftime('%H%M')|int < 900 -%}
-          128
-        {%- elif now().strftime('%H%M')|int < 1100 -%}
-          160
-        {%- elif now().strftime('%H%M')|int < 1400 -%}
-          200
-        {%- elif now().strftime('%H%M')|int < 2000 -%}
-          160
-        {%- elif now().strftime('%H%M')|int < 2230 -%}
-          128
-        {%- elif now().strftime('%H%M')|int < 2330 -%}
-          96
-        {%- else -%}
-          32
-        {%- endif -%}
+            {%- if now().strftime('%H%M')|int < 600 -%}
+              32
+            {%- elif now().strftime('%H%M')|int < 700 -%}
+              96
+            {%- elif now().strftime('%H%M')|int < 900 -%}
+              128
+            {%- elif now().strftime('%H%M')|int < 1100 -%}
+              160
+            {%- elif now().strftime('%H%M')|int < 1400 -%}
+              200
+            {%- elif now().strftime('%H%M')|int < 2000 -%}
+              160
+            {%- elif now().strftime('%H%M')|int < 2230 -%}
+              128
+            {%- elif now().strftime('%H%M')|int < 2330 -%}
+              96
+            {%- else -%}
+              32
+            {%- endif -%}
+      entity_id: []
+
 ###########################################################
 #
 # Set Light Sensor to brightness for Automations

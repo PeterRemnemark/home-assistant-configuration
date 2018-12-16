@@ -18,7 +18,25 @@
           script.dark_lights
         {% endif %}
 
-
+- alias: 'Turn off interior lights when on one is home'
+  trigger:
+    - platform: state
+      entity_id: sensor.someone_home
+      from: 'yes'
+      to: 'no'
+      for:
+        minutes: 5
+  # condition:
+  #   - condition: time
+  #     before: '23:50:00'
+  action:
+    - service: script.bright_lights
+    - delay: '00:05:00'
+    - service_template: >-
+        {% if is_state ("sun.sun", "below_horizon") %}
+          homeassistant.turn_on
+        {% endif %}
+      entity_id: group.window_lights
 
 # - alias: 'People Greeting'
 #

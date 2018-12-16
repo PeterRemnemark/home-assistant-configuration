@@ -1,0 +1,177 @@
+#
+  - alias: 'Toggle interior lamps from dimmer'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: central_remote
+        event: 1002
+    action:
+      - service: light.toggle
+        entity_id:
+          - light.ceiling_dinner_room
+          - light.ceiling_philip_room
+          - light.hallway
+          - light.interior_dinner_room_1
+          - light.interior_main_room
+          - light.interior_philip_room
+          - light.wall_dinner_room
+          - light.window_dinner_room
+          - light.window_kitchen
+          - light.window_main_room
+          - light.window_master_bedroom
+          - light.window_office
+      - service: switch.toggle
+        entity_id:
+          - switch.interior_laundry
+          - switch.wall_fire_place
+          - switch.wall_main_room
+          - switch.window_laundry
+          - switch.x_mas_dinner_room
+          - switch.x_mas_kitchen
+          - switch.x_mas_main_room
+          - switch.x_mas_master_bedroom
+          - switch.x_mas_office
+          - switch.x_mas_philip
+          - switch.x_mas_tree
+
+  - alias: 'Turn on night mode, good night'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: central_remote
+        event: 1001
+    action:
+      - service: light.turn_on
+        data:
+          entity_id: light.wall_dinner_room
+          flash: 'short'
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.good_night
+
+  - alias: 'Increase brightness of lamp from dimmer'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: central_remote
+        event: 5002
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id:
+            - light.ceiling_dinner_room
+            - light.ceiling_philip_room
+            - light.hallway
+            - light.interior_dinner_room_1
+            - light.interior_main_room
+            - light.interior_philip_room
+            - light.window_dinner_room
+            - light.window_kitchen
+            - light.window_main_room
+            - light.window_master_bedroom
+            - light.window_office
+          brightness: >
+            {% set bri = states.light.interior_main_room.attributes.brightness | int %}
+            {{ [bri+30, 249] | min }}
+      - service: light.turn_on
+        data_template:
+          entity_id:
+            - light.wall_dinner_room
+          brightness: >
+            {% set bri = states.light.wall_dinner_room.attributes.brightness | int %}
+            {{ [bri+30, 125] | min }}
+
+  - alias: 'Decrease brightness of lamp from dimmer'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: central_remote
+        event: 4002
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id:
+            - light.ceiling_dinner_room
+            - light.ceiling_philip_room
+            - light.hallway
+            - light.interior_dinner_room_1
+            - light.interior_main_room
+            - light.interior_philip_room
+            - light.window_dinner_room
+            - light.window_kitchen
+            - light.window_main_room
+            - light.window_master_bedroom
+            - light.window_office
+          brightness: >
+            {% set bri = states.light.interior_main_room.attributes.brightness | int %}
+            {{ [bri-30, 0] | max }}
+      - service: light.turn_on
+        data_template:
+          entity_id:
+            - light.wall_dinner_room
+          brightness: >
+            {% set bri = states.light.wall_dinner_room.attributes.brightness | int %}
+            {{ [bri-30, 0] | max }}
+
+  - alias: 'Turn on full brightness from dimmer'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: central_remote
+        event: 2002
+    action:
+      - service: light.turn_on
+        data:
+          entity_id:
+            - light.ceiling_dinner_room
+            - light.ceiling_philip_room
+            - light.hallway
+            - light.interior_dinner_room_1
+            - light.interior_main_room
+            - light.interior_philip_room
+            - light.window_dinner_room
+            - light.window_kitchen
+            - light.window_main_room
+            - light.window_master_bedroom
+            - light.window_office
+            - light.wall_dinner_room
+          brightness: 254
+
+  - alias: 'Restore brightness from dimmer'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: central_remote
+        event: 3002
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id:
+            - light.hallway
+            - light.interior_dinner_room_1
+            - light.interior_main_room
+            - light.interior_philip_room
+            - light.window_dinner_room
+            - light.window_kitchen
+            - light.window_main_room
+            - light.window_master_bedroom
+            - light.window_office
+          brightness: "{{ states('sensor.time_brightness')|int }}"
+      - service: light.turn_on
+        data_template:
+          entity_id:
+            - light.wall_dinner_room
+          brightness: "{{ states('sensor.time_brightness')|int //2 }}"
+      - service: light.turn_off
+        entity_id:
+          - light.ceiling_dinner_room
+          - light.ceiling_philip_room

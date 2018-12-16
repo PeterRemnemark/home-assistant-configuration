@@ -1,0 +1,27 @@
+############################################################
+#
+# Lights off
+#
+############################################################
+
+lights_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.window_lights
+    - delay: 00:00:10
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.interior_lights
+    - delay: 00:00:10
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.wall_lights
+    - delay: 00:00:10
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.ceiling_lights
+    - delay: 00:00:10
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.x_mas_lights

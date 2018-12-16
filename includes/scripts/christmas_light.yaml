@@ -10,9 +10,11 @@ christmas_lights:
       entity_id:
         - switch.x_mas_dinner_room
         - switch.x_mas_kitchen
+    - delay: 00:00:10
+    - service: switch.turn_on
+      entity_id:
         - switch.x_mas_main_room
         - switch.x_mas_master_bedroom
-        - switch.x_mas_philip
         - switch.x_mas_tree
     - condition: state
       entity_id: input_boolean.guest_mode
