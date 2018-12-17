@@ -6,6 +6,10 @@ alexa:
       - input_boolean.guest_mode
       - input_boolean.good_night
       - input_boolean.good_morning
+      - sensor.exterior_porch_temperature
+      - sensor.freezer_temperature
+      - sensor.fridge_temperature
+      - sensor.main_room_temperature
       # - group.inside_lights_automations
       # - script.movie_time
       # - script.turn_on_shield
@@ -15,6 +19,21 @@ alexa:
     exclude_entities:
       - light.all_lights
       - light.gateway_light_34ce00fa72a2
+      - light.window_kitchen_1
+      - light.window_kitchen_2
+      - light.hallway_1
+      - light.hallway_2
+      - light.window_main_room_1
+      - light.window_main_room_2
+      - switch.ceiling_garage
+      - switch.tv_lg
+      - switch.window_laundry
+      - switch.x_mas_dinner_room
+      - switch.x_mas_kitchen
+      - switch.x_mas_main_room
+      - switch.x_mas_master_bedroom
+      - switch.x_mas_office
+      - switch.x_mas_philip
     exclude_domains:
       - group
       - automation
@@ -43,9 +62,25 @@ alexa:
     input_boolean.speech_notifications:
       name: 'Speech Notifications'
       display_categories: 'SWITCH'
+    sensor.exterior_porch_temperature:
+      name: 'Exterior'
+      display_categories: 'TEMPERATURE_SENSOR'
+    sensor.freezer_temperature:
+      name: 'Freezer'
+      display_categories: 'TEMPERATURE_SENSOR'
+    sensor.fridge_temperature:
+      name: 'Fridge'
+      display_categories: 'TEMPERATURE_SENSOR'
+    sensor.main_room_temperature:
+      name: 'Interior'
+      display_categories: 'TEMPERATURE_SENSOR'
+
     # script.movie_time:
     #   name: 'Movie time'
     #   display_categories: 'SWITCH'
+    switch.x_mas_tree:
+      name: 'Christmas tree'
+
     switch.lg_tv_power:
       name: 'Living room tv'
       display_categories: 'TV'

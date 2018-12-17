@@ -10,11 +10,9 @@
       - service: light.toggle
         entity_id:
           - light.ceiling_dinner_room
-          - light.ceiling_philip_room
           - light.hallway
           - light.interior_dinner_room_1
           - light.interior_main_room
-          - light.interior_philip_room
           - light.wall_dinner_room
           - light.window_dinner_room
           - light.window_kitchen
@@ -32,7 +30,6 @@
           - switch.x_mas_main_room
           - switch.x_mas_master_bedroom
           - switch.x_mas_office
-          - switch.x_mas_philip
           - switch.x_mas_tree
 
   - alias: 'Turn on night mode, good night'
@@ -62,12 +59,9 @@
       - service: light.turn_on
         data_template:
           entity_id:
-            - light.ceiling_dinner_room
-            - light.ceiling_philip_room
             - light.hallway
             - light.interior_dinner_room_1
             - light.interior_main_room
-            - light.interior_philip_room
             - light.window_dinner_room
             - light.window_kitchen
             - light.window_main_room
@@ -96,12 +90,9 @@
       - service: light.turn_on
         data_template:
           entity_id:
-            - light.ceiling_dinner_room
-            - light.ceiling_philip_room
             - light.hallway
             - light.interior_dinner_room_1
             - light.interior_main_room
-            - light.interior_philip_room
             - light.window_dinner_room
             - light.window_kitchen
             - light.window_main_room
@@ -131,11 +122,9 @@
         data:
           entity_id:
             - light.ceiling_dinner_room
-            - light.ceiling_philip_room
             - light.hallway
             - light.interior_dinner_room_1
             - light.interior_main_room
-            - light.interior_philip_room
             - light.window_dinner_room
             - light.window_kitchen
             - light.window_main_room
@@ -159,7 +148,6 @@
             - light.hallway
             - light.interior_dinner_room_1
             - light.interior_main_room
-            - light.interior_philip_room
             - light.window_dinner_room
             - light.window_kitchen
             - light.window_main_room
@@ -174,4 +162,3 @@
       - service: light.turn_off
         entity_id:
           - light.ceiling_dinner_room
-          - light.ceiling_philip_room
