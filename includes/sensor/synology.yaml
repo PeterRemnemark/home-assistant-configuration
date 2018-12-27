@@ -9,6 +9,6 @@
   monitored_conditions:
     - cpu_total_load
     - memory_real_usage
-    - volume_status
-    - volume_percentage_used
-    - volume_disk_temp_max
+    # - volume_status
+    # - volume_percentage_used
+    # - volume_disk_temp_max

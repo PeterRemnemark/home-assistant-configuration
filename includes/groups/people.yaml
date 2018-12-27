@@ -4,6 +4,7 @@ location_katarina:
   entities:
     - device_tracker.katarinasiphone
     - device_tracker.katarinaswifiiphone
+    - device_tracker.life360_katarina
 
 location_peter:
   name: "Location Peter"
@@ -11,14 +12,16 @@ location_peter:
   entities:
     - device_tracker.petersiphone
     - device_tracker.peterswifiiphone
+    - device_tracker.life360_peter
 
 location_philip:
   name: "Location Philip"
   view: no
   entities:
     - device_tracker.philipsgalaxys6
-    - device_tracker.philips_iphone
-    - device_tracker.philipswifiiphone
+    - device_tracker.life360_philip
+    # - device_tracker.philips_iphone
+    # - device_tracker.philipswifiiphone
 
 family:
   entities:

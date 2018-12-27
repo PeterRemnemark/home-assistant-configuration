@@ -1,0 +1,537 @@
+#####################################################################
+#    @package          :     alexa_tts
+#    @description      :     alexa_tts settings
+#####################################################################
+homeassistant:
+  customize:
+    ################################################
+    ## Node Anchors
+    ################################################
+    package.node_anchors:
+      customize: &customize
+        package: 'alexa_tts'
+
+      hidden: &hidden
+        <<: *customize
+        hidden: true
+
+
+    ################################################
+    ## Input Text
+    ################################################
+    # input_text.alexa_tts:
+    #   icon: mdi:textbox
+
+
+    ################################################
+    ## Input Select
+    ################################################
+    # input_select.alexa:
+    #   icon: mdi:format-list-bulleted
+
+
+    ################################################
+    ## Input Number
+    ################################################
+    # input_number.alexa_volume:
+    #   icon: mdi:volume-high
+    ################################################
+    ## Group Alexa
+    ################################################
+    group.alexa:
+      icon: mdi:robot
+###################################################################
+##media_player
+###################################################################
+media_player:
+  # - platform: alexa
+  #   email: !secret alexa_email
+  #   password: !secret alexa_password
+  #   url: amazon.com
+  - platform: alexa
+    email: !secret alexa-email_id
+    password: !secret alexa-email_secret
+    url: amazon.com
+#################################################################
+##group
+#################################################################
+group:
+#
+  alexa:
+    view: yes
+    control: hidden
+    name: 'Alexa'
+    entities:
+      # - group.alexa_tts
+      # - group.alexa_tts_automation
+      # - group.alexa_tts_temperature
+      # - group.alexa_tts_humidity
+      # - group.alexa_tts_info
+      # - group.alexa_tts_alarm
+      - media_player.dinner_room
+      - media_player.main_room
+      - media_player.kitchen
+      - media_player.everywhere
+      - media_player.this_device
+#
+  # alexa_tts:
+  #   view: no
+  #   control: hidden
+  #   name: 'Alexa TTS '
+  #   entities:
+  #     - input_text.alexa_tts
+  #     - input_select.alexa
+  #     - input_number.alexa_volume
+  #     - automation.alexa_tts
+#
+  # alexa_tts_automation:
+  #   view: no
+  #   control: hidden
+  #   name: 'Alexa TTS automation'
+  #   entities:
+  #     # - automation.alexa_smoke_detected
+  #     # - automation.alexa_varning_perimeter
+  #     - automation.alexa_water_leakage
+  #     # - automation.alexa_door_bell
+#
+  # alexa_tts_temperature:
+  #   view: no
+  #   control: hidden
+  #   name: 'Alexa TTS temperature'
+  #   entities:
+  #     - script.alexa_tts_bathroom_temperature
+  #     - script.alexa_tts_control_room_temperature
+  #     - script.alexa_tts_filippa_bedroom_temperature
+  #     # - script.alexa_tts_house_alarm_state
+  #     - script.alexa_tts_livingroom_temperature
+  #     - script.alexa_tts_master_bedroom_temperature
+  #     - script.alexa_tts_office_temperature
+  #     - script.alexa_tts_storehouse_temperature
+  #     - script.alexa_tts_upstairs_temperature
+
+#
+  # alexa_tts_humidity:
+  #   view: no
+  #   control: hidden
+  #   name: 'Alexa TTS humidity'
+  #   entities:
+#       - script.alexa_tts_bathroom_humidity
+#       - script.alexa_tts_control_room_humidity
+#       - script.alexa_tts_filippa_bedroom_humidity
+#       # - script.alexa_tts_house_alarm_state
+#       - script.alexa_tts_livingroom_humidity
+#       - script.alexa_tts_master_bedroom_humidity
+#       - script.alexa_tts_office_humidity
+#       - script.alexa_tts_storehouse_humidity
+#       - script.alexa_tts_upstairs_humidity
+# #
+#   alexa_tts_info:
+#     view: no
+#     control: hidden
+#     name: 'Alexa TTS info'
+#     entities:
+#       - script.alexa_tts_kavlinge_wind_speed
+#       - script.alexa_tts_lund_norra_wind_speed
+#       - script.alexa_tts_house_alarm_state
+# #
+#   alexa_tts_alarm:
+#     view: no
+#     control: hidden
+#     name: 'Alexa TTS alarm'
+#     entities:
+#       # - automation.alexa_alarm_has_been_set_armed_away
+#       # - automation.alexa_alarm_has_been_set_armed_home
+#       # - automation.alexa_doorbell
+#       # - automation.alexa_smoke_detected
+#       # - automation.alexa_alarm_as_been_disarmed
+#       # - automation.alexa_varning_perimeter
+#       - automation.alexa_water_leakage
+# #
+#####################################################################
+### Input Text
+#####################################################################
+# input_text:
+  # alexa_tts:
+  #   name: Alexa TTS
+  #   initial: Hello
+#####################################################################
+### Input Number
+#####################################################################
+# input_number:
+#   alexa_volume:
+#     name: Alexa Volume
+#     initial: 4
+#     min: 1
+#     max: 10
+#     step: 1
+
+
+#####################################################################
+### Input Select
+#####################################################################
+# input_select:
+#   alexa:
+#     name: Alexa
+#     options:
+#       - Main Room
+#       - None
+#       - This device
+#       - Kitchen
+#       # - Master Bedroom
+#       # - Nursery
+#       - Dinne Room
+#     initial: None
+#     icon: mdi:target
+
+##################################################################
+#automation
+##################################################################
+automation:
+  ## Announce what is typed as input
+  # - alias: Alexa TTS
+  #   trigger:
+  #     platform: state
+  #     entity_id: input_select.alexa
+  #   action:
+  #     - service: media_player.volume_set
+  #       data_template:
+  #         entity_id: >
+  #           {% if is_state('input_select.alexa', 'Dinner Room') %}
+  #             media_player.dinner_room
+  #           {% elif is_state('input_select.alexa', 'Main device') %}
+  #             media_player.main_room
+  #           {% elif is_state('input_select.alexa', 'Kitchen device') %}
+  #             media_player.kitchen
+  #           {% elif is_state('input_select.alexa', 'This device') %}
+  #             media_player.this_device
+  #           {% elif is_state('input_select.alexa', 'None') %}
+  #             false
+  #           {% endif %}
+  #         volume_level: '{{ states.input_number.alexa_volume.state | float /10 }}'
+  #     - service: media_player.alexa_tts
+  #       data_template:
+  #         entity_id: >
+  #           {% if is_state('input_select.alexa', 'Dinner Room') %}
+  #             media_player.dinner_room
+  #           {% elif is_state('input_select.alexa', 'Main device') %}
+  #             media_player.main_room
+  #           {% elif is_state('input_select.alexa', 'Kitchen device') %}
+  #             media_player.kitchen
+  #           {% elif is_state('input_select.alexa', 'This device') %}
+  #             media_player.this_device
+  #           {% elif is_state('input_select.alexa', 'None') %}
+  #             false
+  #           {% endif %}
+  #         message: "{{  states.input_text.alexa_tts.state }}"
+  #
+  #     - delay: '00:00:02'
+  #
+  #     - service: input_select.select_option
+  #       data:
+  #         entity_id: input_select.alexa
+  #         option: None
+
+#####################################################################################
+##
+#   - alias: Alexa varning perimeter
+#     initial_state: 'on'
+#     trigger:
+#       - platform: state
+#         entity_id: alarm_control_panel.ha_alarm
+#         to: 'pending'
+#     condition:
+#       - condition: state
+#         entity_id: group.perimeter_sensor
+#         state: 'on'
+#     action:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             You forgot to close:
+#             {%- for entity_id in states.group.perimeter_sensor.attributes.entity_id -%}
+#               {% set parts = entity_id.split('.') -%}
+#               {%- if states(entity_id) == 'on' %}
+#               {%- if loop.first %} {% elif loop.last %} and the {% else %}, the {% endif -%}{{ states[parts[0]][parts[1]].name }}{% endif -%}
+#             {%- endfor %}
+#           # cache: false
+#           # language: 'sv'
+#       - delay:
+#          seconds: 1
+# #
+#   - alias: Alexa Alarm as been disarmed
+#     initial_state: 'on'
+#     trigger:
+#       - platform: state
+#         entity_id: alarm_control_panel.ha_alarm
+#         to: 'disarmed'
+#     action:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Welcome back! House Alarm is now disarmed
+# #
+#   - alias: Alexa Alarm has been set armed away
+#     initial_state: 'on'
+#     trigger:
+#       - platform: state
+#         entity_id: alarm_control_panel.ha_alarm
+#         from: 'pending'
+#         to: 'armed_away'
+#     action:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Warning! House alarm is now set armed away and all sensors are now activated
+# #
+#   - alias: Alexa Alarm has been set armed home
+#     initial_state: 'on'
+#     trigger:
+#       - platform: state
+#         entity_id: alarm_control_panel.ha_alarm
+#         from: 'pending'
+#         to: 'armed_home'
+#     action:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Warning! House Alarm is now set to armed home and all doors and windows sensors are now activated
+#
+#group.water_leakage
+  - alias: Alexa water leakage
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: group.water_leakage
+        to: 'on'
+    action:
+      - service: media_player.alexa_tts
+        entity_id: media_player.dinner_room
+        data_template:
+          message: >
+            Warning there is water leakage in:
+            {%- for entity_id in states.group.water_leakage.attributes.entity_id -%}
+              {% set parts = entity_id.split('.') -%}
+              {%- if states(entity_id) == 'on' %}
+              {%- if loop.first %} {% elif loop.last %} and the {% else %}, the {% endif -%}{{ states[parts[0]][parts[1]].name }}{% endif -%}
+            {%- endfor %}
+      - delay: '00:00:03'
+      - service: media_player.alexa_tts
+        entity_id: media_player.kitchen
+        data_template:
+          message: >
+            Warning there is water leakage in:
+            {%- for entity_id in states.group.water_leakage.attributes.entity_id -%}
+              {% set parts = entity_id.split('.') -%}
+              {%- if states(entity_id) == 'on' %}
+              {%- if loop.first %} {% elif loop.last %} and the {% else %}, the {% endif -%}{{ states[parts[0]][parts[1]].name }}{% endif -%}
+            {%- endfor %}
+      - delay: '00:00:03'
+      - service: media_player.alexa_tts
+        entity_id: media_player.main_room
+        data_template:
+          message: >
+            Warning there is water leakage in:
+            {%- for entity_id in states.group.water_leakage.attributes.entity_id -%}
+              {% set parts = entity_id.split('.') -%}
+              {%- if states(entity_id) == 'on' %}
+              {%- if loop.first %} {% elif loop.last %} and the {% else %}, the {% endif -%}{{ states[parts[0]][parts[1]].name }}{% endif -%}
+            {%- endfor %}
+
+
+##smoke detected
+  # - alias: Alexa smoke detected
+  #   initial_state: 'on'
+  #   trigger:
+  #     - platform: state
+  #       entity_id: group.smoke_detectors
+  #       to: 'on'
+  #   action:
+  #     - service: media_player.alexa_tts
+  #       entity_id: media_player.livingroom
+  #       data_template:
+  #         message: >
+  #           Smoke is detected in:
+  #           {%- for entity_id in states.group.smoke_detectors.attributes.entity_id -%}
+  #             {% set parts = entity_id.split('.') -%}
+  #             {%- if states(entity_id) == 'on' %}
+  #             {%- if loop.first %} {% elif loop.last %} and the {% else %}, the {% endif -%}{{ states[parts[0]][parts[1]].name }}{% endif -%}
+  #           {%- endfor %}
+
+##Alexa Doorbell automation.alexa_doorbell
+  # - alias: 'Alexa Doorbell'
+  #   initial_state: 'on'
+  #   trigger:
+  #     - platform: state
+  #       entity_id:
+  #        - binary_sensor.doorbell_laundrydoor
+  #        - binary_sensor.doorbell_frontdoor
+  #       to: 'on'
+  #   action:
+  #     - service: media_player.alexa_tts
+  #       entity_id: media_player.livingroom
+  #       data_template:
+  #         message: >
+  #          "Someone is at the {{ trigger.to_state.name }}"
+
+#####################################################
+#script.livingroom_temperature
+# script:
+##################################################################################################
+# TTS temperature
+################################################################################################
+#   alexa_tts_livingroom_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Living room temperature is {{ states('sensor.living_room_temperature')  }} degrees
+# #
+#   alexa_tts_storehouse_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#            Storehouse emperature is {{ states('sensor.storehouse_temperature')  }} degrees
+# #
+#   alexa_tts_control_room_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#            Control room temperature is {{ states('sensor.control_room_temperature')  }} degrees
+# #
+#   alexa_tts_bathroom_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#            Bathroom temperature is {{ states('sensor.bathroom_temperature')  }} degrees
+# #
+#   alexa_tts_office_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Office temperature is {{ states('sensor.office_temperature')  }} degrees
+# #
+#   alexa_tts_upstairs_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Upstairs temperature is {{ states('sensor.upstairs_temperature')  }} degrees
+# #
+#   alexa_tts_master_bedroom_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Master Bedroom temperature is {{ states('sensor.master_bedroom_temperature')  }} degrees
+# #
+#   alexa_tts_filippa_bedroom_temperature:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Filippa bedroom temperature is {{ states('sensor.filippa_bedroom_temperature')  }} degrees
+# #
+#   alexa_tts_livingroom_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Living room humidity is {{ states('sensor.living_room_humidity')  }} procents
+# #
+#   alexa_tts_storehouse_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#            Storehouse emperature is {{ states('sensor.storehouse_humidity')  }} procents
+# #
+#   alexa_tts_control_room_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#            Control room humidity is {{ states('sensor.control_room_humidity')  }} procents
+# #
+#   alexa_tts_bathroom_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#            Bathroom humidity is {{ states('sensor.bathroom_humidity')  }} procents
+# #
+#   alexa_tts_office_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Office humidity is {{ states('sensor.office_humidity')  }} procents
+# #
+#   alexa_tts_upstairs_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Upstairs humidity is {{ states('sensor.upstairs_humidity')  }} procents
+# #
+#   alexa_tts_master_bedroom_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Master Bedroom humidity is {{ states('sensor.master_bedroom_humidity')  }} procents
+# #
+#   alexa_tts_filippa_bedroom_humidity:
+#     sequence:
+#       - service: media_player.alexa_tts
+#         entity_id: media_player.livingroom
+#         data_template:
+#           message: >
+#             Filippa bedroom humidity is {{ states('sensor.filippa_bedroom_humidity')  }} procents
+#######################################################################################################
+  # alexa_tts_house_alarm_state:
+  #   sequence:
+  #     - service: media_player.alexa_tts
+  #       entity_id: media_player.livingroom
+  #       data_template:
+  #         message: >
+  #           {{ states.alarm_control_panel.ha_alarm.attributes.friendly_name}} {{ states('alarm_control_panel.ha_alarm')  }}
+#sensor.vag_kavlinge_108_wind_speed
+  # alexa_tts_kavlinge_wind_speed:
+  #   sequence:
+  #     - service: media_player.alexa_tts
+  #       entity_id: media_player.livingroom
+  #       data_template:
+  #         message: >
+  #           Kävlinge Wind speed is {{ states('sensor.vag_kavlinge_108_wind_speed')  }} meter per seconds
+#
+#sensor.vag_lund_norra_wind_speed
+  # alexa_tts_lund_norra_wind_speed:
+  #   sequence:
+  #     - service: media_player.alexa_tts
+  #       entity_id: media_player.livingroom
+  #       data_template:
+  #         message: >
+  #           Lund North Wind speed is {{ states('sensor.vag_lund_norra_wind_speed')  }} meter per seconds

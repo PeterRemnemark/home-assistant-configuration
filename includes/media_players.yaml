@@ -16,7 +16,10 @@
   # aliases:
   #     abc123def456: 'Living Room'
   #     9183abas000: 'Bed Room'
-
+# - platform: alexa
+#   email: !secret alexa-email_id
+#   password: !secret alexa-email_secret
+#   url: amazon.com
 # Coffey Table Jazz
 # spotify:user:spotify:playlist:37i9dQZF1DWVqfgj8NZEp1
 #

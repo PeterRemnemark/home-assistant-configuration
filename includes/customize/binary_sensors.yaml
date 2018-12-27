@@ -21,6 +21,12 @@ binary_sensor.kitchen_motion:
 binary_sensor.laundry_motion:
   friendly_name: 'Laundry room Sensor'
 
+binary_sensor.water_leak_ftx_system:
+  friendly_name: 'FTX boiler system'
+
+binary_sensor.water_leak_kitchen:
+  friendly_name: 'kitchen dishwasher'
+  
 # binary_sensor.aeotec_dsb04100_doorwindow_sensor_sensor_4_0:
 #   friendly_name: 'Aeotec Dsb04100 Door/window Sensor Sensor 4'
 #   emulated_hue_hidden: true

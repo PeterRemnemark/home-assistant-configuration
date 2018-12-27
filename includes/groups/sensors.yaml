@@ -11,3 +11,8 @@ Sensors:
     - sensor.time_brightness
     - binary_sensor.laundry_door
     - binary_sensor.front_door
+
+water_leakage:
+  entities:
+    - binary_sensor.water_leak_ftx_system
+    - binary_sensor.water_leak_kitchen
