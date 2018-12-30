@@ -24,13 +24,13 @@
           - condition: state
             entity_id: input_boolean.vacation_mode
             state: 'off'
-          - condition: time
-            weekday:
-              - mon
-              - tue
-              - wed
-              - thu
-              - fri
+          # - condition: time
+          #   weekday:
+          #     - mon
+          #     - tue
+          #     - wed
+          #     - thu
+          #     - fri
   action:
     - service: input_boolean.turn_off
       entity_id:

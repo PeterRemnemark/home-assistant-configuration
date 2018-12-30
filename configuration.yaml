@@ -177,6 +177,9 @@ cloud: !include includes/alexa.yaml
   #   - group
   #   - switch
   #   - input_boolean
+binary_sensor:
+  - platform: workday
+    country: SE
 
 #------------------------------------------------------
 
@@ -189,7 +192,6 @@ cloud: !include includes/alexa.yaml
 # single Files
 
 #group: !include includes/groups.yaml
-#binary_sensor: !include includes/binary_sensors.yaml
 device_tracker: !include includes/device_trackers.yaml
 light: !include includes/lights.yaml
 switch: !include includes/switches.yaml

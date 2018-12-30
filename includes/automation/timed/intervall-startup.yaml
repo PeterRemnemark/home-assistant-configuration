@@ -1,0 +1,51 @@
+
+- alias: 'every_30_minutes'
+  trigger:
+    - platform: time
+      minutes: '/30'
+      seconds: 0
+  action:
+    - service: homeassistant.update_entity
+      entity_id: sensor.time_brightness
+
+#
+- alias: 'every_day_at_4_am'
+  trigger:
+    - platform: time
+      at: '04:00:00'
+  action:
+    - service_template: >-
+          {% if is_state ("sensor.christmas_period","yes") %}
+            input_boolean.turn_on
+          {% else %}
+            input_boolean.turn_off
+          {% endif %}
+      entity_id: input_boolean.x_mas
+    - service_template: >-
+          {% if is_state ("calendar.schoolbreak","on") or is_state ("binary_sensor.workday_sensor","off")%}
+            input_boolean.turn_on
+          {% else %}
+            input_boolean.turn_off
+          {% endif %}
+      entity_id: input_boolean.vacation_mode
+#
+- alias: 'When Hass starts'
+  trigger:
+    platform: homeassistant
+    # Event can also be 'shutdown'
+    event: start
+  action:
+    - service_template: >-
+          {% if is_state ("sensor.christmas_period","yes") %}
+            input_boolean.turn_on
+          {% else %}
+            input_boolean.turn_off
+          {% endif %}
+      entity_id: input_boolean.x_mas
+    - service_template: >-
+          {% if is_state ("calendar.schoolbreak","on") or is_state ("binary_sensor.workday_sensor","off") %}
+            input_boolean.turn_on
+          {% else %}
+            input_boolean.turn_off
+          {% endif %}
+      entity_id: input_boolean.vacation_mode
