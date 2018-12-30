@@ -2,123 +2,27 @@
 # Template
 - platform: template
   sensors:
-    location_peter:
-      friendly_name: 'Location Peter'
-      value_template: >
-        {% if is_state("input_select.presence_detection_peter","Manual home") %}
-          home
-        {% elif is_state("input_select.presence_detection_peter","Manual away") %}
-          away
-        {% elif is_state("group.location_peter","home") %}
-          home
-        {% elif is_state("group.location_peter","not_home") %}
-          away
-        {% else %}
-          unknown
-        {% endif %}
-      icon_template: >
-        {% if is_state("input_select.presence_detection_peter","Manual home") %}
-          mdi:account
-        {% elif is_state("input_select.presence_detection_peter","Manual away") %}
-        mdi:account-off
-        {% elif is_state("group.location_peter","home") %}
-          mdi:account
-        {% elif is_state("group.location_peter","not_home") %}
-          mdi:account-off
-        {% else %}
-          mdi:help
-        {% endif %}
-      # entity_id:
-      #   - group.location_peter
-      #   - input_select.presence_detection_peter
 
-    location_katarina:
-      friendly_name: 'Location Katarina'
-      value_template: >
-        {% if is_state("input_select.presence_detection_katarina","Manual home") %}
-          home
-        {% elif is_state("input_select.presence_detection_katarina","Manual away") %}
-          away
-        {% elif is_state("group.location_katarina","home") %}
-          home
-        {% elif is_state("group.location_katarina","not_home") %}
-          away
-        {% else %}
-          unknown
-        {% endif %}
-      icon_template: >
-        {% if is_state("input_select.presence_detection_katarina","Manual home") %}
-          mdi:account
-        {% elif is_state("input_select.presence_detection_katarina","Manual away") %}
-          mdi:account-off
-        {% elif is_state("group.location_katarina","home") %}
-          mdi:account
-        {% elif is_state("group.location_katarina","not_home") %}
-          mdi:account-off
-        {% else %}
-          mdi:help
-        {% endif %}
-      # entity_id:
-      #   - group.location_katarina
-      #   - input_select.presence_detection_katarina
-
-    location_philip:
-      friendly_name: 'Location Philip'
-      value_template: >
-        {% if is_state("input_select.presence_detection_philip","Manual home") %}
-          home
-        {% elif is_state("input_select.presence_detection_philip","Manual away") %}
-          away
-        {% elif is_state("group.location_philip","home") %}
-          home
-        {% elif is_state("group.location_philip","not_home") %}
-          away
-        {% else %}
-          unknown
-        {% endif %}
-      icon_template: >
-        {% if is_state("input_select.presence_detection_philip","Manual home") %}
-          mdi:account
-        {% elif is_state("input_select.presence_detection_philip","Manual away") %}
-          mdi:account-off
-        {% elif is_state("group.location_philip","home") %}
-          mdi:account
-        {% elif is_state("group.location_philip","not_home") %}
-          mdi:account-off
-        {% else %}
-          mdi:help
-        {% endif %}
-      # entity_id:
-      #   - group.location_philip
-      #   - input_select.presence_detection_philip
+############################################################
+#
+# Someone home
+#
+############################################################
 
     someone_home:
-      value_template: '{% if is_state("sensor.location_katarina", "home") or is_state("sensor.location_peter", "home") or is_state("sensor.location_philip", "home") %}yes{% else %}no{% endif %}'
-      # entity_id:
-      #   - sensor.location_katarina
-      #   - sensor.location_peter
-      #   - sensor.location_philip
-
-    onlyone_home:
       value_template: >
-        {% if is_state ("sensor.someone_home","yes") and ( is_state("sensor.location_katarina", "away") or is_state("sensor.location_peter", "away") or is_state("sensor.location_philip", "away")) %}
-          {% if is_state("sensor.location_katarina", "home") %}
-            katarina
-          {% elif is_state("sensor.location_peter", "home") %}
-            peter
-          {% elif is_state("sensor.location_philip", "home") %}
-            philip
-          {% else %}
-            error
-          {% endif %}
+        {% if is_state("group.location_katarina", "home") or is_state("group.location_peter", "home") or is_state("group.location_philip", "home") or is_state("input_boolean.guest_mode", "on")%}
+          yes
         {% else %}
           no
         {% endif %}
-      # entity_id:
-      #   - sensor.location_katarina
-      #   - sensor.location_peter
-      #   - sensor.location_philip
-      #   - sensor.someone_home
+
+
+############################################################
+#
+# Christmas Period
+#
+############################################################
 
     christmas_period:
       value_template: >
@@ -133,6 +37,7 @@
 # Set brightness depending on Time of Day
 #
 ############################################################
+
     time_brightness:
       value_template: >-
             {%- if now().strftime('%H%M')|int < 600 -%}
@@ -178,26 +83,3 @@
         {% else %}
           unknown
         {% endif %}
-
-
-
-
-
-# # garage action
-#     garage_action:
-#       friendly_name: 'Garage action'
-#       value_template: >
-#         {% if is_state("sun.sun","below_horizon") %}
-#           Notify
-#         {% elif is_state("sensor.someone_home","no") %}
-#           Notify
-#         {% elif is_state("sun.sun","above_horizon") %}
-#           Lights
-#         {% elif is_state("sensor.someone_home","yes") %}
-#           Lights
-#         {% else %}
-#           unknown
-#         {% endif %}
-#       entity_id:
-#         - sun.sun
-#         - sensor.someone_home

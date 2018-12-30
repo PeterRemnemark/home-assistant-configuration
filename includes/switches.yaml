@@ -66,5 +66,5 @@
     #   name: Wall dinner Room
     #0b11000d007cc0fa05000070:
     #  name: Exterior Side Entry
-    0b11000d007cc0fa06000070:
-      name: Exterior Garage
+    # 0b11000d007cc0fa06000070:
+    #   name: Exterior Garage

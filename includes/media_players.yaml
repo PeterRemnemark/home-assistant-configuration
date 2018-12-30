@@ -13,21 +13,16 @@
 - platform: spotify
   client_id: !secret spotify_id
   client_secret: !secret spotify_secret
-  # aliases:
-  #     abc123def456: 'Living Room'
-  #     9183abas000: 'Bed Room'
-# - platform: alexa
-#   email: !secret alexa-email_id
-#   password: !secret alexa-email_secret
-#   url: amazon.com
+
 # Coffey Table Jazz
 # spotify:user:spotify:playlist:37i9dQZF1DWVqfgj8NZEp1
 #
 # Digster Soft Jazz
-# spotify:user:digster.se:playlist:33YLYbQcmFT7Qv7NrNVIDo
+# spotify:perese:digster.se:playlist:33YLYbQcmFT7Qv7NrNVIDo
 #
 # New Music Friday
 # spotify:user:spotify:playlist:37i9dQZF1DXcecv7ESbOPu
 #
 # Girl PWR
 # spotify:user:spotify:playlist:37i9dQZF1DX3JcVtdd4I4E
+# https://open.spotify.com/playlist/7jvC4zj4QPYtEi1dpJ0m94

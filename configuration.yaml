@@ -116,8 +116,25 @@ recorder:
   #     - sensor.speedtest_upload
 
 # External logging database
-# influxdb:
-#   host: !secret influxdb_host
+influxdb:
+  host: !secret influxdb_host
+  include:
+    entities:
+      - sensor.cellar_humidity
+      - sensor.cellar_temperature
+      - sensor.dinner_room_luminance
+      - sensor.dinner_room_relative_humidity
+      - sensor.dinner_room_temperature
+      - sensor.exterior_porch_humidity
+      - sensor.exterior_porch_pressure
+      - sensor.exterior_porch_temperature
+      - sensor.freezer_temperature
+      - sensor.fridge_temperature
+      - sensor.main_room_humidity
+      - sensor.main_room_pressure
+      - sensor.main_room_temperature
+      - sensor.yr_humidity
+      - sensor.yr_temperature
 
 # Track the sun
 sun:
@@ -133,6 +150,10 @@ rfxtrx:
 zwave:
   usb_path: /dev/ttyACM0
 #  new_entity_ids: true
+
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
 
 # dcz:
 #   ws_url: !secret dcz_ws_url
@@ -168,7 +189,7 @@ cloud: !include includes/alexa.yaml
 # single Files
 
 #group: !include includes/groups.yaml
-binary_sensor: !include includes/binary_sensors.yaml
+#binary_sensor: !include includes/binary_sensors.yaml
 device_tracker: !include includes/device_trackers.yaml
 light: !include includes/lights.yaml
 switch: !include includes/switches.yaml

@@ -1,6 +1,6 @@
 # Binary Sensors
 #
-binary_sensor.front_door_motion:
+binary_sensor.front_door_motion_2:
   friendly_name: 'Front door motion'
 
 binary_sensor.garage_door:
@@ -26,7 +26,7 @@ binary_sensor.water_leak_ftx_system:
 
 binary_sensor.water_leak_kitchen:
   friendly_name: 'kitchen dishwasher'
-  
+
 # binary_sensor.aeotec_dsb04100_doorwindow_sensor_sensor_4_0:
 #   friendly_name: 'Aeotec Dsb04100 Door/window Sensor Sensor 4'
 #   emulated_hue_hidden: true

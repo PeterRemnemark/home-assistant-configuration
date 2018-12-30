@@ -4,13 +4,6 @@
     0b11000d007cc0fa02000070:
       name: Ceiling Dinner room
 
-
-# - platform: hue
-#   host: !secret hue_host
-#   filename: phue.conf
-#   allow_unreachable: true
-#   allow_in_emulated_hue: false
-#   allow_hue_groups: false
 - platform: group
   name: Window Kitchen
   entities:
@@ -42,3 +35,5 @@
 
     192.168.1.149:
       name: Ceiling Philip Room
+    192.168.1.150:
+      name: Ceiling Porch

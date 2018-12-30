@@ -8,11 +8,10 @@ default_view:
     - group.Interior_lights
     - group.ceiling_lights
     - group.wall_lights
-    - group.home_modes
+    # - group.home_modes
     - group.exterior_lights
     - sensor.light_sensor
     - sensor.time_brightness
-#    - sensor.onlyone_home
     - sensor.someone_home
     - sensor.exterior_porch_temperature
     - sensor.main_room_temperature
@@ -20,22 +19,17 @@ default_view:
     - sensor.luminance_dinner_room_mean
     - group.scripts
 
-mainroom_view:
-  name: Main room
-  view: yes
-  icon: mdi:youtube-tv
-  entities:
-#    - light.window_main_room_1
-#    - light.window_main_room_2
-#    - group.window_main_room_lights
-#    - switch.wall_main_room
-#    - light.interior_main_room
-    - media_player.spotify
-    - media_player.apple_tv_in_main_room
-    - media_player.apple_tv_in_bedroom
-    - media_player.lg_tv_remote
-#    - media_player.marantzsr5007
-    - media_player.marantz_nr1603
+# mainroom_view:
+#   name: Main room
+#   view: yes
+#   icon: mdi:youtube-tv
+#   entities:
+#     - media_player.spotify
+#     - media_player.apple_tv_in_main_room
+#     - media_player.apple_tv_in_bedroom
+#     - media_player.lg_tv_remote
+# #    - media_player.marantzsr5007
+#     - media_player.marantz_nr1603
 
 kitchen_view:
   name: Kitchen
@@ -53,11 +47,6 @@ information_view:
   entities:
     - group.x_mas_lights
     - group.iphone_battery_status
-    # - group.synology
-    # - group.speedtest_net
-    - group.manual_override
-    - group.zwave_group
-    - group.all_automations
     - group.water_leakage
 
 

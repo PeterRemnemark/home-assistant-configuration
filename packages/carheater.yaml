@@ -149,7 +149,7 @@ group:
     name: "Motorvärmare AK"
     entities:
       - sensor.departuretime_ak
-      - sensor.heater_start_time_ak
+      # - sensor.heater_start_time_ak
       - input_number.heater_ak_hour
       - input_number.heater_ak_minutes
       - sensor.exterior_porch_temperature
