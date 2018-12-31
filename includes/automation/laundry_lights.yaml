@@ -5,6 +5,7 @@
 ############################################################
 
 - alias: Turn ON Laundry Lights when movement is detected
+  initial_state: true
   trigger:
     - platform: template
       value_template: "{% if is_state('binary_sensor.laundry_motion', 'on') %}true{% endif %}"

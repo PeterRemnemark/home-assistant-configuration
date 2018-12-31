@@ -1,4 +1,5 @@
 - alias: Turn on Night light
+  initial_state: true
   trigger:
     platform: state
     entity_id: input_boolean.night_mode
@@ -26,6 +27,7 @@
          - light.exterior_back_door
 
 - alias: Turn off Night light
+  initial_state: true
   trigger:
     platform: state
     entity_id: input_boolean.night_mode

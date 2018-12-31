@@ -1,5 +1,6 @@
 # Turn on and off Christmas Period
 - alias: Turn on Christmas Period
+  initial_state: true
   trigger:
     - platform: template
       value_template: >-
@@ -10,6 +11,7 @@
 
 
 - alias: Turn off Christmas Period
+  initial_state: true
   trigger:
     - platform: template
       value_template: >-

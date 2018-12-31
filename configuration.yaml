@@ -16,9 +16,9 @@ homeassistant:
 
   time_zone: !secret homeassistant_time_zome
   customize: !include_dir_merge_named includes/customize
-  customize_domain:
-    automation:
-      initial_state: 'on'
+  # customize_domain:
+  #   automation:
+  #     initial_state: 'on'
   customize_glob:
     "sensor.*":
       emulated_hue_hidden: true

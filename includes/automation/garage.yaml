@@ -1,5 +1,6 @@
 # Turn on lights in Garage when door is open, and send text if noone is home
 - alias: Turn ON Garage Lights when door is open
+  initial_state: true
   trigger:
     - platform: template
       value_template: "{% if is_state('binary_sensor.garage_door', 'on') %}true{% endif %}"

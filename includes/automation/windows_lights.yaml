@@ -1,5 +1,6 @@
 #Turn on windows lights if noone is home and sun gone down
 - id: windows_lights_on
+  initial_state: true
   alias: Turn on window light when sun sets
   trigger:
     platform: sun
@@ -15,6 +16,7 @@
 
 # Turn the Windows lights off when noone is home
 - id: window_lights_off
+  initial_state: true
   alias: Lights off windows
   trigger:
     platform: time

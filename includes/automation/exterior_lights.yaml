@@ -1,6 +1,7 @@
 #Turn on outside lights when sun gone down
 - id: lights_on_03
   alias: Turn on outside light when sun sets
+  initial_state: true
   trigger:
     platform: sun
     event: sunset
@@ -15,6 +16,7 @@
 # Turn the outside lights off at 2 AM every day
 - id: lights_off_02
   alias: Ligts off outside
+  initial_state: true
   trigger:
     platform: time
     at: 01:58:00

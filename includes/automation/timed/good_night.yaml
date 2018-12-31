@@ -1,5 +1,6 @@
 # Turn off house when going to bed
 - alias: Turn off house when going to bed
+  initial_state: true
   trigger:
     - platform: state
       entity_id: input_boolean.good_night

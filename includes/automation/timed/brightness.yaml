@@ -8,6 +8,7 @@
 ###################################
 
 - alias: 'Change the brightness during the day'
+  initial_state: true
   trigger:
     - platform: state
       entity_id: sensor.time_brightness

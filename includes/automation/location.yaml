@@ -1,5 +1,5 @@
 - alias: 'Turn on interior lights when someone gets home'
-
+  initial_state: true
   trigger:
     - platform: state
       entity_id: sensor.someone_home
@@ -19,6 +19,7 @@
         {% endif %}
 
 - alias: 'Turn off interior lights when on one is home'
+  initial_state: true
   trigger:
     - platform: state
       entity_id: sensor.someone_home

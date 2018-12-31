@@ -1,5 +1,6 @@
 #
   - alias: 'Toggle interior lamps from dimmer'
+    initial_state: true
     trigger:
       platform: event
       event_type: deconz_event
@@ -33,6 +34,7 @@
           - switch.x_mas_tree
 
   - alias: 'Turn on night mode, good night'
+    initial_state: true
     trigger:
       platform: event
       event_type: deconz_event

@@ -1,5 +1,6 @@
 #Turn on inside lights when noone is home and sun gone down
 - alias: Turn on inside light when sun sets
+  initial_state: true
   trigger:
     platform: sun
     event: sunset
@@ -15,6 +16,7 @@
 
 # Turn the inside lights off when noone is home
 - alias: Lights off inside
+  initial_state: true
   trigger:
     platform: time
     at: '22:35:00'

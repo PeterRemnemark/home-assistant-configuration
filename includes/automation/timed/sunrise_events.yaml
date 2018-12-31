@@ -3,6 +3,7 @@
 ###################################
 
 - alias: 'Turn on exterior lights before Sunrise'
+  initial_state: true
   trigger:
     - platform: sun
       event: sunrise
@@ -27,6 +28,7 @@
 ###################################
 
 - alias: 'Turn off exterior lighgts when Sunrise'
+  initial_state: true
   trigger:
     - platform: sun
       event: sunrise
