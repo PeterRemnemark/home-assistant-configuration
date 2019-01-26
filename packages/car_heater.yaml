@@ -23,10 +23,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
+              entity_id: sensor.exterior_porch_temperature
               below: '-20'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int + 7200 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 10800 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -43,10 +43,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
+              entity_id: sensor.exterior_porch_temperature
               below: '-20'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int + 7200 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 10800 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -56,10 +56,13 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
+       - service: notify.ios_petersiphone
+         data_template:
+           message: 'Engine heater is turned on for 3h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
          entity_id: automation.heater_minus_20, automation.heater_minus_10, automation.heater_plus_1, automation.heater_plus_5
 
-# triggers 2h before departure time when temp is below -10 and heater status is on, checks if weekend/weekday matches option
+# triggers 2.5h before departure time when temp is below -10 and heater status is on, checks if weekend/weekday matches option
   - alias: "heater minus 10"
     initial_state: false
     trigger:
@@ -72,10 +75,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
+              entity_id: sensor.exterior_porch_temperature
               below: '-10'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int + 3600 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 9000 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -92,10 +95,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
+              entity_id: sensor.exterior_porch_temperature
               below: '-10'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int + 3600 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 9000 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -105,10 +108,13 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
+       - service: notify.ios_petersiphone
+         data_template:
+           message: 'Engine heater is turned on for 2.5h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
          entity_id: automation.heater_minus_20, automation.heater_minus_10, automation.heater_plus_1, automation.heater_plus_5
 
-# triggers 1h before departure time when temp is below 1 and heater status is on, checks if weekend/weekday matches option
+# triggers 1.5h before departure time when temp is below 1 and heater status is on, checks if weekend/weekday matches option
   - alias: "heater plus 1"
     initial_state: false
     trigger:
@@ -121,10 +127,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
+              entity_id: sensor.exterior_porch_temperature
               below: '1'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 5400 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -141,10 +147,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
+              entity_id: sensor.exterior_porch_temperature
               below: '1'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 5400 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -154,10 +160,13 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
+       - service: notify.ios_petersiphone
+         data_template:
+           message: 'Engine heater is turned on for 1.5h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
          entity_id: automation.heater_minus_20, automation.heater_plus_1, automation.heater_plus_5, automation.heater_minus_10
 
-# triggers 30min before departure time when temp is below 5 and heater status is on, checks if weekend/weekday matches option
+# triggers 1h before departure time when temp is below 7 and heater status is on, checks if weekend/weekday matches option
   - alias: "heater plus 5"
     initial_state: false
     trigger:
@@ -170,10 +179,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
-              below: '5'
+              entity_id: sensor.exterior_porch_temperature
+              below: '7'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int - 1800) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 3600) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -190,10 +199,10 @@ automation:
         - condition: and
           conditions:
             - condition: numeric_state
-              entity_id: sensor.yr_temperature
-              below: '5'
+              entity_id: sensor.exterior_porch_temperature
+              below: '7'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int - 1800) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 3600) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -203,6 +212,9 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
+       - service: notify.ios_petersiphone
+         data_template:
+           message: 'Engine heater is turned on for 1h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
          entity_id: automation.heater_minus_20, automation.heater_plus_1, automation.heater_plus_5, automation.heater_minus_10
 
@@ -235,6 +247,10 @@ automation:
          entity_id: automation.heater_off
        - service: switch.turn_off
          entity_id: switch.engine_heater
+       - service: notify.ios_petersiphone
+         data_template:
+           message: 'Enging heater will now be tunrned off {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
+
 
 
 # Input section
@@ -279,40 +295,40 @@ sensor:
         value_template: '{% if states.input_number.heater_hour.state|round(0)|string|length == 1 %}0{% endif %}{{ states.input_number.heater_hour.state|round(0)|string }}:{% if states.input_number.heater_minutes.state|round(0)|string|length == 1 %}0{% endif %}{{ states.input_number.heater_minutes.state|round(0)|string }}'
 
 # Group section
-group:
-
-  heater_view:
-    view: yes
-    name: heter
-    icon: mdi:radiator
-    entities:
-      - group.heater
-# option to show the automations and scripts that controls the heater
-#      - group.heater_controls
-
-  heater:
-    control: hidden
-    name: "Motorvärmare"
-    entities:
-      - sensor.departuretime
-      - sensor.heater_start_time
-      - input_number.heater_hour
-      - input_number.heater_minutes
-      - sensor.yr_temperature
-      - switch.engine_heater
-      - input_boolean.heaterstatus
-      - input_boolean.heaterweekday
-
-  heater_controls:
-    name: "Styrning"
-    entities:
-      - automation.heater_enabled
-      - automation.heater_off
-      - automation.heater_minus_20
-      - automation.heater_minus_10
-      - automation.heater_plus_1
-      - automation.heater_plus_5
-      - script.heater_on
+# group:
+#
+#   heater_view:
+#     view: yes
+#     name: heter
+#     icon: mdi:radiator
+#     entities:
+#       - group.heater
+# # option to show the automations and scripts that controls the heater
+# #      - group.heater_controls
+#
+#   heater:
+#     control: hidden
+#     name: "Motorvärmare"
+#     entities:
+#       - sensor.departuretime
+#       - sensor.heater_start_time
+#       - input_number.heater_hour
+#       - input_number.heater_minutes
+#       - sensor.yr_temperature
+#       - switch.engine_heater
+#       - input_boolean.heaterstatus
+#       - input_boolean.heaterweekday
+#
+#   heater_controls:
+#     name: "Styrning"
+#     entities:
+#       - automation.heater_enabled
+#       - automation.heater_off
+#       - automation.heater_minus_20
+#       - automation.heater_minus_10
+#       - automation.heater_plus_1
+#       - automation.heater_plus_5
+#       - script.heater_on
 
 # Script section
 script:

@@ -23,7 +23,7 @@ christmas_lights:
       entity_id:
         - switch.x_mas_office
     - service_template: >-
-        {% if (now().isoweekday() == 6) or (now().isoweekday() == 7) %}
+        {% if is_state ("input_boolean.vacation_mode", "on") %}
           {% if (now().strftime('%H%M')|int > 900 ) %}
             switch.turn_on
           {% else %}
@@ -37,3 +37,5 @@ christmas_lights:
           {% endif %}
         {% endif %}
       entity_id: switch.x_mas_philip
+
+#        {% if (now().isoweekday() == 6) or (now().isoweekday() == 7) %}

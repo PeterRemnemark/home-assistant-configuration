@@ -151,6 +151,22 @@ zwave:
   usb_path: /dev/ttyACM0
 #  new_entity_ids: true
 
+mqtt:
+  broker: !secret mqtt_broker
+  client_id: hass
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+    qos: 1
+    retain: true
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+    qos: 1
+    retain: true
+
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret

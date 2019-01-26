@@ -35,6 +35,9 @@ morning_lights:
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
     - delay: '00:30:00'
+    - condition: state
+      entity_id:  input_boolean.vacation_mode
+      state: 'off'
     - service: light.turn_on
       entity_id:
         - light.interior_philip_room

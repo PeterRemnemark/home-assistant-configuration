@@ -44,14 +44,14 @@
 #      name: Badrumsdörren
 #    0b11000d007cc0fa0a000070:
 #      name: Entrédörren
-    0b11000d007cc0fa01000070:
-      name: Engine Heater
+    # 0b11000d007cc0fa01000070:
+    #   name:
     # 0b11000d03F243FE02000070:
     #   name: Interior Main room
     0b11000d03F243FE04000070:
       name: Wall Fire Place
-    # 0b11000d03F243FE08000070:
-    #   name: Exterior post
+    0b11000d03F243FE08000070:
+      name: Engine Heater
     0b11000d03F243FE09000070:
       name: Window Laundry
     0b11000d03F243FE0a000070:

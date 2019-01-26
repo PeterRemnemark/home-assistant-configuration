@@ -5,10 +5,9 @@
     - platform: state
       entity_id: input_boolean.good_night
       to: 'on'
-      from: 'off'
-  condition:
-    - condition: sun
-      after: sunset
+  # condition:
+  #   - condition: sun
+  #     after: sunset
   action:
     - service: light.turn_on
       data:
