@@ -32,8 +32,8 @@
         entity_id:
           - light.ceiling_philip_room
           - light.interior_philip_room
-        brightness: 254
-        rgb_color: [255,255,255]
+        brightness: 255
+        color_temp: "239"
 
 - alias: 'Restore color and brightness for Philip Room lamps'
   initial_state: 'on'
@@ -50,7 +50,7 @@
           - light.ceiling_philip_room
           - light.interior_philip_room
         brightness: "{{ states('sensor.time_brightness')|int }}"
-        rgb_color: [255,183,123]
+        color_temp: "320"
 
 - alias: 'Red color brightness for Philip Room lamps'
   initial_state: 'on'

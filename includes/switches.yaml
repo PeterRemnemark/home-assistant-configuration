@@ -50,8 +50,8 @@
     #   name: Interior Main room
     0b11000d03F243FE04000070:
       name: Wall Fire Place
-    0b11000d03F243FE08000070:
-      name: Engine Heater
+    # 0b11000d03F243FE08000070:
+    #   name: Engine Heater
     0b11000d03F243FE09000070:
       name: Window Laundry
     0b11000d03F243FE0a000070:

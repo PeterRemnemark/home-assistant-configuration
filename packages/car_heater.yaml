@@ -14,7 +14,7 @@ automation:
   - alias: "heater minus 20"
     initial_state: false
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
@@ -66,7 +66,7 @@ automation:
   - alias: "heater minus 10"
     initial_state: false
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
@@ -118,7 +118,7 @@ automation:
   - alias: "heater plus 1"
     initial_state: false
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
@@ -170,7 +170,7 @@ automation:
   - alias: "heater plus 5"
     initial_state: false
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
@@ -236,7 +236,7 @@ automation:
   - alias: "heater off"
     initial_state: false
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:

@@ -10,7 +10,7 @@ automation:
   - alias: "car heater minus 10"
     initial_state: True
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
@@ -34,7 +34,7 @@ automation:
   - alias: "car heater plus 1"
     initial_state: True
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
@@ -58,7 +58,7 @@ automation:
   - alias: "car heater plus 5"
     initial_state: True
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
@@ -93,7 +93,7 @@ automation:
   - alias: "car heater off"
     initial_state: False
     trigger:
-     - platform: time
+     - platform: time_pattern
        minutes: '/5'
        seconds: 2
     condition:
