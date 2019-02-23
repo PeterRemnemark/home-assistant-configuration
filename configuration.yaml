@@ -64,6 +64,12 @@ http:
 #
 ############################################################
 
+system_health:
+
+custom_updater:
+  mode: storage
+
+
 xiaomi_aqara:
   discovery_retry: 5
   gateways:

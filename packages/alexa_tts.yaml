@@ -43,38 +43,44 @@ homeassistant:
 ###################################################################
 ##media_player
 ###################################################################
-media_player:
-  # - platform: alexa
-  #   email: !secret alexa_email
-  #   password: !secret alexa_password
-  #   url: amazon.com
-  - platform: alexa
-    email: !secret alexa-email_id
-    password: !secret alexa-email_secret
-    url: amazon.com
+# media_player:
+#   # - platform: alexa
+#   #   email: !secret alexa_email
+#   #   password: !secret alexa_password
+#   #   url: amazon.com
+#   - platform: alexa
+#     email: !secret alexa-email_id
+#     password: !secret alexa-email_secret
+#     url: amazon.com
+alexa_media:
+  accounts:
+    - email: !secret alexa-email_id
+      password: !secret alexa-email_secret
+      url: amazon.com
+
 
 #################################################################
 ##group
 #################################################################
-group:
-#
-  alexa:
-    view: yes
-    control: hidden
-    name: 'Alexa'
-    entities:
-      # - group.alexa_tts
-      # - group.alexa_tts_automation
-      # - group.alexa_tts_temperature
-      # - group.alexa_tts_humidity
-      # - group.alexa_tts_info
-      # - group.alexa_tts_alarm
-      - media_player.dinner_room
-      - media_player.main_room
-      - media_player.kitchen
-      - media_player.everywhere
-      - media_player.this_device
-#
+# group:
+# #
+#   alexa:
+#     view: yes
+#     control: hidden
+#     name: 'Alexa'
+#     entities:
+#       # - group.alexa_tts
+#       # - group.alexa_tts_automation
+#       # - group.alexa_tts_temperature
+#       # - group.alexa_tts_humidity
+#       # - group.alexa_tts_info
+#       # - group.alexa_tts_alarm
+#       - media_player.dinner_room
+#       - media_player.main_room
+#       - media_player.kitchen
+#       - media_player.everywhere
+#       - media_player.this_device
+# #
   # alexa_tts:
   #   view: no
   #   control: hidden
