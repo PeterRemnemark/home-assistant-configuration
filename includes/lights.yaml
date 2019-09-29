@@ -22,6 +22,26 @@
     - light.hallway_1
     - light.hallway_2
 
+- platform: group
+  name: Exterior Garage
+  entities:
+    - light.ExtG1D
+    - light.ExtG1U
+    - light.ExtG2D
+    - light.ExtG2U
+
+- platform: group
+  name: Exterior Garage Up
+  entities:
+    - light.ExtG1U
+    - light.ExtG2U
+
+- platform: group
+  name: Exterior Garage Down
+  entities:
+    - light.ExtG1D
+    - light.ExtG2D
+
 
 - platform: yeelight
   devices:

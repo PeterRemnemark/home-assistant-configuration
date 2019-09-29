@@ -10,7 +10,6 @@
   host: !secret sensor_unifi_host
   username: !secret sensor_unifi_username
   password: !secret sensor_unifi_password
-  home_interval: 5
   verify_ssl: false
 #  track_new_devices: no
 #  interval_seconds: 40

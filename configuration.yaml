@@ -19,35 +19,35 @@ homeassistant:
   # customize_domain:
   #   automation:
   #     initial_state: 'on'
-  customize_glob:
-    "sensor.*":
-      emulated_hue_hidden: true
-      homebridge_hidden: true
-      haaska_hidden: true
-    "sensor.*_battery_level":
-      emulated_hue_hidden: true
-      homebridge_hidden: true
-      haaska_hidden: true
-    "sensor.*_battery_state":
-      emulated_hue_hidden: true
-      homebridge_hidden: true
-      haaska_hidden: true
-    "sensor.synology_*":
-      emulated_hue_hidden: true
-      homebridge_hidden: true
-      haaska_hidden: true
-    "binary_sensor.*":
-      emulated_hue_hidden: true
-      homebridge_hidden: true
-      haaska_hidden: true
-    "group.*":
-      emulated_hue_hidden: true
-      homebridge_hidden: true
-      haaska_hidden: true
-    "lights.*":
-      emulated_hue_hidden: false
-      homebridge_hidden: false
-      haaska_hidden: false
+  # customize_glob:
+  #   "sensor.*":
+  #     emulated_hue_hidden: true
+  #     homebridge_hidden: true
+  #     haaska_hidden: true
+  #   "sensor.*_battery_level":
+  #     emulated_hue_hidden: true
+  #     homebridge_hidden: true
+  #     haaska_hidden: true
+  #   "sensor.*_battery_state":
+  #     emulated_hue_hidden: true
+  #     homebridge_hidden: true
+  #     haaska_hidden: true
+  #   "sensor.synology_*":
+  #     emulated_hue_hidden: true
+  #     homebridge_hidden: true
+  #     haaska_hidden: true
+  #   "binary_sensor.*":
+  #     emulated_hue_hidden: true
+  #     homebridge_hidden: true
+  #     haaska_hidden: true
+  #   "group.*":
+  #     emulated_hue_hidden: true
+  #     homebridge_hidden: true
+  #     haaska_hidden: true
+  #   "lights.*":
+  #     emulated_hue_hidden: false
+  #     homebridge_hidden: false
+  #     haaska_hidden: false
 
   packages: !include_dir_named packages
 
@@ -64,11 +64,25 @@ http:
 #
 ############################################################
 
+
+#
+timer:
+  timer_laundry:
+    duration: '00:03:00'
+  timer_garage:
+    duration: '00:05:00'
+  timer_engineheater:
+    duration: '00:45:00'
+
 system_health:
 
-custom_updater:
-  mode: storage
+default_config:
 
+person:
+
+custom_updater:
+
+panel_custom: !include panels/panel_custom.yaml
 
 xiaomi_aqara:
   discovery_retry: 5
@@ -148,7 +162,8 @@ sun:
 ios:
 # Text to speech
 tts:
-  platform: google
+  - platform: google_translate
+
 # Rfx Com 433 device
 rfxtrx:
   device: /dev/ttyUSB0
@@ -191,6 +206,8 @@ deconz:
 alexa:
 
 cloud: !include includes/alexa.yaml
+
+yeelight: !include includes/yeelight.yaml
 
 # emulated_hue:
 #   host_ip: !secret emulated_hue_host

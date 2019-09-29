@@ -15,8 +15,36 @@
     - condition: state
       entity_id: sensor.someone_home
       state: 'yes'
-    # - condition: state
-    #   entity_id: sun.sun
-    #   state: 'below_horizon'
   action:
-    - service: script.laundry_lights_timer
+#    - service: script.laundry_lights_timer
+    - service: timer.start
+      entity_id: timer.timer_laundry
+    - service: homeassistant.turn_on
+      data_template:
+        entity_id: >-
+          {% if is_state('sensor.light_sensor', 'Night') %}
+            switch.window_laundry
+          {% else %}
+            switch.interior_laundry
+          {% endif %}
+
+
+- alias: Turn OFF Laundry Lights when movement is detected
+  initial_state: true
+  trigger:
+    - platform: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.timer_laundry
+  action:
+    - wait_template: "{{ states.binary_sensor.laundry_motion == 'off'}} "
+      # timeout: '00:01:45'
+      # continue_on_timeout: 'true'
+    - service: homeassistant.turn_off
+      data_template:
+        entity_id: >-
+          {% if is_state('sensor.light_sensor', 'Night') %}
+            switch.window_laundry
+          {% else %}
+            switch.interior_laundry
+          {% endif %}

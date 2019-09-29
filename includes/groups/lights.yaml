@@ -12,6 +12,7 @@ exterior_lights:
     - light.exterior_back_door
     - light.exterior_front_door
     - light.exterior_side_door
+    - light.exterior_garage
 
 window_lights:
   name: Windows lights
