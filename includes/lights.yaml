@@ -42,6 +42,63 @@
     - light.ExtG1D
     - light.ExtG2D
 
+- platform: group
+  name: Exterior Storage
+  entities:
+    - light.ExtS1D
+    - light.ExtS1U
+
+- platform: group
+  name: Exterior Post
+  entities:
+    - light.ExtPost1
+    - light.ExtPost2
+    - light.ExtPost3
+
+- platform: group
+  name: Exterior Back Up
+  entities:
+    - light.ExtB1U
+    - light.ExtB2U
+    - light.ExtB3U
+
+- platform: group
+  name: Exterior Back Down
+  entities:
+    - light.ExtB1D
+    - light.ExtB2D
+    - light.ExtB3D
+
+- platform: group
+  name: Exterior Back
+  entities:
+    - light.ExtB1D
+    - light.ExtB1U
+    - light.ExtB2D
+    - light.ExtB2U
+    - light.ExtB3U
+    - light.ExtB3D
+
+- platform: group
+  name: Exterior Front Up
+  entities:
+    - light.ExtF2U
+#    - light.ExtF3U
+
+- platform: group
+  name: Exterior Front Down
+  entities:
+    - light.ExtF2D
+#    - light.ExtF3D
+
+- platform: group
+  name: Exterior Front
+  entities:
+    - light.ExtF1
+    - light.ExtF2D
+    - light.ExtF2U
+#    - light.ExtF3U
+#    - light.ExtF3D
 
 - platform: yeelight
   devices:

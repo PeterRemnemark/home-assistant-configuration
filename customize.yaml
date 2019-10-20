@@ -1,0 +1,8 @@
+light.exterior_garage:
+  icon: mdi:lava-lamp
+switch.garageheater:
+  friendly_name: GarageHeater
+  icon: mdi:fan
+switch.storageheater:
+  friendly_name: Storage Heater
+  icon: mdi:fan
