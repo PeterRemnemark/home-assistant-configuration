@@ -83,13 +83,13 @@
   name: Exterior Front Up
   entities:
     - light.ExtF2U
-#    - light.ExtF3U
+    - light.ExtF3U
 
 - platform: group
   name: Exterior Front Down
   entities:
     - light.ExtF2D
-#    - light.ExtF3D
+    - light.ExtF3D
 
 - platform: group
   name: Exterior Front
@@ -97,8 +97,28 @@
     - light.ExtF1
     - light.ExtF2D
     - light.ExtF2U
-#    - light.ExtF3U
-#    - light.ExtF3D
+    - light.ExtF3U
+    - light.ExtF3D
+
+- platform: group
+  name: Exterior BackSide
+  entities:
+    - light.ExtBS1D
+    - light.ExtBS1U
+    - light.ExtBS2D
+    - light.ExtBS2U
+
+- platform: group
+  name: Exterior BackSide Up
+  entities:
+    - light.ExtBS1U
+    - light.ExtBS2U
+
+- platform: group
+  name: Exterior BackSide Down
+  entities:
+    - light.ExtBS1D
+    - light.ExtBS2D
 
 - platform: yeelight
   devices:

@@ -11,7 +11,7 @@
 
     someone_home:
       value_template: >
-        {% if is_state("group.location_katarina", "home") or is_state("group.location_peter", "home") or is_state("group.location_philip", "home") or is_state("input_boolean.guest_mode", "on")%}
+        {% if is_state("person.katarina", "home") or is_state("person.peter", "home") or is_state("person.philip", "home") or is_state("input_boolean.guest_mode", "on")%}
           yes
         {% else %}
           no
@@ -31,7 +31,7 @@
         {% else %}
           no
         {% endif  %}
-        
+
 ############################################################
 #
 # Set brightness depending on Time of Day

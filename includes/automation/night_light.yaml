@@ -22,6 +22,7 @@
          - light.exterior_side_door
          - light.exterior_garage
          - light.exterior_post
+         - light.exterior_backside
        data:
           brightness: 100
      - service: light.turn_off

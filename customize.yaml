@@ -6,3 +6,9 @@ switch.garageheater:
 switch.storageheater:
   friendly_name: Storage Heater
   icon: mdi:fan
+person.katarina:
+  entity_picture: /local/katarina_192x192.png
+person.peter:
+  entity_picture: /local/peter_192x192.png
+person.philip:
+  entity_picture: /local/philip_192x192.png

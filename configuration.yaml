@@ -80,7 +80,7 @@ default_config:
 
 person:
 
-custom_updater:
+#custom_updater:
 
 panel_custom: !include panels/panel_custom.yaml
 
@@ -159,7 +159,7 @@ influxdb:
 # Track the sun
 sun:
 #iOS platform
-ios:
+#ios:
 # Text to speech
 tts:
   - platform: google_translate
