@@ -23,7 +23,7 @@
       data_template:
         entity_id: >-
           {% if is_state('sensor.light_sensor', 'Night') %}
-            switch.window_laundry
+            light.window_laundry
           {% else %}
             switch.interior_laundry
           {% endif %}
@@ -37,14 +37,14 @@
       event_data:
         entity_id: timer.timer_laundry
   action:
-    - wait_template: "{{ states.binary_sensor.laundry_motion == 'off'}} "
+#    - wait_template: "{{ states.binary_sensor.laundry_motion == 'off'}} "
       # timeout: '00:01:45'
       # continue_on_timeout: 'true'
     - service: homeassistant.turn_off
       data_template:
         entity_id: >-
           {% if is_state('sensor.light_sensor', 'Night') %}
-            switch.window_laundry
+            light.window_laundry
           {% else %}
             switch.interior_laundry
           {% endif %}

@@ -1,7 +1,7 @@
 #### Code of the bwalarm integration ####
 
 # For legacy installations, this is not used in HA > 0.93
-REQUIREMENTS = ['ruamel.yaml==0.15.42']
+#REQUIREMENTS = ['ruamel.yaml==HomeAssistant_ruamel.yaml_version']
 
 import logging
 _LOGGER = logging.getLogger(__name__)
@@ -909,7 +909,7 @@ class BWAlarm(alarm.AlarmControlPanel):
         for state in states_dict.keys():
             state_config = states_dict[state]
             if INT_ATTR_STATE_CHECK_BEFORE_ARM in state_config.keys():
-                _LOGGER.error("{} state {}: {} found, remove before saving".format(FNAME, state, INT_ATTR_STATE_CHECK_BEFORE_ARM))
+                _LOGGER.debug("{} state {}: {} found, remove before saving".format(FNAME, state, INT_ATTR_STATE_CHECK_BEFORE_ARM))
                 state_config.pop(INT_ATTR_STATE_CHECK_BEFORE_ARM, None)
 
         fname = self.yaml_config()

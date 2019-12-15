@@ -22,6 +22,10 @@
         - group.exterior_lights
       data:
         brightness: 100
+    - service: switch.turn_on
+      entity_id:
+        - switch.winterpole
+        - switch.winterfront
 
 ###################################
 ##  Sunrise events
@@ -37,3 +41,7 @@
     - service: homeassistant.turn_off
       entity_id:
         - group.exterior_lights
+    - service: switch.turn_off
+      entity_id:
+        - switch.winterpole
+        - switch.winterfront

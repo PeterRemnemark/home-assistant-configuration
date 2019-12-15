@@ -26,11 +26,11 @@ dark_lights:
         - light.wall_dinner_room
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int //2 }}"
-    - service: switch.turn_on
-      entity_id:
-#        - switch.window_dinner_room
-        # - switch.window_laundry
-        - switch.window_philip
+#     - service: switch.turn_on
+#       entity_id:
+#         - switch.window_dinner_room
+#         - switch.window_laundry
+#         - switch.window_philip
     - service: switch.turn_on
       entity_id:
 #        - switch.wall_dinner_room
@@ -51,6 +51,8 @@ dark_lights:
           {% else %}
             light.turn_off
           {% endif %}
-      entity_id: light.interior_philip_room
+      entity_id:
+        - light.interior_philip_room
+        - light.window_philip
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"

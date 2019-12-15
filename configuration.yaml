@@ -68,11 +68,13 @@ http:
 #
 timer:
   timer_laundry:
-    duration: '00:03:00'
-  timer_garage:
     duration: '00:05:00'
+  timer_garage:
+    duration: '00:15:00'
   timer_engineheater:
     duration: '00:45:00'
+  timer_exterior:
+    duration: '00:05:00'
 
 system_health:
 
@@ -93,6 +95,7 @@ xiaomi_aqara:
 frontend:
   #Support fro the new Java UI
   javascript_version: latest
+  themes: !include_dir_merge_named themes
 
 # Enables configuration UI
 config:
@@ -158,8 +161,9 @@ influxdb:
 
 # Track the sun
 sun:
-#iOS platform
-#ios:
+#Shelly platform
+shelly:
+
 # Text to speech
 tts:
   - platform: google_translate

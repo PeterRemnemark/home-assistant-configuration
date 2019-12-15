@@ -48,7 +48,7 @@
               128
             {%- elif now().strftime('%H%M')|int < 1100 -%}
               160
-            {%- elif now().strftime('%H%M')|int < 1400 -%}
+            {%- elif now().strftime('%H%M')|int < 1800 -%}
               200
             {%- elif now().strftime('%H%M')|int < 2000 -%}
               160

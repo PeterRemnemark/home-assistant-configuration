@@ -1,21 +1,23 @@
 #Turn on outside lights when sun gone down
-- id: lights_on_03
-  alias: Turn on outside light when sun sets
+- alias: Turn on exterior lights when sun sets
   initial_state: true
   trigger:
     platform: sun
     event: sunset
   action:
-    service: light.turn_on
-    data:
-      brightness: 254
+    - service: light.turn_on
+      data:
+        brightness: 254
+        entity_id:
+          - group.exterior_lights
+    - service: switch.turn_on
       entity_id:
-        - group.exterior_lights
+        - switch.winterpole
+        - switch.winterfront
 
 
 # Turn the outside lights off at 2 AM every day
-- id: lights_off_02
-  alias: Ligts off outside
+- alias: Turn off exterior lights at 2 am
   initial_state: true
   trigger:
     platform: time
@@ -24,3 +26,14 @@
     service: light.turn_off
     entity_id:
     - group.exterior_lights
+# Turn the winter lights off at 4 AM every day
+- alias: Turn off Winter lights at 4 am
+  initial_state: true
+  trigger:
+    platform: time
+    at: 04:00:00
+  action:
+    - service: switch.turn_off
+      entity_id:
+        - switch.winterpole
+        - switch.winterfront

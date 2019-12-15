@@ -1,0 +1,83 @@
+############################################################
+#
+# Home Assistant Exterior Lights Door/motion Automation
+#
+############################################################
+
+- alias: Turn ON Exterior Front Lights when movement is detected
+  initial_state: true
+  trigger:
+    - platform: template
+      value_template: "{% if is_state('binary_sensor.laundry_door', 'on') %}true{% endif %}"
+    - platform: template
+      value_template: "{% if is_state('binary_sensor.front_door', 'on') %}true{% endif %}"
+    - platform: template
+      value_template: "{% if is_state('binary_sensor.front_door_motion', 'on') %}true{% endif %}"
+    - platform: template
+      value_template: "{% if is_state('binary_sensor.garage_motion', 'on') %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: and
+        conditions:
+        - condition: state
+          entity_id: sun.sun
+          state: 'below_horizon'
+        - condition: state
+          entity_id: sensor.someone_home
+          state: 'no'
+      - condition: and
+        conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: state
+        entity_id: input_boolean.night_mode
+        state: 'on'
+  action:
+    - service: timer.start
+      entity_id: timer.timer_exterior
+    - service: light.turn_on
+      data:
+        brightness: 254
+        transition: 1
+        entity_id:
+          - light.extpost1
+          - light.extpost2
+          - light.extpost3
+          - light.exterior_side_door
+          - light.extf1
+
+
+
+- alias: Turn OFF Exterior Front Lights when movement is detected
+  initial_state: true
+  trigger:
+    - platform: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.timer_exterior
+  action:
+    - service_template: >-
+          {% if ( is_state('input_boolean.night_mode', 'on') or is_state('sensor.someone_home', 'no')) and (now().strftime('%H%M')|int < 158 )%}
+            light.turn_on
+            data:
+              brightness: 100
+              transition: 2
+              entity_id:
+                - light.extpost1
+                - light.extpost2
+                - light.extpost3
+                - light.exterior_side_door
+                - light.extf1
+          {% else %}
+            light.turn_off
+            data:
+              transition: 20
+              entity_id:
+                - light.extpost1
+                - light.extpost2
+                - light.extpost3
+                - light.exterior_side_door
+                - light.extf1
+          {% endif %}

@@ -24,7 +24,7 @@
       event_data:
         entity_id: timer.timer_garage
   action:
-    - wait_template: "{{ states.binary_sensor.garage_door == 'off'}} "
+#    - wait_template: "{{ states.binary_sensor.garage_door == 'off'}} "
       # timeout: '00:01:45'
       # continue_on_timeout: 'true'
     - service: homeassistant.turn_off

@@ -42,6 +42,7 @@ morning_lights:
     - service: light.turn_on
       entity_id:
         - light.interior_philip_room
+        - light.window_philip
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
         color_temp: "320"
