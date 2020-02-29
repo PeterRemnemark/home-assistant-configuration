@@ -1,0 +1,12 @@
+- platform: workday
+  country: SE
+
+- platform: template
+  sensors:
+    someone_home:
+      value_template: >
+        {{ is_state('person.katarina', 'home') or
+           is_state('person.peter', 'home') or
+           is_state('person.philip', 'home') or
+           is_state('input_boolean.guest_mode', 'on')}}
+      device_class: presence

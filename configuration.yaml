@@ -116,12 +116,16 @@ history:
 
 logbook:
 # Logging all events in the home-assistant.log
-# logger:
+logger:
 #   default: critical
 #   logs:
 #     homeassistant.components: info
 #     homeassistant.components.automation: debug
 #    homeassistant.components.binary_sensor.rfxtrx: debug
+  default: info
+  # logs:
+  #   pydeconz: debug
+  #   homeassistant.components.deconz: debug
 
 recorder:
   purge_interval: 2
@@ -181,6 +185,8 @@ mqtt:
   client_id: hass
   username: !secret mqtt_username
   password: !secret mqtt_password
+  discovery: true
+  discovery_prefix: homeassistant
   birth_message:
     topic: 'hass/status'
     payload: 'online'
@@ -220,9 +226,7 @@ yeelight: !include includes/yeelight.yaml
   #   - group
   #   - switch
   #   - input_boolean
-binary_sensor:
-  - platform: workday
-    country: SE
+
 
 #------------------------------------------------------
 
@@ -242,9 +246,12 @@ input_select: !include includes/input_select.yaml
 media_player: !include includes/media_players.yaml
 apple_tv: !include includes/apple_tv.yaml
 input_boolean: !include includes/input_boolean.yaml
+scene: !include scenes.yaml
+binary_sensor: !include includes/binary_sensors.yaml
 
 # Merge List
-automation: !include_dir_merge_list includes/automation
+automation: !include automations.yaml
+automation split: !include_dir_merge_list includes/automation
 sensor: !include_dir_merge_list includes/sensor
 
 #Merge named

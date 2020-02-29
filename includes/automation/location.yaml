@@ -39,6 +39,66 @@
         {% endif %}
       entity_id: group.window_lights
 
+
+- alias: 'Peter BT presence'
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: sensor.7c_a1_ae_95_d1_08_room_presence
+      from: 'not_home'
+    - platform: state
+      entity_id: sensor.7c_a1_ae_95_d1_08_room_presence
+      to: 'not_home'
+  action:
+    service: mqtt.publish
+    data_template:
+      topic: location/peter_bt
+      payload_template: >
+        {% if is_state("sensor.7c_a1_ae_95_d1_08_room_presence", "hallway") or is_state("sensor.7c_a1_ae_95_d1_08_room_presence", "master-bedroom")%}
+          home
+        {% else %}
+          not_home
+        {% endif %}
+
+- alias: 'Katarina BT presence'
+  trigger:
+    - platform: state
+      entity_id: sensor.f0_c3_71_b5_07_6c_room_presence
+      from: 'not_home'
+    - platform: state
+      entity_id: sensor.f0_c3_71_b5_07_6c_room_presence
+      to: 'not_home'
+  action:
+    service: mqtt.publish
+    data_template:
+      topic: location/katarina_bt
+      payload_template: >
+        {% if is_state("sensor.f0_c3_71_b5_07_6c_room_presence", "hallway") or is_state("sensor.f0_c3_71_b5_07_6c_room_presence", "master-bedroom")%}
+          home
+        {% else %}
+          not_home
+        {% endif %}
+
+- alias: 'Philip BT presence'
+  trigger:
+    - platform: state
+      entity_id: sensor.philip_telefon_room_presence
+      from: 'not_home'
+    - platform: state
+      entity_id: sensor.philip_telefon_room_presence
+      to: 'not_home'
+  action:
+    service: mqtt.publish
+    data_template:
+      topic: location/philip_bt
+      payload_template: >
+        {% if is_state("sensor.philip_telefon_room_presence", "hallway") or is_state("sensor.philip_telefon_room_presence", "master-bedroom")%}
+          home
+        {% else %}
+          not_home
+        {% endif %}
+
+
 # - alias: 'People Greeting'
 #
 #   trigger:
