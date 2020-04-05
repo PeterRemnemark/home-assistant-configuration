@@ -392,7 +392,7 @@ async def async_setup_platform(hass, config, async_add_devices, discovery_info=N
     hass.http.register_static_path(url, resources)
     await hass.components.panel_custom.async_register_panel(
         webcomponent_name='alarm',
-        frontend_url_path="alarm",
+        frontend_url_path="custom-alarm",
         html_url=url,
         sidebar_title='Alarm',
         sidebar_icon='mdi:shield-home',

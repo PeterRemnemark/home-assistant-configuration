@@ -1,0 +1,47 @@
+- platform: switch
+  name: Christmas Lighting Office
+  entity_id: switch.x_mas_office
+
+- platform: switch
+  name: Christmas Lighting Philip
+  entity_id: switch.x_mas_philip
+
+- platform: switch
+  name: Christmas Lighting Master Bedroom
+  entity_id: switch.x_mas_master_bedroom
+
+- platform: switch
+  name: Christmas Lighting Dinnner Room
+  entity_id: switch.x_mas_dinner_room
+
+- platform: switch
+  name: Christmas Lighting Kitchen
+  entity_id: switch.x_mas_kitchen
+
+- platform: switch
+  name: Christmas Lighting Main Room
+  entity_id: switch.x_mas_main_room
+
+- platform: switch
+  name: Christmas Tree Lighting
+  entity_id: switch.x_mas_tree
+
+- platform: switch
+  name: Interior Laundry
+  entity_id: switch.interior_laundry
+
+- platform: switch
+  name: Ceiling Laundry
+  entity_id: switch.ceiling_laundry
+
+- platform: switch
+  name: Ceiling Garage
+  entity_id: switch.ceiling_garage
+
+- platform: switch
+  name: Wall Main Room
+  entity_id: switch.wall_main_room
+
+- platform: switch
+  name: Wall Fire Place
+  entity_id: switch.wall_fire_place

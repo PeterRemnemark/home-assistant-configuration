@@ -8,6 +8,8 @@
   action:
     - service: homeassistant.update_entity
       entity_id: sensor.time_brightness
+    - service: homeassistant.update_entity
+      entity_id: sensor.light_sensor
 
 #
 - alias: 'every_day_at_4_am'

@@ -1,0 +1,63 @@
+- platform: group
+  name: Window Kitchen
+  entities:
+    - light.window_kitchen_1
+    - light.window_kitchen_2
+
+- platform: group
+  name: Window Main Room
+  entities:
+    - light.window_main_room_1
+    - light.window_main_room_2
+
+- platform: group
+  name: Hallway
+  entities:
+    - light.hallway_1
+    - light.hallway_2
+
+- platform: group
+  name: Interior Lights
+  entities:
+    - light.hallway
+    - light.interior_dinner_room_1
+    - light.interior_main_room
+    - light.interior_laundry
+    - light.interior_philip_room
+
+- platform: group
+  name: Window lights
+  entities:
+    - light.window_kitchen
+    - light.window_office
+    - light.window_dinner_room
+    - light.window_master_bedroom
+    - light.window_laundry
+    - light.window_main_room
+    - light.window_philip
+
+- platform: group
+  name: Ceiling Lights
+  entities:
+    - light.ceiling_laundry
+    - light.ceiling_dinner_room
+    - light.ceiling_garage
+    - light.ceiling_philip_room
+
+- platform: group
+  name: Wall Lights
+  entities:
+    - light.wall_main_room
+    - light.wall_dinner_room
+    - light.wall_fire_place
+
+- platform: group
+  name: Christmas Lights
+  entities:
+    - light.christmas_lighting_office
+    - light.christmas_lighting_philip
+    - light.christmas_lighting_master_bedroom
+    - light.christmas_lighting_dinnner_room
+    - light.christmas_lighting_kitchen
+    - light.christmas_lighting_rain_room
+    - light.christmas_tree_lighting

@@ -9,10 +9,8 @@ dark_lights:
     - service: light.turn_on
       entity_id:
         - light.window_main_room
-#        - light.window_main_room_2
         - light.interior_dinner_room_1
         - light.hallway
-#        - light.hallway_2
         - light.interior_main_room
         - light.window_office
         - light.window_kitchen
@@ -26,16 +24,10 @@ dark_lights:
         - light.wall_dinner_room
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int //2 }}"
-#     - service: switch.turn_on
-#       entity_id:
-#         - switch.window_dinner_room
-#         - switch.window_laundry
-#         - switch.window_philip
-    - service: switch.turn_on
+    - service: light.turn_on
       entity_id:
-#        - switch.wall_dinner_room
-        - switch.wall_fire_place
-        - switch.wall_main_room
+        - light.wall_fire_place
+        - light.wall_main_room
     - service_template: >-
           {% if now().strftime('%H%M')|int > 1000 %}
             light.turn_on

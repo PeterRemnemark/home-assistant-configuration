@@ -1,0 +1,15 @@
+appdaemon:
+  latitude: 59.96908
+  longitude: 17.93569
+  elevation: 37
+  time_zone: Europe/Stockholm
+  plugins:
+    HASS:
+      type: hass
+      ha_url: https://auto.remnemark.nu
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1MTE3MDcyZjgwZGM0NjRiOGU4Y2FmMjRiNzEwMGNjNSIsImlhdCI6MTU4NDcxODkxOSwiZXhwIjoxOTAwMDc4OTE5fQ.Aeqy8e07jn8dOG3C6eghKCF1F5yk92Oa17FqxXixwt8
+http:
+  url: http://$HOSTNAME:5050
+admin:
+api:
+hadashboard:

@@ -6,36 +6,36 @@
 
 christmas_lights:
   sequence:
-    - service: switch.turn_on
+    - service: light.turn_on
       entity_id:
-        - switch.x_mas_dinner_room
-        - switch.x_mas_kitchen
-    - delay: 00:00:10
-    - service: switch.turn_on
+        - light.christmas_lighting_dinner_room
+        - light.christmas_lighting_kitchen
+    - delay: 00:00:05
+    - service: light.turn_on
       entity_id:
-        - switch.x_mas_main_room
-        - switch.x_mas_master_bedroom
-        - switch.x_mas_tree
+        - light.christmas_lighting_main_room
+        - light.christmas_lighting_master_bedroom
+        - light.christmas_tree_lighting
     - condition: state
       entity_id: input_boolean.guest_mode
       state: 'off'
-    - service: switch.turn_on
+    - service: light.turn_on
       entity_id:
-        - switch.x_mas_office
+        - light.christmas_lighting_office
     - service_template: >-
         {% if is_state ("input_boolean.vacation_mode", "on") %}
           {% if (now().strftime('%H%M')|int > 900 ) %}
-            switch.turn_on
+            light.turn_on
           {% else %}
-            switch.turn_off
+            light.turn_off
           {% endif %}
         {% else %}
           {% if (now().strftime('%H%M')|int > 630 ) %}
-            switch.turn_on
+            light.turn_on
           {% else %}
-            switch.turn_off
+            light.turn_off
           {% endif %}
         {% endif %}
-      entity_id: switch.x_mas_philip
+      entity_id: light.christmas_lighting_philip
 
 #        {% if (now().isoweekday() == 6) or (now().isoweekday() == 7) %}

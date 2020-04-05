@@ -9,10 +9,10 @@
       entity_id: sensor.someone_home
       state: 'no'
   action:
-    service: homeassistant.turn_on
+    service: light.turn_on
     entity_id:
-    - group.interior_lights
-    - group.wall_lights
+    - light.interior_lights
+    - light.wall_lights
 
 # Turn the inside lights off when noone is home
 - alias: Lights off inside
@@ -25,7 +25,7 @@
       entity_id: sensor.someone_home
       state: 'no'
   action:
-    service: homeassistant.turn_off
+    service: light.turn_off
     entity_id:
-    - group.interior_lights
-    - group.wall_lights
+    - light.interior_lights
+    - light.wall_lights

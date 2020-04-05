@@ -9,7 +9,7 @@
       data:
         brightness: 254
         entity_id:
-          - group.exterior_lights
+          - light.exterior_lights
     - service: switch.turn_on
       entity_id:
         - switch.winterpole
@@ -25,7 +25,7 @@
   action:
     service: light.turn_off
     entity_id:
-    - group.exterior_lights
+    - light.exterior_lights
 # Turn the winter lights off at 4 AM every day
 - alias: Turn off Winter lights at 4 am
   initial_state: true

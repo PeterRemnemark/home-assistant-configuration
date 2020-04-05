@@ -11,8 +11,8 @@
       entity_id: sensor.someone_home
       state: 'no'
   action:
-    service: homeassistant.turn_on
-    entity_id: group.window_lights
+    service: light.turn_on
+    entity_id: light.window_lights
 
 # Turn the Windows lights off when noone is home
 - id: window_lights_off
@@ -26,5 +26,5 @@
       entity_id: sensor.someone_home
       state: 'no'
   action:
-    service: homeassistant.turn_off
-    entity_id: group.window_lights
+    service: light.turn_off
+    entity_id: light.window_lights

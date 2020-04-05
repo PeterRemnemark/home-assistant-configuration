@@ -240,7 +240,6 @@ yeelight: !include includes/yeelight.yaml
 
 #group: !include includes/groups.yaml
 device_tracker: !include includes/device_trackers.yaml
-light: !include includes/lights.yaml
 switch: !include includes/switches.yaml
 input_select: !include includes/input_select.yaml
 media_player: !include includes/media_players.yaml
@@ -253,6 +252,7 @@ binary_sensor: !include includes/binary_sensors.yaml
 automation: !include automations.yaml
 automation split: !include_dir_merge_list includes/automation
 sensor: !include_dir_merge_list includes/sensor
+light: !include_dir_merge_list includes/light
 
 #Merge named
 script: !include_dir_merge_named includes/scripts

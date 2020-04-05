@@ -17,9 +17,9 @@
 
   action:
 #    - service: script.interior_off
-    - service: homeassistant.turn_on
+    - service: light.turn_on
       entity_id:
-        - group.exterior_lights
+        - light.exterior_lights
       data:
         brightness: 100
     - service: switch.turn_on
@@ -31,16 +31,16 @@
 ##  Sunrise events
 ###################################
 
-- alias: 'Turn off exterior lighgts when Sunrise'
+- alias: 'Turn off exterior lights when Sunrise'
   initial_state: true
   trigger:
     - platform: sun
       event: sunrise
   action:
 #    - service: script.interior_off
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       entity_id:
-        - group.exterior_lights
+        - light.exterior_lights
     - service: switch.turn_off
       entity_id:
         - switch.winterpole

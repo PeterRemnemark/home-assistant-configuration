@@ -1,0 +1,15 @@
+hello_world:
+  module: hello
+  class: HelloWorld
+
+alexa_talking_clock:
+  module: alexa_talking_clock
+  class: AlexaTalkingClock
+  alexa: media_player.main_room
+  start_hour: 8
+  start_minute: 0
+  end_hour: 22
+  end_minute: 0
+  announce_hour: true
+  announce_half_hour: false
+  announce_quarter_hour: false

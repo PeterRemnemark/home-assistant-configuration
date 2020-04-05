@@ -18,7 +18,7 @@
           script.dark_lights
         {% endif %}
 
-- alias: 'Turn off interior lights when on one is home'
+- alias: 'Turn off interior lights when no one is home'
   initial_state: true
   trigger:
     - platform: state
@@ -35,9 +35,9 @@
     - delay: '00:05:00'
     - service_template: >-
         {% if is_state ("sun.sun", "below_horizon") %}
-          homeassistant.turn_on
+          light.turn_on
         {% endif %}
-      entity_id: group.window_lights
+      entity_id: light.window_lights
 
 
 - alias: 'Peter BT presence'
