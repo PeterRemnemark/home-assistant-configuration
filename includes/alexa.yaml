@@ -6,9 +6,10 @@ alexa:
       - input_boolean.guest_mode
       - input_boolean.good_night
       - input_boolean.good_morning
+      - input_boolean.night_mode
       - sensor.exterior_porch_temperature
-      - sensor.freezer_temperature
-      - sensor.fridge_temperature
+      # - sensor.freezer_temperature
+      # - sensor.fridge_temperature
       - sensor.main_room_temperature
       # - group.inside_lights_automations
       # - script.movie_time
@@ -25,15 +26,15 @@ alexa:
       - light.hallway_2
       - light.window_main_room_1
       - light.window_main_room_2
-      - switch.ceiling_garage
+      - light.ceiling_garage
       - switch.tv_lg
-      - switch.window_laundry
-      - switch.x_mas_dinner_room
-      - switch.x_mas_kitchen
-      - switch.x_mas_main_room
-      - switch.x_mas_master_bedroom
-      - switch.x_mas_office
-      - switch.x_mas_philip
+      - light.window_laundry
+      # - switch.x_mas_dinner_room
+      # - switch.x_mas_kitchen
+      # - switch.x_mas_main_room
+      # - switch.x_mas_master_bedroom
+      # - switch.x_mas_office
+      # - switch.x_mas_philip
     exclude_domains:
       - group
       - automation
@@ -62,15 +63,18 @@ alexa:
     input_boolean.speech_notifications:
       name: 'Speech Notifications'
       display_categories: 'SWITCH'
+    input_boolean.night_mode:
+      name: 'Night Mode'
+      display_categories: 'SWITCH'
     sensor.exterior_porch_temperature:
       name: 'Exterior'
       display_categories: 'TEMPERATURE_SENSOR'
-    sensor.freezer_temperature:
-      name: 'Freezer'
-      display_categories: 'TEMPERATURE_SENSOR'
-    sensor.fridge_temperature:
-      name: 'Fridge'
-      display_categories: 'TEMPERATURE_SENSOR'
+    # sensor.freezer_temperature:
+    #   name: 'Freezer'
+    #   display_categories: 'TEMPERATURE_SENSOR'
+    # sensor.fridge_temperature:
+    #   name: 'Fridge'
+    #   display_categories: 'TEMPERATURE_SENSOR'
     sensor.main_room_temperature:
       name: 'Interior'
       display_categories: 'TEMPERATURE_SENSOR'
@@ -78,8 +82,8 @@ alexa:
     # script.movie_time:
     #   name: 'Movie time'
     #   display_categories: 'SWITCH'
-    switch.x_mas_tree:
-      name: 'Christmas tree'
+    # switch.x_mas_tree:
+    #   name: 'Christmas tree'
 
     switch.lg_tv_power:
       name: 'Living room tv'

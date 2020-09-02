@@ -86,10 +86,10 @@ person:
 
 panel_custom: !include panels/panel_custom.yaml
 
-xiaomi_aqara:
-  discovery_retry: 5
-  gateways:
-    - key: 4D3CF1BDCCF54C04
+# xiaomi_aqara:
+#   discovery_retry: 5
+#   gateways:
+#     - key: 4D3CF1BDCCF54C04
 
 # Enables the frontend
 frontend:
@@ -128,7 +128,6 @@ logger:
   #   homeassistant.components.deconz: debug
 
 recorder:
-  purge_interval: 2
   purge_keep_days: 5
 #  db_url: sqlite:///home/user/.homeassistant/test
   # include:
@@ -173,8 +172,8 @@ tts:
   - platform: google_translate
 
 # Rfx Com 433 device
-rfxtrx:
-  device: /dev/ttyUSB0
+rfxtrx:  !include includes/rfxtrx.yaml
+  # device: /dev/ttyUSB0
 # z-wave Aeon Stick
 zwave:
   usb_path: /dev/ttyACM0
@@ -227,6 +226,19 @@ yeelight: !include includes/yeelight.yaml
   #   - switch
   #   - input_boolean
 
+## Spotify integration
+spotify:
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
+# Coffey Table Jazz
+# spotify:user:spotify:playlist:37i9dQZF1DWVqfgj8NZEp1
+# Digster Soft Jazz
+# spotify:perese:digster.se:playlist:33YLYbQcmFT7Qv7NrNVIDo
+# New Music Friday
+# spotify:user:spotify:playlist:37i9dQZF1DXcecv7ESbOPu
+# Girl PWR
+# spotify:user:spotify:playlist:37i9dQZF1DX3JcVtdd4I4E
+# https://open.spotify.com/playlist/7jvC4zj4QPYtEi1dpJ0m94
 
 #------------------------------------------------------
 
@@ -241,7 +253,7 @@ yeelight: !include includes/yeelight.yaml
 #group: !include includes/groups.yaml
 device_tracker: !include includes/device_trackers.yaml
 switch: !include includes/switches.yaml
-input_select: !include includes/input_select.yaml
+#input_select: !include includes/input_select.yaml
 media_player: !include includes/media_players.yaml
 apple_tv: !include includes/apple_tv.yaml
 input_boolean: !include includes/input_boolean.yaml

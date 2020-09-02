@@ -1,47 +1,51 @@
 - platform: switch
   name: Christmas Lighting Office
-  entity_id: switch.x_mas_office
+  entity_id: switch.ac_3f243fe_1
 
 - platform: switch
   name: Christmas Lighting Philip
-  entity_id: switch.x_mas_philip
+  entity_id: switch.ac_3f243fe_6
 
 - platform: switch
   name: Christmas Lighting Master Bedroom
-  entity_id: switch.x_mas_master_bedroom
+  entity_id: switch.ac_3f243fe_7
 
 - platform: switch
   name: Christmas Lighting Dinnner Room
-  entity_id: switch.x_mas_dinner_room
+  entity_id: switch.ac_3f243fe_15
 
 - platform: switch
   name: Christmas Lighting Kitchen
-  entity_id: switch.x_mas_kitchen
+  entity_id: switch.ac_3f243fe_5
 
 - platform: switch
   name: Christmas Lighting Main Room
-  entity_id: switch.x_mas_main_room
+  entity_id: switch.ac_3f243fe_3
 
 - platform: switch
   name: Christmas Tree Lighting
-  entity_id: switch.x_mas_tree
+  entity_id: switch.ac_3f243fe_16
 
 - platform: switch
   name: Interior Laundry
-  entity_id: switch.interior_laundry
+  entity_id: switch.ac_07cc0fa_3
 
-- platform: switch
-  name: Ceiling Laundry
-  entity_id: switch.ceiling_laundry
+# - platform: switch
+#   name: Ceiling Laundry
+#   entity_id: switch.ceiling_laundry
 
 - platform: switch
   name: Ceiling Garage
-  entity_id: switch.ceiling_garage
+  entity_id: switch.ac_07cc0fa_4
+
+- platform: switch
+  name: Ceiling Dinner Room
+  entity_id: switch.ac_07cc0fa_2
 
 - platform: switch
   name: Wall Main Room
-  entity_id: switch.wall_main_room
+  entity_id: switch.ac_3f243fe_10
 
 - platform: switch
   name: Wall Fire Place
-  entity_id: switch.wall_fire_place
+  entity_id: switch.ac_3f243fe_4

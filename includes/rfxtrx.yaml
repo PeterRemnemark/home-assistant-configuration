@@ -1,0 +1,56 @@
+  device: /dev/ttyUSB0
+  automatic_add: false
+# Example configuration with several devices
+  devices:
+    #lights
+    # Ceiling Dinner room
+    0b11000d007cc0fa02000070:
+#      name: Ceiling Dinner room
+
+    # Switches
+    0b11000d03F243FE01000070:
+      signal_repetitions: 3
+#      name: x_mas_office
+    0b11000d03F243FE06000070:
+      signal_repetitions: 3
+#      name: x_mas_philip
+    0b11000d03F243FE07000070:
+      signal_repetitions: 3
+#      name: x_mas_master_bedroom
+    0b11000d03F243FE0f000070:
+      signal_repetitions: 3
+  #      name: x_mas_dinner_room
+    0b11000d03F243FE05000070:
+      signal_repetitions: 3
+  #    name: x_mas_kitchen
+    0b11000d03F243FE03000070:
+      signal_repetitions: 3
+#      name: x_mas_main_room
+    0b11000d03F243FE10000070:
+      signal_repetitions: 3
+#      name: x_mas_tree
+    0b11000d03F243FE04000070:
+      signal_repetitions: 3
+#      name: Wall Fire Place
+    0b11000d03F243FE0a000070:
+      signal_repetitions: 3
+#      name: Wall Main room
+    0b11000d007cc0fa04000070:
+      signal_repetitions: 3
+#      name: Ceiling Garage
+    0b11000d007cc0fa03000070:
+      signal_repetitions: 3
+#      name: Interior Laundry
+
+    # Sensors
+    085007008700004389:
+#      device_class: temperature
+      # name: Fridge
+    0850070d970080e779:
+#      device_class: temperature
+      # name: Freezer
+    # 0a520901a700005e3f0179:
+    #   name: Cellar
+    #   data_type:
+    #     - Humidity
+    #     - Temperature

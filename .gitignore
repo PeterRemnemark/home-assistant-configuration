@@ -85,3 +85,5 @@ dlib_unknown_faces
 alexa_media.*pickle
 alarm.yaml
 alarm_log.json
+appdaemon
+custom_components

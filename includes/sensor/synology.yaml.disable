@@ -1,5 +1,5 @@
 # Synology
-- platform: synologydsm
+- platform: synology_dsm
   entity_namespace: synology
   host: !secret sensor_synology_host
   username: !secret sensor_synology_username
