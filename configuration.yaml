@@ -94,7 +94,7 @@ panel_custom: !include panels/panel_custom.yaml
 # Enables the frontend
 frontend:
   #Support fro the new Java UI
-  javascript_version: latest
+#  javascript_version: latest
   themes: !include_dir_merge_named themes
 
 # Enables configuration UI
@@ -216,7 +216,7 @@ alexa:
 
 cloud: !include includes/alexa.yaml
 
-yeelight: !include includes/yeelight.yaml
+#yeelight: !include includes/yeelight.yaml
 
 # emulated_hue:
 #   host_ip: !secret emulated_hue_host
@@ -227,9 +227,9 @@ yeelight: !include includes/yeelight.yaml
   #   - input_boolean
 
 ## Spotify integration
-spotify:
-  client_id: !secret spotify_id
-  client_secret: !secret spotify_secret
+# spotify:
+#   client_id: !secret spotify_id
+#   client_secret: !secret spotify_secret
 # Coffey Table Jazz
 # spotify:user:spotify:playlist:37i9dQZF1DWVqfgj8NZEp1
 # Digster Soft Jazz
@@ -262,11 +262,13 @@ binary_sensor: !include includes/binary_sensors.yaml
 
 # Merge List
 automation: !include automations.yaml
-automation split: !include_dir_merge_list includes/automation
+automation old: !include_dir_merge_list includes/automation
 sensor: !include_dir_merge_list includes/sensor
 light: !include_dir_merge_list includes/light
 
 #Merge named
+#script: !include scripts.yaml
+#script old: !include_dir_merge_named includes/scripts
 script: !include_dir_merge_named includes/scripts
 group: !include_dir_merge_named includes/groups
 

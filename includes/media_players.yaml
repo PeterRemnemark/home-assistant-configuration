@@ -4,8 +4,8 @@
 # - platform: denonavr
 #   host: !secret media_player_marantz
 #   show_all_sources: true
-- platform: denonavr
-  host: !secret media_player_mainroom
-  show_all_sources: true
-# - platform: plex
-#   entity_namespace: 'plex-ds'
+# - platform: denonavr
+#   host: !secret media_player_mainroom
+#   show_all_sources: true
+# # - platform: plex
+# #   entity_namespace: 'plex-ds'

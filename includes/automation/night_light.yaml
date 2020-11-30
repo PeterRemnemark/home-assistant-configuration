@@ -18,16 +18,9 @@
          rgb_color: [10, 0, 255]
      - service: light.turn_on
        entity_id:
-         - light.exterior_front
-         - light.exterior_side_door
-         - light.exterior_garage
-         - light.exterior_post
-         - light.exterior_backside
-         - light.exterior_back_door
-         - light.exterior_storage
-         - light.exterior_back
+         - light.exterior_lights
        data:
-          brightness: 100
+         brightness: 100
 
 - alias: Turn off Night light
   initial_state: true

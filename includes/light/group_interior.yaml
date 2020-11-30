@@ -1,20 +1,20 @@
-- platform: group
-  name: Window Kitchen
-  entities:
-    - light.window_kitchen_1
-    - light.window_kitchen_2
+# - platform: group
+#   name: Window Kitchen
+#   entities:
+#     - light.window_kitchen_1
+#     - light.window_kitchen_2
 
-- platform: group
-  name: Window Main Room
-  entities:
-    - light.window_main_room_1
-    - light.window_main_room_2
+# - platform: group
+#   name: Window Main Room
+#   entities:
+#     - light.window_main_room_1
+#     - light.window_main_room_2
 
-- platform: group
-  name: Hallway
-  entities:
-    - light.hallway_1
-    - light.hallway_2
+# - platform: group
+#   name: Hallway
+#   entities:
+#     - light.hallway_1
+#     - light.hallway_2
 
 - platform: group
   name: Interior Lights
@@ -25,16 +25,16 @@
     - light.interior_laundry
     - light.interior_philip_room
 
-- platform: group
-  name: Window lights
-  entities:
-    - light.window_kitchen
-    - light.window_office
-    - light.window_dinner_room
-    - light.window_master_bedroom
-    - light.window_laundry
-    - light.window_main_room
-    - light.window_philip
+# - platform: group
+#   name: Window lights
+#   entities:
+#     - light.window_kitchen
+#     - light.window_office
+#     - light.window_dinner_room
+#     - light.window_master_bedroom
+#     - light.window_laundry
+#     - light.window_main_room
+#     - light.window_philip
 
 - platform: group
   name: Ceiling Lights

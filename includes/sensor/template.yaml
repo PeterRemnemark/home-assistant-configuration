@@ -26,11 +26,12 @@
 
     christmas_period:
       value_template: >
-        {% if (is_state ("light.window_kitchen","unavailable") and is_state("light.window_dinner_room", "unavailable") and ( (now().month == 12) or (now().month == 1))  ) %}
+        {% if ( (is_state ("light.window_kitchen_1","unavailable")) and (" light.window_kitchen_2","unavailable") and is_state("light.window_dinner_room", "unavailable") and ( (now().month == 11) or (now().month == 12) or (now().month == 1)) ) %}
           yes
         {% else %}
           no
         {% endif  %}
+
 
 ############################################################
 #

@@ -1,58 +1,64 @@
-- platform: group
-  name: Exterior Garage
-  entities:
-    - light.ExtG1D
-    - light.ExtG1U
-    - light.ExtG2D
-    - light.ExtG2U
-
-- platform: group
-  name: Exterior Storage
-  entities:
-    - light.ExtS1D
-    - light.ExtS1U
-
-- platform: group
-  name: Exterior Post
-  entities:
-    - light.ExtPost1
-    - light.ExtPost2
-    - light.ExtPost3
-
-- platform: group
-  name: Exterior Back
-  entities:
-    - light.ExtB1D
-    - light.ExtB1U
-    - light.ExtB2D
-    - light.ExtB2U
-    - light.ExtB3U
-    - light.ExtB3D
-
-- platform: group
-  name: Exterior Front
-  entities:
-    - light.ExtF1
-    - light.ExtF2D
-    - light.ExtF2U
-    - light.ExtF3U
-    - light.ExtF3D
-
-- platform: group
-  name: Exterior BackSide
-  entities:
-    - light.ExtBS1D
-    - light.ExtBS1U
-    - light.ExtBS2D
-    - light.ExtBS2U
-
-- platform: group
-  name: Exterior Lights
-  entities:
-    - light.exterior_post
-    - light.exterior_back
-    - light.exterior_front
-    - light.exterior_side_door
-    - light.exterior_garage
-    - light.exterior_storage
-    - light.exterior_backside
+# - platform: group
+#   name: Exterior Garage
+#   entities:
+#     - light.ExtG1D
+#     - light.ExtG1U
+#     - light.ExtG2D
+#     - light.ExtG2U
+#
+# - platform: group
+#   name: Exterior Storage
+#   entities:
+#     - light.ExtS1D
+#     - light.ExtS1U
+#
+# - platform: group
+#   name: Exterior Post
+#   entities:
+#     - light.ExtPost1
+#     - light.ExtPost2
+#     - light.ExtPost3
+#
+# - platform: group
+#   name: Exterior Back
+#   entities:
+#     - light.ExtB1D
+#     - light.ExtB1U
+#     - light.ExtB2D
+#     - light.ExtB2U
+#     - light.ExtB3U
+#     - light.ExtB3D
+#
+# - platform: group
+#   name: Exterior Front
+#   entities:
+#     - light.ExtF1
+#     - light.ExtF2D
+#     - light.ExtF2U
+#     - light.ExtF3U
+#     - light.ExtF3D
+#
+# - platform: group
+#   name: Exterior BackSide
+#   entities:
+#     - light.ExtBS1D
+#     - light.ExtBS1U
+#     - light.ExtBS2D
+#     - light.ExtBS2U
+#
+# - platform: group
+#   name: Exterior Pool
+#   entities:
+#     - light.extpoolhouse01
+#
+# - platform: group
+#   name: Exterior Lights
+#   entities:
+#     - light.exterior_post
+#     - light.exterior_back
+#     - light.exterior_front
+#     - light.exterior_side_door
+#     - light.exterior_garage
+#     - light.exterior_storage
+#     - light.exterior_backside
+#     - light.exterior_pool

@@ -56,13 +56,13 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
-       - service: notify.ios_petersiphone
+       - service: notify.mobile_app_peters_iphone
          data_template:
            message: 'Engine heater is turned on for 3h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
-         entity_id: automation.heater_minus_20, automation.heater_minus_10, automation.heater_plus_1, automation.heater_plus_5
+         entity_id: automation.heater_minus_20, automation.heater_minus_10, automation.heater_plus_1, automation.heater_plus_10
 
-# triggers 2.5h before departure time when temp is below -10 and heater status is on, checks if weekend/weekday matches option
+# triggers 2h before departure time when temp is below -10 and heater status is on, checks if weekend/weekday matches option
   - alias: "heater minus 10"
     initial_state: false
     trigger:
@@ -78,7 +78,7 @@ automation:
               entity_id: sensor.exterior_porch_temperature
               below: '-10'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int + 9000 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 7200 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -98,7 +98,7 @@ automation:
               entity_id: sensor.exterior_porch_temperature
               below: '-10'
             - condition: template
-              value_template: '{{ ((now().strftime("%s") | int + 9000 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
+              value_template: '{{ ((now().strftime("%s") | int + 7200 ) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
               entity_id: input_boolean.heaterstatus
               state: 'on'
@@ -108,11 +108,11 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
-       - service: notify.ios_petersiphone
+       - service: notify.mobile_app_peters_iphone
          data_template:
-           message: 'Engine heater is turned on for 2.5h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
+           message: 'Engine heater is turned on for 2h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
-         entity_id: automation.heater_minus_20, automation.heater_minus_10, automation.heater_plus_1, automation.heater_plus_5
+         entity_id: automation.heater_minus_20, automation.heater_minus_10, automation.heater_plus_1, automation.heater_plus_10
 
 # triggers 1.5h before departure time when temp is below 1 and heater status is on, checks if weekend/weekday matches option
   - alias: "heater plus 1"
@@ -160,14 +160,14 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
-       - service: notify.ios_petersiphone
+       - service: notify.mobile_app_peters_iphone
          data_template:
            message: 'Engine heater is turned on for 1.5h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
-         entity_id: automation.heater_minus_20, automation.heater_plus_1, automation.heater_plus_5, automation.heater_minus_10
+         entity_id: automation.heater_minus_20, automation.heater_plus_1, automation.heater_plus_10, automation.heater_minus_10
 
 # triggers 1h before departure time when temp is below 7 and heater status is on, checks if weekend/weekday matches option
-  - alias: "heater plus 5"
+  - alias: "heater plus 10"
     initial_state: false
     trigger:
      - platform: time_pattern
@@ -180,7 +180,7 @@ automation:
           conditions:
             - condition: numeric_state
               entity_id: sensor.exterior_porch_temperature
-              below: '7'
+              below: '11'
             - condition: template
               value_template: '{{ ((now().strftime("%s") | int + 3600) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
@@ -200,7 +200,7 @@ automation:
           conditions:
             - condition: numeric_state
               entity_id: sensor.exterior_porch_temperature
-              below: '7'
+              below: '11'
             - condition: template
               value_template: '{{ ((now().strftime("%s") | int + 3600) | timestamp_custom("%H:%M")) == states.sensor.departuretime.state  }}'
             - condition: state
@@ -212,11 +212,11 @@ automation:
     action:
        - service: script.turn_on
          entity_id: script.heater_on
-       - service: notify.ios_petersiphone
+       - service: notify.mobile_app_peters_iphone
          data_template:
            message: 'Engine heater is turned on for 1h from {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
        - service: homeassistant.turn_off
-         entity_id: automation.heater_minus_20, automation.heater_plus_1, automation.heater_plus_5, automation.heater_minus_10
+         entity_id: automation.heater_minus_20, automation.heater_plus_1, automation.heater_plus_10, automation.heater_minus_10
 
 # activates the automations that will trigger the heater depending on temp if the function is activated
   - alias: "heater enabled"
@@ -230,7 +230,7 @@ automation:
          state: 'on'
     action:
       service: homeassistant.turn_on
-      entity_id: automation.heater_minus_20, automation.heater_plus_5, automation.heater_plus_1, automation.heater_minus_10
+      entity_id: automation.heater_minus_20, automation.heater_plus_10, automation.heater_plus_1, automation.heater_minus_10
 
 # Turns the heater off when leaving time is reached
   - alias: "heater off"
@@ -247,7 +247,7 @@ automation:
          entity_id: automation.heater_off
        - service: switch.turn_off
          entity_id: switch.engine_heater
-       - service: notify.ios_petersiphone
+       - service: notify.mobile_app_peters_iphone
          data_template:
            message: 'Enging heater will now be tunrned off {{now().strftime("%H:%M:%S")}} Temperature outside: {{ states.sensor.exterior_porch_temperature.state}}°C'
 
@@ -327,7 +327,7 @@ sensor:
 #       - automation.heater_minus_20
 #       - automation.heater_minus_10
 #       - automation.heater_plus_1
-#       - automation.heater_plus_5
+#       - automation.heater_plus_10
 #       - script.heater_on
 
 # Script section
