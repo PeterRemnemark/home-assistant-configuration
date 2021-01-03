@@ -251,7 +251,7 @@ class AlexaMediaNotificationSensor(Entity):
         _LOGGER.debug("Sensor value %s", value)
         alarm = value[1][self._sensor_property]
         reminder = None
-        if isinstance(value[1][self._sensor_property], int):
+        if isinstance(value[1][self._sensor_property], (int, float)):
             reminder = True
             alarm = dt.as_local(
                 self._round_time(
@@ -431,13 +431,9 @@ class AlexaMediaNotificationSensor(Entity):
 
         attr = {
             "recurrence": self.recurrence,
-            "process_timestamp": 
-
-                dt.as_local(
-                        datetime.datetime.fromtimestamp(
-                            self._timestamp.timestamp()
-                        )
-                ).isoformat(),            
+            "process_timestamp": dt.as_local(
+                datetime.datetime.fromtimestamp(self._timestamp.timestamp())
+            ).isoformat(),
             "prior_value": self._process_state(self._prior_value),
             "total_active": len(self._active),
             "total_all": len(self._all),

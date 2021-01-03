@@ -144,6 +144,12 @@ recorder:
 # External logging database
 influxdb:
   host: !secret influxdb_host
+  port: 8086
+  username: !secret influxdb_user
+  password: !secret influxdb_pw
+  database: home_assistant
+  ssl: false
+  verify_ssl: false
   include:
     entities:
       - sensor.cellar_humidity
@@ -211,6 +217,18 @@ deconz:
   api_key: !secret dcz_api_key
   port: 80
 
+proxmoxve:
+  - host: !secret pve_host
+    verify_ssl: false
+    username: !secret pve_user
+    password: !secret pve_pwd
+    realm: pve
+    nodes:
+      - node: proxmox
+        vms:
+          - 100
+          - 101
+          - 102
 
 alexa:
 

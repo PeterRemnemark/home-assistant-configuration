@@ -28,14 +28,14 @@ morning_lights:
         - light.window_office
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
-    - delay: '00:30:00'
-    - condition: state
-      entity_id:  input_boolean.vacation_mode
-      state: 'off'
-    - service: light.turn_on
-      entity_id:
-        - light.interior_philip_room
-        - light.window_philip
-      data_template:
-        brightness: "{{ states('sensor.time_brightness')|int }}"
-        color_temp: "320"
+    # - delay: '00:30:00'
+    # - condition: state
+    #   entity_id:  input_boolean.vacation_mode
+    #   state: 'off'
+    # - service: light.turn_on
+    #   entity_id:
+    #     - light.interior_philip_room
+    #     - light.window_philip
+    #   data_template:
+    #     brightness: "{{ states('sensor.time_brightness')|int }}"
+    #     color_temp: "320"

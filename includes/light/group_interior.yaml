@@ -24,6 +24,7 @@
     - light.interior_main_room
     - light.interior_laundry
     - light.interior_philip_room
+    - light.interior_piano
 
 # - platform: group
 #   name: Window lights
@@ -59,5 +60,5 @@
     - light.christmas_lighting_master_bedroom
     - light.christmas_lighting_dinnner_room
     - light.christmas_lighting_kitchen
-    - light.christmas_lighting_rain_room
+    - light.christmas_lighting_main_room
     - light.christmas_tree_lighting

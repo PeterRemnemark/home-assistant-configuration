@@ -8,7 +8,7 @@ christmas_lights:
   sequence:
     - service: light.turn_on
       entity_id:
-        - light.christmas_lighting_dinner_room
+        - light.christmas_lighting_dinnner_room
         - light.christmas_lighting_kitchen
     - delay: 00:00:05
     - service: light.turn_on
@@ -30,7 +30,7 @@ christmas_lights:
             light.turn_off
           {% endif %}
         {% else %}
-          {% if (now().strftime('%H%M')|int > 630 ) %}
+          {% if (now().strftime('%H%M')|int > 625 ) %}
             light.turn_on
           {% else %}
             light.turn_off

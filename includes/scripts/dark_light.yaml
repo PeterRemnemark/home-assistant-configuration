@@ -22,6 +22,7 @@ dark_lights:
     - service: light.turn_on
       entity_id:
         - light.wall_dinner_room
+        - light.interior_piano
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int //2 }}"
     - service: light.turn_on
@@ -38,10 +39,18 @@ dark_lights:
       data_template:
         brightness: "{{ states('sensor.time_brightness')|int }}"
     - service_template: >-
-          {% if now().strftime('%H%M')|int > 900 %}
-            light.turn_on
+          {% if is_state ("input_boolean.vacation_mode", "on") %}
+            {% if (now().strftime('%H%M')|int > 900 ) %}
+              light.turn_on
+            {% else %}
+              light.turn_off
+            {% endif %}
           {% else %}
-            light.turn_off
+            {% if (now().strftime('%H%M')|int > 625 ) %}
+              light.turn_on
+            {% else %}
+              light.turn_off
+            {% endif %}
           {% endif %}
       entity_id:
         - light.interior_philip_room

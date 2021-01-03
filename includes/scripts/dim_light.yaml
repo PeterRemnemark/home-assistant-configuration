@@ -30,3 +30,4 @@ dim_lights:
       entity_id:
         - light.interior_main_room
         - light.interior_dinner_room_1
+        - light.interior_piano

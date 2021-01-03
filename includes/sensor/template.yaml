@@ -43,15 +43,15 @@
       value_template: >-
             {%- if now().strftime('%H%M')|int < 600 -%}
               32
-            {%- elif now().strftime('%H%M')|int < 700 -%}
-              96
-            {%- elif now().strftime('%H%M')|int < 900 -%}
+            {%- elif now().strftime('%H%M')|int < 630 -%}
               128
-            {%- elif now().strftime('%H%M')|int < 1100 -%}
+            {%- elif now().strftime('%H%M')|int < 800 -%}
               160
-            {%- elif now().strftime('%H%M')|int < 1800 -%}
+            {%- elif now().strftime('%H%M')|int < 1100 -%}
+              180
+            {%- elif now().strftime('%H%M')|int < 1900 -%}
               200
-            {%- elif now().strftime('%H%M')|int < 2000 -%}
+            {%- elif now().strftime('%H%M')|int < 2100 -%}
               160
             {%- elif now().strftime('%H%M')|int < 2230 -%}
               128
